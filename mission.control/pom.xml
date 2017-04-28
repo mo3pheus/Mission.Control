@@ -46,7 +46,7 @@
 									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>/mission.control/src/main/java/naasa/gov/mission/control/Consumer.java</mainClass>
+									<mainClass>naasa.gov.mission.control.Driver</mainClass>
 								</transformer>
 							</transformers>
 							<shadedArtifactAttached>true</shadedArtifactAttached>
@@ -60,8 +60,8 @@
 				<artifactId>protobuf-maven-plugin</artifactId>
 				<version>0.5.0</version>
 				<configuration>
-					<protocExecutable>/usr/bin/protoc</protocExecutable>
-					<!-- -<protocExecutable>/Users/sanketkorgaonkar/Documents/protoc-3/bin/protoc</protocExecutable> -->
+					<!-- <protocExecutable>/usr/bin/protoc</protocExecutable> -->
+					<protocExecutable>/Users/sanketkorgaonkar/Documents/protoc-3/bin/protoc</protocExecutable>
 				</configuration>
 				<executions>
 					<execution>
@@ -98,7 +98,8 @@
 			<artifactId>mars.rover</artifactId>
 			<version>0.0.1-SOLSHOT-shaded</version>
 			<scope>system</scope>
-			<systemPath>/home/sanket/Documents/Code/MyProjects/Java/MavenProjects/space.exploration/MarsRover/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</systemPath>
+            <systemPath>/Users/sanketkorgaonkar/Documents/workspace/mars.rover.project/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</systemPath>
+			 <!-- <systemPath>/home/sanket/Documents/Code/MyProjects/Java/MavenProjects/space.exploration/MarsRover/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</systemPath> -->
 		</dependency>
 	</dependencies>
 </project>

@@ -66,6 +66,7 @@ public class Transmitter {
 		iBuilder.addTargets(tBuilder.build());
 
 		transmitMessage(iBuilder.build().toByteArray());
+		System.out.println(iBuilder.build());
 	}
 
 	public void transmitMessage(byte[] message) throws InterruptedException, InvalidProtocolBufferException {

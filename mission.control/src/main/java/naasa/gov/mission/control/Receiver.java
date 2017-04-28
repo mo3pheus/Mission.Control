@@ -14,8 +14,9 @@ import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
-import naasa.gov.mission.control.RoverPingOuterClass.RoverPing;
 import space.exploration.mars.rover.bootstrap.MatrixCreation;
+import space.exploration.mars.rover.communication.RoverStatusOuterClass.RoverStatus;
+
 import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
@@ -56,7 +57,7 @@ public class Receiver extends Thread {
 		ConsumerIterator<byte[], byte[]> it = stream.iterator();
 		while (it.hasNext())
 			try {
-				RoverPing received = (RoverPing.parseFrom(it.next().message()));
+				RoverStatus received = (RoverStatus.parseFrom(it.next().message()));
 				System.out.println(received);
 			} catch (InvalidProtocolBufferException e) {
 				e.printStackTrace();
