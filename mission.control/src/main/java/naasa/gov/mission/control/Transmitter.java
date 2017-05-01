@@ -54,21 +54,6 @@ public class Transmitter {
 		earthChannel = new Producer<String, byte[]>(new ProducerConfig(kafkaProperties));
 	}
 
-	public void transmitMessage() throws Exception {
-		InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
-		iBuilder.setTimeStamp(System.currentTimeMillis());
-		iBuilder.setSOS(false);
-
-		TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
-		tBuilder.setAction("ScanArea");
-		tBuilder.setRoverModule(Module.SENSOR_LIDAR.getValue());
-		tBuilder.setEstimatedPowerUsage(20);
-		iBuilder.addTargets(tBuilder.build());
-
-		transmitMessage(iBuilder.build().toByteArray());
-		System.out.println(iBuilder.build());
-	}
-
 	public void transmitMessage(byte[] message) throws InterruptedException, InvalidProtocolBufferException {
 		for (int i = 0; i < 1; i++) {
 			earthChannel.send(new KeyedMessage<String, byte[]>(kafkaProperties.getProperty("source.topic"), message));
