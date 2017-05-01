@@ -15,9 +15,9 @@ import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import space.exploration.mars.rover.bootstrap.MatrixCreation;
-import space.exploration.mars.rover.communication.RoverStatusOuterClass.RoverStatus;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 
 /**
  * @author sanketkorgaonkar
@@ -25,7 +25,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
  */
 public class Receiver extends Thread {
 	final static String	clientId			= "Curiosity";
-	final static String	TOPIC				= "secure_com_to_earth_channel_0";
+	final static String	TOPIC				= "secure_com_to_earth_channel_1";
 	ConsumerConnector	consumerConnector	= null;
 
 	public Receiver() throws Exception {
@@ -57,7 +57,8 @@ public class Receiver extends Thread {
 		ConsumerIterator<byte[], byte[]> it = stream.iterator();
 		while (it.hasNext())
 			try {
-				RoverStatus received = (RoverStatus.parseFrom(it.next().message()));
+
+				RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus.parseFrom(it.next().message()));
 				System.out.println(received);
 			} catch (InvalidProtocolBufferException e) {
 				e.printStackTrace();
