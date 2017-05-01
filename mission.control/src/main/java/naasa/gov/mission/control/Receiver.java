@@ -58,8 +58,11 @@ public class Receiver extends Thread {
 		while (it.hasNext())
 			try {
 
-				RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus.parseFrom(it.next().message()));
+				RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus
+						.parseFrom(it.next().message()));
 				System.out.println(received);
+				System.out.println("ERT = " + System.currentTimeMillis());
+				System.out.println("OWLT = " + (System.currentTimeMillis() - received.getScet()));
 			} catch (InvalidProtocolBufferException e) {
 				e.printStackTrace();
 			}
