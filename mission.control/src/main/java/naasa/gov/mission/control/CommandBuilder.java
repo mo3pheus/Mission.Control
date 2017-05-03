@@ -30,10 +30,24 @@ public class CommandBuilder {
         tBuilder.setRoverModule(Module.PROPULSION.getValue());
         tBuilder.setEstimatedPowerUsage(40);
 
-        RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(475).setY(50).build();
+        RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(175).setY(50).build();
 
         tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
                 .toByteString());
+
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+    
+    public static byte[] buildScienceMission() {
+        InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
+        tBuilder.setAction("Explore");
+        tBuilder.setRoverModule(Module.SCIENCE.getValue());
+        tBuilder.setEstimatedPowerUsage(30);
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();

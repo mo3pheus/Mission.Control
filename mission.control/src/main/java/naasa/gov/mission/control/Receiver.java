@@ -18,6 +18,8 @@ import space.exploration.mars.rover.bootstrap.MatrixCreation;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
+import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
+import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
 /**
  * @author sanketkorgaonkar
@@ -25,7 +27,7 @@ import space.exploration.mars.rover.communication.RoverStatusOuterClass;
  */
 public class Receiver extends Thread {
 	final static String	clientId			= "Curiosity";
-	final static String	TOPIC				= "secure_com_to_earth_channel_1";
+	final static String	TOPIC				= "secure_com_to_earth_channel_2";
 	ConsumerConnector	consumerConnector	= null;
 
 	public Receiver() throws Exception {
@@ -55,16 +57,25 @@ public class Receiver extends Thread {
 				.createMessageStreams(topicCountMap);
 		KafkaStream<byte[], byte[]> stream = consumerMap.get(TOPIC).get(0);
 		ConsumerIterator<byte[], byte[]> it = stream.iterator();
-		while (it.hasNext())
+		int messageCount = 0;
+		while (it.hasNext()) {
+			System.out.println("======================== MESSAGE ================================== " + messageCount);
 			try {
-
 				RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus
 						.parseFrom(it.next().message()));
 				System.out.println(received);
+
+				if (received.getModuleReporting() == Module.SCIENCE.getValue()) {
+					SpectrometerScan scan = SpectrometerScan.parseFrom(received.getModuleMessage());
+					System.out.println(scan);
+				}
+
 				System.out.println("ERT = " + System.currentTimeMillis());
 				System.out.println("OWLT = " + (System.currentTimeMillis() - received.getScet()));
 			} catch (InvalidProtocolBufferException e) {
 				e.printStackTrace();
 			}
+			messageCount++;
+		}
 	}
 }

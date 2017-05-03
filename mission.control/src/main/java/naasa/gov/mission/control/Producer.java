@@ -13,10 +13,11 @@ public class Producer {
 		Transmitter transmitter = new Transmitter(kafkaProperties);
 
 		int choice = 0;
-		while (choice != 2) {
+		while (choice != 3) {
 			System.out.println("0. Send Move Message");
 			System.out.println("1. Send Lidar Message");
-			System.out.println("2. Exit");
+			System.out.println("2. Send Scientific Message");
+			System.out.println("3. Exit");
 			System.out.println("Please enter your choice");
 			Scanner scanner = new Scanner(System.in);
 			choice = scanner.nextInt();
@@ -33,6 +34,11 @@ public class Producer {
 				;
 				break;
 			case 2: {
+				transmitter.transmitMessage(CommandBuilder.buildScienceMission());
+			}
+				;
+				break;
+			case 3: {
 				scanner.close();
 				System.out.println("This is NASA Mission Control coms signing off.");
 			}
