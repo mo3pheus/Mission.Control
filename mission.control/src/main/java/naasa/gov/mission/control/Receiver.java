@@ -21,6 +21,7 @@ import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
+
 /**
  * @author sanketkorgaonkar
  *

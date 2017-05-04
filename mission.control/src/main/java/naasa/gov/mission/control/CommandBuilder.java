@@ -30,7 +30,7 @@ public class CommandBuilder {
         tBuilder.setRoverModule(Module.PROPULSION.getValue());
         tBuilder.setEstimatedPowerUsage(40);
 
-        RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(175).setY(50).build();
+        RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(500).setY(50).build();
 
         tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
                 .toByteString());

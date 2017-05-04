@@ -12,6 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<space.exploration.mars.rover.version>/Users/sanketkorgaonkar/Documents/workspace/mars.rover.project/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</space.exploration.mars.rover.version>
 	</properties>
 
 	<build>
@@ -19,20 +20,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-					<createDependencyReducedPom>true</createDependencyReducedPom>
-					<filters>
-						<filter>
-							<artifact>*:*</artifact>
-							<excludes>
-								<exclude>META-INF/*.SF</exclude>
-								<exclude>META-INF/*.DSA</exclude>
-								<exclude>META-INF/*.RSA</exclude>
-							</excludes>
-						</filter>
-					</filters>
+					<createDependencyReducedPom>false</createDependencyReducedPom>
 				</configuration>
 				<executions>
 					<execution>
@@ -96,10 +88,7 @@
 		<dependency>
 			<groupId>space.exploration</groupId>
 			<artifactId>mars.rover</artifactId>
-			<version>0.0.1-SOLSHOT-shaded</version>
-			<scope>system</scope>
-			<systemPath>/Users/sanketkorgaonkar/Documents/workspace/mars.rover.project/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</systemPath>
-			<!-- <systemPath>/home/sanket/Documents/Code/MyProjects/Java/MavenProjects/space.exploration/MarsRover/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar</systemPath> -->
+			<version>0.0.1-SOLSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
