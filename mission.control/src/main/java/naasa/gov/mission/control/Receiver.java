@@ -3,32 +3,28 @@
  */
 package naasa.gov.mission.control;
 
-import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-
+import com.google.protobuf.InvalidProtocolBufferException;
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import space.exploration.mars.rover.bootstrap.MatrixCreation;
-
-import com.google.protobuf.InvalidProtocolBufferException;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 
 /**
@@ -48,7 +44,8 @@ public class Receiver extends Thread {
         MatrixCreation.configureLogging();
         Properties matrixConfig = new Properties();
         FileInputStream propFile = new FileInputStream(
-                "/Users/sanketkorgaonkar/Documents/CodeRepos/AdvancedMatrix/advanced.matrix/src/main/resources/mazeDefinition.properties");
+                "/Users/sanketkorgaonkar/Documents/CodeRepos/AdvancedMatrix/advanced" +
+                        ".matrix/src/main/resources/mazeDefinition.properties");
         matrixConfig.load(propFile);
     }
 
@@ -80,13 +77,18 @@ public class Receiver extends Thread {
                 } else if (received.getModuleReporting() == Module.CAMERA_SENSOR.getValue()) {
                     byte[] imageBytes = received.getModuleMessage().toByteArray();
                     try {
-                        BufferedImage imag = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                        JFrame frame = new JFrame();
-                        frame.setBounds(0,0, 1000,1000);
-                        Graphics g = frame.getGraphics();
-                        Graphics2D g2 = (Graphics2D)g;
-                        g2.drawImage(imag, null, 0,0);
-                                        } catch (IOException e) {
+                        BufferedImage imag  = ImageIO.read(new ByteArrayInputStream(imageBytes));
+                        JFrame        frame = new JFrame();
+                        frame.setBounds(0, 0, 1000, 1000);
+                        frame.setVisible(true);
+                        Graphics   g  = frame.getGraphics();
+                        Graphics2D g2 = (Graphics2D) g;
+                        g2.drawImage(imag, null, 0, 0);
+                        Thread.sleep(3000);
+                        g2.dispose();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
