@@ -9,6 +9,7 @@ import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
+import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
 import space.exploration.mars.rover.bootstrap.MatrixCreation;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
@@ -25,7 +26,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-
 
 /**
  * @author sanketkorgaonkar
@@ -76,20 +76,18 @@ public class Receiver extends Thread {
                     System.out.println(scan);
                 } else if (received.getModuleReporting() == Module.CAMERA_SENSOR.getValue()) {
                     byte[] imageBytes = received.getModuleMessage().toByteArray();
-                    try {
-                        BufferedImage imag  = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                        JFrame        frame = new JFrame();
-                        frame.setBounds(0, 0, 1000, 1000);
-                        frame.setVisible(true);
-                        Graphics   g  = frame.getGraphics();
-                        Graphics2D g2 = (Graphics2D) g;
-                        g2.drawImage(imag, null, 0, 0);
-                        Thread.sleep(3000);
-                        g2.dispose();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    if (imageBytes != null) {
+                        try {
+                            BufferedImage imag  = ImageIO.read(new ByteArrayInputStream(imageBytes));
+                            JFrame        frame = new JFrame();
+                            frame.setBounds(0, 0, 1000, 1000);
+                            frame.getContentPane().add(new ImageUtil(imag));
+                            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                            frame.setVisible(true);
+                            //Thread.sleep(3000);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
 
