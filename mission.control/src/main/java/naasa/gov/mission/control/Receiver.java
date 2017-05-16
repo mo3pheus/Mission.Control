@@ -12,12 +12,12 @@ import kafka.javaapi.consumer.ConsumerConnector;
 import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
 import space.exploration.mars.rover.bootstrap.MatrixCreation;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
+import space.exploration.mars.rover.diagnostics.HeartBeatOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -89,6 +89,10 @@ public class Receiver extends Thread {
                             e.printStackTrace();
                         }
                     }
+                } else if (received.getModuleReporting() == Module.DIAGNOSTICS.getValue()) {
+                    HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
+                            .getModuleMessage().toByteArray());
+                    System.out.println(heartBeat);
                 }
 
                 System.out.println("ERT = " + System.currentTimeMillis());
