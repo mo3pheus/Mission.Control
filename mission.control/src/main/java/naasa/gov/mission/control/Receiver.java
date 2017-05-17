@@ -64,12 +64,14 @@ public class Receiver extends Thread {
         KafkaStream<byte[], byte[]>      stream       = consumerMap.get(TOPIC).get(0);
         ConsumerIterator<byte[], byte[]> it           = stream.iterator();
         int                              messageCount = 0;
+        long scetTime = 0l;
         while (it.hasNext()) {
             System.out.println("======================== MESSAGE ================================== " + messageCount);
             try {
                 RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus
                         .parseFrom(it.next().message()));
                 System.out.println(received);
+                scetTime = received.getSCET();
 
                 if (received.getModuleReporting() == Module.SCIENCE.getValue()) {
                     SpectrometerScan scan = SpectrometerScan.parseFrom(received.getModuleMessage());
@@ -92,11 +94,12 @@ public class Receiver extends Thread {
                 } else if (received.getModuleReporting() == Module.DIAGNOSTICS.getValue()) {
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
                             .getModuleMessage().toByteArray());
+                    scetTime = heartBeat.getSCET();
                     System.out.println(heartBeat);
                 }
 
                 System.out.println("ERT = " + System.currentTimeMillis());
-                System.out.println("OWLT = " + (System.currentTimeMillis() - received.getSCET()));
+                System.out.println("OWLT = " + (System.currentTimeMillis() - scetTime));
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
             }
