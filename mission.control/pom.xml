@@ -12,9 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <space.exploration.mars.rover.version>
-            /Users/sanketkorgaonkar/Documents/workspace/mars.rover.project/mars.rover/target/mars.rover-0.0.1-SOLSHOT-shaded.jar
-        </space.exploration.mars.rover.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <build>
@@ -89,6 +88,11 @@
             <groupId>space.exploration</groupId>
             <artifactId>mars.rover</artifactId>
             <version>0.0.1-SOLSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>tensorflow</artifactId>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 </project>
