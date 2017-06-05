@@ -58,7 +58,7 @@ public class CommandBuilder {
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
     }
-    
+
     public static byte[] buildScienceMission() {
         InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
@@ -82,6 +82,20 @@ public class CommandBuilder {
         tBuilder.setAction("ClickCamera");
         tBuilder.setRoverModule(Module.CAMERA_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(10);
+
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
+    public static byte[] buildRadarCommand() {
+        InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
+        tBuilder.setAction("PerformRadarScan");
+        tBuilder.setRoverModule(Module.RADAR.getValue());
+        tBuilder.setEstimatedPowerUsage(20);
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
