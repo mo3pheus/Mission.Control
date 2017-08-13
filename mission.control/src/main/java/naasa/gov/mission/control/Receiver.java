@@ -14,6 +14,7 @@ import space.exploration.mars.rover.bootstrap.MatrixCreation;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 import space.exploration.mars.rover.diagnostics.HeartBeatOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
+import space.exploration.mars.rover.radar.RadarContactListOuterClass;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
 import javax.imageio.ImageIO;
@@ -31,8 +32,9 @@ import java.util.Properties;
  * @author sanketkorgaonkar
  */
 public class Receiver extends Thread {
-    final static String clientId = "Curiosity";
-    final static String TOPIC    = "secure_com_to_earth_channel_3";
+    final static String SEPARATOR = "============================================================================";
+    final static String clientId  = "Curiosity";
+    final static String TOPIC     = "curiosity_to_earth_0";
     ConsumerConnector consumerConnector = null;
 
     public Receiver() throws Exception {
@@ -56,7 +58,7 @@ public class Receiver extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Listening to Mars...");
+        System.out.println("Listening to Mars on topic : " + TOPIC);
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
         topicCountMap.put(TOPIC, new Integer(1));
         Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumerConnector
@@ -64,19 +66,23 @@ public class Receiver extends Thread {
         KafkaStream<byte[], byte[]>      stream       = consumerMap.get(TOPIC).get(0);
         ConsumerIterator<byte[], byte[]> it           = stream.iterator();
         int                              messageCount = 0;
-        long scetTime = 0l;
+        long                             scetTime     = 0l;
         while (it.hasNext()) {
-            System.out.println("======================== MESSAGE ================================== " + messageCount);
+            System.out.println("\n");
+            System.out.println(SEPARATOR);
+            System.out.println("RECEIVED MESSAGE:: " + messageCount);
+            System.out.println(SEPARATOR);
             try {
                 RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus
                         .parseFrom(it.next().message()));
-                System.out.println(received);
                 scetTime = received.getSCET();
 
                 if (received.getModuleReporting() == Module.SCIENCE.getValue()) {
                     SpectrometerScan scan = SpectrometerScan.parseFrom(received.getModuleMessage());
-                    System.out.println(scan);
+                    printMessage(received.toString());
+                    printMessage(scan.toString());
                 } else if (received.getModuleReporting() == Module.CAMERA_SENSOR.getValue()) {
+                    System.out.println(received.toString());
                     byte[] imageBytes = received.getModuleMessage().toByteArray();
                     if (imageBytes != null) {
                         try {
@@ -86,16 +92,28 @@ public class Receiver extends Thread {
                             frame.getContentPane().add(new ImageUtil(imag));
                             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                             frame.setVisible(true);
-                            //Thread.sleep(3000);
+                            Thread.sleep(3000);
+                            frame.dispose();
                         } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
                 } else if (received.getModuleReporting() == Module.DIAGNOSTICS.getValue()) {
+                    printMessage(received.toString());
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
-                            .getModuleMessage().toByteArray());
+                                                                                                              .getModuleMessage().toByteArray());
                     scetTime = heartBeat.getSCET();
-                    System.out.println(heartBeat);
+                    printMessage(heartBeat.toString());
+                } else if (received.getModuleReporting() == Module.RADAR.getValue()) {
+                    printMessage(received.toString());
+                    RadarContactListOuterClass.RadarContactList list = RadarContactListOuterClass.RadarContactList
+                            .parseFrom(received
+                                               .getModuleMessage().toByteArray());
+                    printMessage(list.toString());
+                } else {
+                    printMessage(received.toString());
                 }
 
                 System.out.println("ERT = " + System.currentTimeMillis());
@@ -104,6 +122,17 @@ public class Receiver extends Thread {
                 e.printStackTrace();
             }
             messageCount++;
+        }
+    }
+
+    private void printMessage(String message) {
+        try {
+            for (char c : message.toCharArray()) {
+                System.out.print(c);
+                Thread.sleep(30);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
