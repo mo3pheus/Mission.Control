@@ -14,6 +14,7 @@ import space.exploration.mars.rover.bootstrap.MatrixCreation;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
 import space.exploration.mars.rover.diagnostics.HeartBeatOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
+import space.exploration.mars.rover.propulsion.TelemetryPacketOuterClass;
 import space.exploration.mars.rover.radar.RadarContactListOuterClass;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
@@ -34,7 +35,7 @@ import java.util.Properties;
 public class Receiver extends Thread {
     final static String SEPARATOR = "============================================================================";
     final static String clientId  = "Curiosity";
-    final static String TOPIC     = "curiosity_to_earth_0";
+    final static String TOPIC     = "curiosity_to_earth_1";
     ConsumerConnector consumerConnector = null;
 
     public Receiver() throws Exception {
@@ -112,6 +113,10 @@ public class Receiver extends Thread {
                             .parseFrom(received
                                                .getModuleMessage().toByteArray());
                     printMessage(list.toString());
+                } else if (received.getModuleReporting() == Module.PROPULSION.getValue()){
+                    TelemetryPacketOuterClass.TelemetryPacket telemetryPacket = TelemetryPacketOuterClass
+                            .TelemetryPacket.parseFrom(received.getModuleMessage());
+                    printMessage(telemetryPacket.toString());
                 } else {
                     printMessage(received.toString());
                 }

@@ -33,8 +33,9 @@ public class CommandBuilder {
 
         RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(0).setY(50).build();
 
-        tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
-                .toByteString());
+        /*tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
+                                          .toByteString());*/
+        tBuilder.setAuxiliaryData(null);
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
@@ -53,7 +54,7 @@ public class CommandBuilder {
         RobotPositions.Point targetPosition = RobotPositions.Point.newBuilder().setX(x).setY(y).build();
 
         tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
-                .toByteString());
+                                          .toByteString());
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
@@ -81,7 +82,7 @@ public class CommandBuilder {
         TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
         tBuilder.setAction("ClickCamera");
         tBuilder.setRoverModule(Module.CAMERA_SENSOR.getValue());
-        tBuilder.setEstimatedPowerUsage(10);
+        tBuilder.setEstimatedPowerUsage(20);
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
