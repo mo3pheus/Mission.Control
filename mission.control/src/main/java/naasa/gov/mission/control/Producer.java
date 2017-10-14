@@ -53,7 +53,7 @@ public class Producer {
                 default: {
                 }
             }
-            Thread.sleep(2 * 60000);
+            Thread.sleep(4 * 30000);
             //Thread.sleep(45);
         }
     }

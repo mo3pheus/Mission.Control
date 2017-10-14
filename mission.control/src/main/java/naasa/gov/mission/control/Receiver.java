@@ -67,7 +67,7 @@ public class Receiver extends Thread {
             throw new RuntimeException("BufferedImage was null");
         }
 
-        String      fileName    = dataArchivePath+"/curiosityImage" + Long.toString(System.currentTimeMillis()) + ".jpg";
+        String fileName = dataArchivePath + "/curiosityImage" + Long.toString(System.currentTimeMillis()) + ".jpg";
         System.out.println(fileName);
         File outputFile = new File(fileName);
         ImageIO.write(bufferedImage, "jpg", outputFile);
@@ -105,12 +105,12 @@ public class Receiver extends Thread {
 
                     for (String metaData : camPayload.getImageDataMap().keySet()) {
                         System.out.println("MetaData::");
-                        printMessage(metaData);
+                        System.out.println(metaData);
                         byte[] imageBytes = camPayload.getImageDataMap().get(metaData).toByteArray();
                         if (imageBytes != null) {
                             try {
                                 BufferedImage imag = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                                writeImageToFile(imag);
+                                //writeImageToFile(imag);
                                 JFrame frame = new JFrame();
                                 frame.setBounds(0, 0, 1000, 1000);
                                 frame.getContentPane().add(new ImageUtil(imag));
