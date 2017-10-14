@@ -15,7 +15,7 @@ public class Producer {
         Transmitter transmitter = new Transmitter(kafkaProperties);
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 10) {
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 2) {
             //int choice = ThreadLocalRandom.current().nextInt(0, 6);
             int choice = 3;
             System.out.println("Selected choice = " + choice);
@@ -53,7 +53,7 @@ public class Producer {
                 default: {
                 }
             }
-            Thread.sleep(4 * 30000);
+            Thread.sleep(1 * 30000);
             //Thread.sleep(45);
         }
     }
