@@ -2,7 +2,6 @@ package naasa.gov.mission.control;
 
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +16,7 @@ public class Producer {
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 10) {
-            int choice = ThreadLocalRandom.current().nextInt(0, 5);
+            int choice = ThreadLocalRandom.current().nextInt(0, 6);
             System.out.println("Selected choice = " + choice);
             switch (choice) {
                 case 0: {
@@ -43,13 +42,18 @@ public class Producer {
                 }
                 break;
                 case 5: {
+                    transmitter.transmitMessage(CommandBuilder.buildWeatherCommand());
+                }
+                break;
+                case 6: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;
                 default: {
                 }
             }
-            Thread.sleep(60000);
+            Thread.sleep(2 * 60000);
+            //Thread.sleep(45);
         }
     }
 

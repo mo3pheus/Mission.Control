@@ -17,7 +17,7 @@ public class Driver
         	Properties kafkaProperties = new Properties();
         	kafkaProperties.load(fis);
         	
-        	Receiver receiver = new Receiver(kafkaProperties);
+        	Receiver receiver = new Receiver(kafkaProperties, args[1]);
         	receiver.start();
         }
     }

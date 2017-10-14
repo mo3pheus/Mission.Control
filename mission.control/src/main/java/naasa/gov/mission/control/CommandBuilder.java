@@ -5,6 +5,8 @@ import space.exploration.mars.rover.InstructionPayloadOuterClass.InstructionPayl
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.robot.RobotPositionsOuterClass.RobotPositions;
 
+import java.util.Scanner;
+
 public class CommandBuilder {
 
     public static byte[] buildLidarCommand() {
@@ -15,7 +17,20 @@ public class CommandBuilder {
         TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
         tBuilder.setAction("ScanArea");
         tBuilder.setRoverModule(Module.SENSOR_LIDAR.getValue());
-        tBuilder.setEstimatedPowerUsage(20);
+        tBuilder.setEstimatedPowerUsage(70);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
+    public static byte[] buildWeatherCommand() {
+        InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
+        tBuilder.setAction("MeasureWeather");
+        tBuilder.setRoverModule(Module.WEATHER_SENSOR.getValue());
+        tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
     }
@@ -81,6 +96,7 @@ public class CommandBuilder {
 
         TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
         tBuilder.setAction("ClickCamera");
+        tBuilder.setRoverSubModule(getCamId());
         tBuilder.setRoverModule(Module.CAMERA_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(20);
 
@@ -100,5 +116,13 @@ public class CommandBuilder {
 
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
+    }
+
+    public static String getCamId() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter one of the following cam Ids:: (CaseSensitive)"
+                                   + "FHAZ, NAVCAM, MAST, CHEMCAM, MAHLI, MARDI or RHAZ"
+        );
+        return scanner.nextLine();
     }
 }

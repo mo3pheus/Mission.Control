@@ -1,9 +1,5 @@
 package naasa.gov.mission.control;
 
-import naasa.gov.mission.control.CommandBuilder;
-import naasa.gov.mission.control.Producer;
-import naasa.gov.mission.control.Transmitter;
-
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
@@ -17,13 +13,14 @@ public class ProducerManual {
         Transmitter transmitter = new Transmitter(kafkaProperties);
 
         int choice = 0;
-        while (choice != 5) {
+        while (choice != 6) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
             System.out.println("2. Send Scientific Message");
             System.out.println("3. Send Camera Command");
             System.out.println("4. Send Radar command");
-            System.out.println("5. Exit");
+            System.out.println("5. Send Weather Request");
+            System.out.println("6. Exit");
             System.out.println("Please enter your choice");
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -60,14 +57,12 @@ public class ProducerManual {
                 }
                 break;
                 case 5: {
-                    scanner.close();
+                    transmitter.transmitMessage(CommandBuilder.buildWeatherCommand());
+                }
+                break;
+                case 6: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
-                ;
-                break;
-                default: {
-                }
-                ;
             }
         }
 
