@@ -16,7 +16,8 @@ public class Producer {
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 10) {
-            int choice = ThreadLocalRandom.current().nextInt(0, 6);
+            //int choice = ThreadLocalRandom.current().nextInt(0, 6);
+            int choice = 3;
             System.out.println("Selected choice = " + choice);
             switch (choice) {
                 case 0: {
@@ -34,7 +35,7 @@ public class Producer {
                 }
                 break;
                 case 3: {
-                    transmitter.transmitMessage(CommandBuilder.buildCameraCommand());
+                    transmitter.transmitMessage(CommandBuilder.buildCameraCommand(getRandomCamId()));
                 }
                 break;
                 case 4: {
@@ -57,5 +58,10 @@ public class Producer {
         }
     }
 
+    private static String getRandomCamId() {
+        String[] camIds = {"FHAZ", "NAVCAM", "MAST", "CHEMCAM", "MAHLI", "MARDI", "RHAZ"};
+        int      index  = ThreadLocalRandom.current().nextInt(0, 7);
+        return camIds[index];
+    }
 
 }

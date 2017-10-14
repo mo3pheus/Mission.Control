@@ -3,6 +3,7 @@ package naasa.gov.mission.control;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ProducerManual {
     public static void main(String[] args) throws Exception {
@@ -48,7 +49,7 @@ public class ProducerManual {
                 ;
                 break;
                 case 3: {
-                    transmitter.transmitMessage(CommandBuilder.buildCameraCommand());
+                    transmitter.transmitMessage(CommandBuilder.buildCameraCommand(getRandomCamId()));
                 }
                 ;
                 break;
@@ -66,5 +67,11 @@ public class ProducerManual {
             }
         }
 
+    }
+
+    private static String getRandomCamId() {
+        String[] camIds = {"FHAZ", "NAVCAM", "MAST", "CHEMCAM", "MAHLI", "MARDI", "RHAZ"};
+        int      index  = ThreadLocalRandom.current().nextInt(0, 7);
+        return camIds[index];
     }
 }
