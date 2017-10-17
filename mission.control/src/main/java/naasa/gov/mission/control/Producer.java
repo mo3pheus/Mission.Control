@@ -16,8 +16,8 @@ public class Producer {
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 2) {
-            //int choice = ThreadLocalRandom.current().nextInt(0, 6);
-            int choice = 3;
+            int choice = ThreadLocalRandom.current().nextInt(0, 6);
+            //int choice = 3;
             System.out.println("Selected choice = " + choice);
             switch (choice) {
                 case 0: {
@@ -53,7 +53,7 @@ public class Producer {
                 default: {
                 }
             }
-            Thread.sleep(1 * 30000);
+            Thread.sleep(4 * 30000);
             //Thread.sleep(45);
         }
     }
