@@ -11,12 +11,12 @@ import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
 import space.exploration.mars.rover.communication.RoverStatusOuterClass;
-import space.exploration.mars.rover.dataUplink.CameraPayload;
-import space.exploration.mars.rover.dataUplink.WeatherData;
 import space.exploration.mars.rover.diagnostics.HeartBeatOuterClass;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.propulsion.TelemetryPacketOuterClass;
 import space.exploration.mars.rover.radar.RadarContactListOuterClass;
+import space.exploration.mars.rover.service.CameraPayload;
+import space.exploration.mars.rover.service.SeasonalWeather;
 import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
 
 import javax.imageio.ImageIO;
@@ -145,8 +145,9 @@ public class Receiver extends Thread {
                             .TelemetryPacket.parseFrom(received.getModuleMessage());
                     printMessage(telemetryPacket.toString());
                 } else if (received.getModuleReporting() == Module.WEATHER_SENSOR.getValue()) {
-                    WeatherData.WeatherPayload weatherPayload = WeatherData.WeatherPayload.parseFrom(received.getModuleMessage());
-                    printMessage(weatherPayload.toString());
+                    SeasonalWeather.SeasonalWeatherPayload seasonalWeatherPayload = SeasonalWeather
+                            .SeasonalWeatherPayload.parseFrom(received.getModuleMessage());
+                    printMessage(seasonalWeatherPayload.toString());
                     printMessage(received.toString());
                 } else {
                     printMessage(received.toString());

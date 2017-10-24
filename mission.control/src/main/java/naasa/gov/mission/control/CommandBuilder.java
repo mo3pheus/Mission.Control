@@ -4,6 +4,7 @@ import space.exploration.mars.rover.InstructionPayloadOuterClass.InstructionPayl
 import space.exploration.mars.rover.InstructionPayloadOuterClass.InstructionPayload.TargetPackage;
 import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 import space.exploration.mars.rover.robot.RobotPositionsOuterClass.RobotPositions;
+import space.exploration.mars.rover.service.WeatherQueryOuterClass;
 
 import java.util.Scanner;
 
@@ -27,8 +28,28 @@ public class CommandBuilder {
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
+        String terrestrialStartDate = "2017-09-01";
+        String terrestrialEndDate   = "2017-09-22";
+
+        WeatherQueryOuterClass.WeatherQuery.Builder wQueryBuilder = WeatherQueryOuterClass.WeatherQuery.newBuilder();
+        wQueryBuilder.setTerrestrialEndDate(terrestrialEndDate).setTerrestrialStartDate(terrestrialStartDate);
+
         TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
-        tBuilder.setAction("MeasureWeather");
+        tBuilder.setAction("GetSeasonalWeather");
+        tBuilder.setAuxiliaryData(wQueryBuilder.build().toByteString());
+        tBuilder.setRoverModule(Module.WEATHER_SENSOR.getValue());
+        tBuilder.setEstimatedPowerUsage(70);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
+    public static byte[] buildSeasonalWeatherCommand() {
+        InstructionPayload.Builder iBuilder = InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        TargetPackage.Builder tBuilder = TargetPackage.newBuilder();
+        tBuilder.setAction("GetSeasonalWeather");
         tBuilder.setRoverModule(Module.WEATHER_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());

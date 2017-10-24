@@ -1,5 +1,7 @@
 package naasa.gov.mission.control;
 
+import space.exploration.mars.rover.service.WeatherQueryOuterClass;
+
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
@@ -14,14 +16,15 @@ public class ProducerManual {
         Transmitter transmitter = new Transmitter(kafkaProperties);
 
         int choice = 0;
-        while (choice != 6) {
+        while (choice != 7) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
             System.out.println("2. Send Scientific Message");
             System.out.println("3. Send Camera Command");
             System.out.println("4. Send Radar command");
             System.out.println("5. Send Weather Request");
-            System.out.println("6. Exit");
+            System.out.println("6. Send Seasonal Weather Request");
+            System.out.println("7. Exit");
             System.out.println("Please enter your choice");
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -62,6 +65,10 @@ public class ProducerManual {
                 }
                 break;
                 case 6: {
+                    transmitter.transmitMessage(CommandBuilder.buildSeasonalWeatherCommand());
+                }
+                break;
+                case 7: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
             }

@@ -15,7 +15,7 @@ public class Producer {
         Transmitter transmitter = new Transmitter(kafkaProperties);
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 2) {
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 5) {
             int choice = ThreadLocalRandom.current().nextInt(0, 6);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
@@ -43,7 +43,7 @@ public class Producer {
                 }
                 break;
                 case 5: {
-                    transmitter.transmitMessage(CommandBuilder.buildWeatherCommand());
+                    transmitter.transmitMessage(CommandBuilder.buildSeasonalWeatherCommand());
                 }
                 break;
                 case 6: {
