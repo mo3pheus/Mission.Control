@@ -3,24 +3,17 @@
  */
 package naasa.gov.mission.control;
 
-import java.awt.Point;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
-import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
-import space.exploration.mars.rover.InstructionPayloadOuterClass.InstructionPayload;
-import space.exploration.mars.rover.InstructionPayloadOuterClass.InstructionPayload.TargetPackage;
-import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
 
 /**
  * @author sanketkorgaonkar

@@ -1,0 +1,479 @@
+0 [main] DEBUG space.exploration.mars.rover.service.QueryService  - http://marsweather.ingenology.com/v1/archive/?terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01
+1 [main] DEBUG space.exploration.mars.rover.service.QueryService  - http://marsweather.ingenology.com/v1/archive/?terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01
+1 [main] DEBUG space.exploration.mars.rover.service.QueryService  - http://marsweather.ingenology.com/v1/archive/?terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01terrestrial_date_end=2016-05-30&terrestrial_date_start=2016-01-01
+342 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+344 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+405 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-29"
+sol: 1355
+ls: 159.0
+minTemp: -75.0
+minTemFahrenheit: -103.0
+maxTemp: -11.0
+maxTempFahrenheit: 12.2
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-29T102600Z"
+sunset: "2016-05-29T222100Z"
+
+406 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+407 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+408 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-28"
+sol: 1354
+ls: 159.0
+minTemp: -75.0
+minTemFahrenheit: -103.0
+maxTemp: -5.0
+maxTempFahrenheit: 23.0
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-28T102700Z"
+sunset: "2016-05-28T222100Z"
+
+408 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+409 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+410 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-25"
+sol: 1351
+ls: 157.0
+minTemp: -72.0
+minTemFahrenheit: -97.6
+maxTemp: -12.0
+maxTempFahrenheit: 10.4
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-25T102700Z"
+sunset: "2016-05-25T222100Z"
+
+410 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+411 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+412 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-24"
+sol: 1350
+ls: 157.0
+minTemp: -73.0
+minTemFahrenheit: -99.4
+maxTemp: -9.0
+maxTempFahrenheit: 15.8
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-24T102700Z"
+sunset: "2016-05-24T222100Z"
+
+413 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+413 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+415 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-23"
+sol: 1349
+ls: 156.0
+minTemp: -73.0
+minTemFahrenheit: -99.4
+maxTemp: -9.0
+maxTempFahrenheit: 15.8
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-23T102800Z"
+sunset: "2016-05-23T222100Z"
+
+416 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+416 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+417 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-22"
+sol: 1348
+ls: 156.0
+minTemp: -76.0
+minTemFahrenheit: -104.8
+maxTemp: -22.0
+maxTempFahrenheit: -7.6
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-22T102800Z"
+sunset: "2016-05-22T222100Z"
+
+417 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+418 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+419 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-18"
+sol: 1344
+ls: 153.0
+minTemp: -75.0
+minTemFahrenheit: -103.0
+maxTemp: -14.0
+maxTempFahrenheit: 6.8
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-18T102900Z"
+sunset: "2016-05-18T222200Z"
+
+419 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+420 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+430 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-17"
+sol: 1343
+ls: 153.0
+minTemp: -74.0
+minTemFahrenheit: -101.2
+maxTemp: -8.0
+maxTempFahrenheit: 17.6
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-17T102900Z"
+sunset: "2016-05-17T222200Z"
+
+431 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+431 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+432 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-15"
+sol: 1342
+ls: 152.0
+minTemp: -80.0
+minTemFahrenheit: -112.0
+maxTemp: -7.0
+maxTempFahrenheit: 19.4
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-15T102900Z"
+sunset: "2016-05-15T222200Z"
+
+433 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_speed information not present
+java.lang.NumberFormatException: For input string: "null"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:66)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+433 [main] INFO space.exploration.mars.rover.utils.WeatherUtil  - wind_direction information not present
+java.lang.NumberFormatException: For input string: "--"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at space.exploration.mars.rover.utils.WeatherUtil.getweatherPayload(WeatherUtil.java:72)
+	at space.exploration.mars.rover.utils.WeatherUtil.getWeatherPayload(WeatherUtil.java:118)
+	at space.exploration.mars.rover.utils.WeatherUtil.getSeasonalWeatherPayload(WeatherUtil.java:125)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:58)
+434 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - Debug Message terrestrialDate: "2016-05-13"
+sol: 1340
+ls: 151.0
+minTemp: -76.0
+minTemFahrenheit: -104.8
+maxTemp: -15.0
+maxTempFahrenheit: 5.0
+pressureDescription: "Lower"
+absoluteHumidity: "null"
+atmosphericOpacity: "Sunny"
+season: "Month6"
+sunrise: "2016-05-13T103000Z"
+sunset: "2016-05-13T222200Z"
+
+450 [main] DEBUG space.exploration.mars.rover.utils.WeatherUtil  - weatherReports {
+  terrestrialDate: "2016-05-29"
+  sol: 1355
+  ls: 159.0
+  minTemp: -75.0
+  minTemFahrenheit: -103.0
+  maxTemp: -11.0
+  maxTempFahrenheit: 12.2
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-29T102600Z"
+  sunset: "2016-05-29T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-28"
+  sol: 1354
+  ls: 159.0
+  minTemp: -75.0
+  minTemFahrenheit: -103.0
+  maxTemp: -5.0
+  maxTempFahrenheit: 23.0
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-28T102700Z"
+  sunset: "2016-05-28T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-25"
+  sol: 1351
+  ls: 157.0
+  minTemp: -72.0
+  minTemFahrenheit: -97.6
+  maxTemp: -12.0
+  maxTempFahrenheit: 10.4
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-25T102700Z"
+  sunset: "2016-05-25T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-24"
+  sol: 1350
+  ls: 157.0
+  minTemp: -73.0
+  minTemFahrenheit: -99.4
+  maxTemp: -9.0
+  maxTempFahrenheit: 15.8
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-24T102700Z"
+  sunset: "2016-05-24T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-23"
+  sol: 1349
+  ls: 156.0
+  minTemp: -73.0
+  minTemFahrenheit: -99.4
+  maxTemp: -9.0
+  maxTempFahrenheit: 15.8
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-23T102800Z"
+  sunset: "2016-05-23T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-22"
+  sol: 1348
+  ls: 156.0
+  minTemp: -76.0
+  minTemFahrenheit: -104.8
+  maxTemp: -22.0
+  maxTempFahrenheit: -7.6
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-22T102800Z"
+  sunset: "2016-05-22T222100Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-18"
+  sol: 1344
+  ls: 153.0
+  minTemp: -75.0
+  minTemFahrenheit: -103.0
+  maxTemp: -14.0
+  maxTempFahrenheit: 6.8
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-18T102900Z"
+  sunset: "2016-05-18T222200Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-17"
+  sol: 1343
+  ls: 153.0
+  minTemp: -74.0
+  minTemFahrenheit: -101.2
+  maxTemp: -8.0
+  maxTempFahrenheit: 17.6
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-17T102900Z"
+  sunset: "2016-05-17T222200Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-15"
+  sol: 1342
+  ls: 152.0
+  minTemp: -80.0
+  minTemFahrenheit: -112.0
+  maxTemp: -7.0
+  maxTempFahrenheit: 19.4
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-15T102900Z"
+  sunset: "2016-05-15T222200Z"
+}
+weatherReports {
+  terrestrialDate: "2016-05-13"
+  sol: 1340
+  ls: 151.0
+  minTemp: -76.0
+  minTemFahrenheit: -104.8
+  maxTemp: -15.0
+  maxTempFahrenheit: 5.0
+  pressureDescription: "Lower"
+  absoluteHumidity: "null"
+  atmosphericOpacity: "Sunny"
+  season: "Month6"
+  sunrise: "2016-05-13T103000Z"
+  sunset: "2016-05-13T222200Z"
+}
+
+661 [main] ERROR nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest  - IOException when creating weatherDataFile.
+java.io.IOException: Type mismatch in line 1, column 1: got "1355,-75.0", but expected Double value.
+	at de.erichseifert.gral.io.data.CSVReader.read(SourceFile:223)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.readData(MonthlyWeatherTest.java:89)
+	at nasa.gov.mission.control.weatherAnalysis.MonthlyWeatherTest.main(MonthlyWeatherTest.java:66)

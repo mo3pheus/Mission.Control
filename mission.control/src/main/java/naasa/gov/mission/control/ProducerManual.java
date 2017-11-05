@@ -1,7 +1,5 @@
 package naasa.gov.mission.control;
 
-import space.exploration.mars.rover.service.WeatherQueryOuterClass;
-
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;

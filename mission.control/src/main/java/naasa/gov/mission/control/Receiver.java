@@ -4,20 +4,20 @@
 package naasa.gov.mission.control;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import communications.protocol.ModuleDirectory;
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
-import space.exploration.mars.rover.communication.RoverStatusOuterClass;
-import space.exploration.mars.rover.diagnostics.HeartBeatOuterClass;
-import space.exploration.mars.rover.kernel.ModuleDirectory.Module;
-import space.exploration.mars.rover.propulsion.TelemetryPacketOuterClass;
-import space.exploration.mars.rover.radar.RadarContactListOuterClass;
-import space.exploration.mars.rover.service.CameraPayload;
-import space.exploration.mars.rover.service.SeasonalWeather;
-import space.exploration.mars.rover.spectrometer.SpectrometerScanOuterClass.SpectrometerScan;
+import space.exploration.communications.protocol.communication.RoverStatusOuterClass;
+import space.exploration.communications.protocol.diagnostics.HeartBeatOuterClass;
+import space.exploration.communications.protocol.propulsion.TelemetryPacketOuterClass;
+import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
+import space.exploration.communications.protocol.service.CameraPayload;
+import space.exploration.communications.protocol.service.SeasonalWeather;
+import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -95,11 +95,11 @@ public class Receiver extends Thread {
                         .parseFrom(it.next().message()));
                 scetTime = received.getSCET();
 
-                if (received.getModuleReporting() == Module.SCIENCE.getValue()) {
-                    SpectrometerScan scan = SpectrometerScan.parseFrom(received.getModuleMessage());
+                if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
+                    SpectrometerScanOuterClass.SpectrometerScan scan = SpectrometerScanOuterClass.SpectrometerScan.parseFrom(received.getModuleMessage());
                     printMessage(received.toString());
                     printMessage(scan.toString());
-                } else if (received.getModuleReporting() == Module.CAMERA_SENSOR.getValue()) {
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.CAMERA_SENSOR.getValue()) {
 
                     CameraPayload.CamPayload camPayload = CameraPayload.CamPayload.parseFrom(received.getModuleMessage());
                     //System.out.println(received.toString());
@@ -128,23 +128,23 @@ public class Receiver extends Thread {
                             }
                         }
                     }
-                } else if (received.getModuleReporting() == Module.DIAGNOSTICS.getValue()) {
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.DIAGNOSTICS.getValue()) {
                     printMessage(received.toString());
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
                                                                                                               .getModuleMessage().toByteArray());
                     scetTime = heartBeat.getSCET();
                     printMessage(heartBeat.toString());
-                } else if (received.getModuleReporting() == Module.RADAR.getValue()) {
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.RADAR.getValue()) {
                     printMessage(received.toString());
                     RadarContactListOuterClass.RadarContactList list = RadarContactListOuterClass.RadarContactList
                             .parseFrom(received
                                                .getModuleMessage().toByteArray());
                     printMessage(list.toString());
-                } else if (received.getModuleReporting() == Module.PROPULSION.getValue()) {
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.PROPULSION.getValue()) {
                     TelemetryPacketOuterClass.TelemetryPacket telemetryPacket = TelemetryPacketOuterClass
                             .TelemetryPacket.parseFrom(received.getModuleMessage());
                     printMessage(telemetryPacket.toString());
-                } else if (received.getModuleReporting() == Module.WEATHER_SENSOR.getValue()) {
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.WEATHER_SENSOR.getValue()) {
                     SeasonalWeather.SeasonalWeatherPayload seasonalWeatherPayload = SeasonalWeather
                             .SeasonalWeatherPayload.parseFrom(received.getModuleMessage());
                     printMessage(seasonalWeatherPayload.toString());
