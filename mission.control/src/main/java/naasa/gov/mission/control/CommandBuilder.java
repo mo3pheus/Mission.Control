@@ -26,7 +26,8 @@ public class CommandBuilder {
     }
 
     public static byte[] buildWeatherCommand() {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
@@ -47,7 +48,8 @@ public class CommandBuilder {
     }
 
     public static byte[] buildSeasonalWeatherCommand() {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
@@ -60,6 +62,22 @@ public class CommandBuilder {
         return iBuilder.build().toByteArray();
     }
 
+    public static byte[] buildSclkInfoCommand() {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+        tBuilder.setAction("GetSclkInformation");
+        tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
+        /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
+        tBuilder.setEstimatedPowerUsage(0);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
     @Deprecated
     public static byte[] buildMoveCommand() {
         InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
@@ -67,12 +85,14 @@ public class CommandBuilder {
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass.InstructionPayload.TargetPackage.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction("Move");
         tBuilder.setRoverModule(ModuleDirectory.Module.PROPULSION.getValue());
         tBuilder.setEstimatedPowerUsage(40);
 
-        RobotPositionsOuterClass.RobotPositions.Point targetPosition = RobotPositionsOuterClass.RobotPositions.Point.newBuilder().setX(0).setY(50).build();
+        RobotPositionsOuterClass.RobotPositions.Point targetPosition = RobotPositionsOuterClass.RobotPositions.Point
+                .newBuilder().setX(0).setY(50).build();
 
         /*tBuilder.setAuxiliaryData(RobotPositions.newBuilder().addPositions(targetPosition).build()
                                           .toByteString());*/
@@ -83,18 +103,22 @@ public class CommandBuilder {
     }
 
     public static byte[] buildMoveCommand(int x, int y) {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass.InstructionPayload.TargetPackage.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction("Move");
         tBuilder.setRoverModule(ModuleDirectory.Module.PROPULSION.getValue());
         tBuilder.setEstimatedPowerUsage(40);
 
-        RobotPositionsOuterClass.RobotPositions.Point targetPosition = RobotPositionsOuterClass.RobotPositions.Point.newBuilder().setX(x).setY(y).build();
+        RobotPositionsOuterClass.RobotPositions.Point targetPosition = RobotPositionsOuterClass.RobotPositions.Point
+                .newBuilder().setX(x).setY(y).build();
 
-        tBuilder.setAuxiliaryData(RobotPositionsOuterClass.RobotPositions.newBuilder().addPositions(targetPosition).build()
+        tBuilder.setAuxiliaryData(RobotPositionsOuterClass.RobotPositions.newBuilder().addPositions(targetPosition)
+                                          .build()
                                           .toByteString());
 
         iBuilder.addTargets(tBuilder.build());
@@ -102,7 +126,8 @@ public class CommandBuilder {
     }
 
     public static byte[] buildScienceMission() {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
@@ -117,11 +142,13 @@ public class CommandBuilder {
     }
 
     public static byte[] buildCameraCommand() {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass.InstructionPayload.TargetPackage.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction("ClickCamera");
         tBuilder.setRoverSubModule(getCamId());
         tBuilder.setRoverModule(ModuleDirectory.Module.CAMERA_SENSOR.getValue());
@@ -132,11 +159,13 @@ public class CommandBuilder {
     }
 
     public static byte[] buildCameraCommand(String camId) {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass.InstructionPayload.TargetPackage.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction("ClickCamera");
         tBuilder.setRoverSubModule(camId);
         tBuilder.setRoverModule(ModuleDirectory.Module.CAMERA_SENSOR.getValue());
@@ -147,11 +176,13 @@ public class CommandBuilder {
     }
 
     public static byte[] buildRadarCommand() {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass.InstructionPayload.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass.InstructionPayload.TargetPackage.newBuilder();
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction("PerformRadarScan");
         tBuilder.setRoverModule(ModuleDirectory.Module.RADAR.getValue());
         tBuilder.setEstimatedPowerUsage(20);

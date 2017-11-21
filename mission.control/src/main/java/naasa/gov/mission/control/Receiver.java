@@ -11,12 +11,16 @@ import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
+import nasa.gov.mission.control.weatherAnalysis.WeatherDataArchive;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import space.exploration.communications.protocol.communication.RoverStatusOuterClass;
 import space.exploration.communications.protocol.diagnostics.HeartBeatOuterClass;
 import space.exploration.communications.protocol.propulsion.TelemetryPacketOuterClass;
 import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
 import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.SeasonalWeather;
+import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
 
 import javax.imageio.ImageIO;
@@ -38,8 +42,9 @@ public class Receiver extends Thread {
     final static   String SEPARATOR       =
             "============================================================================";
     final static   String clientId        = "Curiosity";
-    final static   String TOPIC           = "curiosity_to_earth_3";
+    final static   String TOPIC           = "curiosity_to_earth_4";
     private static String dataArchivePath = null;
+    private        Logger logger          = LoggerFactory.getLogger(Receiver.class);
 
     ConsumerConnector consumerConnector = null;
 
@@ -95,8 +100,11 @@ public class Receiver extends Thread {
                         .parseFrom(it.next().message()));
                 scetTime = received.getSCET();
 
+                logger.info("Message received from " + received.getModuleName());
+
                 if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
-                    SpectrometerScanOuterClass.SpectrometerScan scan = SpectrometerScanOuterClass.SpectrometerScan.parseFrom(received.getModuleMessage());
+                    SpectrometerScanOuterClass.SpectrometerScan scan = SpectrometerScanOuterClass.SpectrometerScan
+                            .parseFrom(received.getModuleMessage());
                     printMessage(received.toString());
                     printMessage(scan.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.CAMERA_SENSOR.getValue()) {
@@ -148,6 +156,12 @@ public class Receiver extends Thread {
                     SeasonalWeather.SeasonalWeatherPayload seasonalWeatherPayload = SeasonalWeather
                             .SeasonalWeatherPayload.parseFrom(received.getModuleMessage());
                     printMessage(seasonalWeatherPayload.toString());
+                    //printMessage(received.toString());
+                    WeatherDataArchive weatherDataArchive = new WeatherDataArchive(seasonalWeatherPayload.toString());
+                    weatherDataArchive.archiveWeatherData();
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue()) {
+                    SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());
+                    printMessage(sclkPacket.toString());
                     printMessage(received.toString());
                 } else {
                     printMessage(received.toString());
@@ -157,6 +171,8 @@ public class Receiver extends Thread {
                 System.out.println("OWLT = " + (System.currentTimeMillis() - scetTime));
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
+            } catch (IOException io) {
+                io.printStackTrace();
             }
             messageCount++;
         }

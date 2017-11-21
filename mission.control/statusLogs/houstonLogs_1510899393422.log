@@ -1,0 +1,647 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+31 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+31 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+31 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to nasa.gov.mission.newControl-portable
+31 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+32 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+32 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to zion-mainframe:2181
+70 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Connecting to zookeeper instance at zion-mainframe:2181
+74 [ZkClient-EventThread-14-zion-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_151
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-0.0.1-SNAPSHOT-shaded.jar
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-38-generic
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+78 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+78 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control/mission.control
+78 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=zion-mainframe:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@517cd4b
+89 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+92 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+134 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to zion-mainframe/127.0.1.1:2181, initiating session
+138 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server zion-mainframe/127.0.1.1:2181, sessionid = 0x15fc78250aa0004, negotiated timeout = 6000
+139 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+147 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], starting auto committer every 60000 ms
+163 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], begin registering consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 in ZK
+179 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/nasa.gov.mission.newControl-portable/ids/nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 (is it secure? false)
+187 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+187 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], end registering consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 in ZK
+190 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], starting watcher executor thread for consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7
+202 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], begin rebalancing consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 try #0
+273 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Stopping leader finder thread
+273 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Stopping all fetchers
+273 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] All connections stopped
+274 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Cleared all relevant queues for this fetcher
+274 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Cleared the data chunks in all the consumer message iterators
+275 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Committing all offsets after clearing the fetcher queues
+275 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Releasing partition ownership
+296 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_4 with consumers: List(nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0)
+297 [Thread-0] INFO kafka.consumer.RangeAssignor  - nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0 attempting to claim partition 0
+312 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0 successfully owned partition 0 for topic curiosity_to_earth_4
+323 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], Consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 selected partitions : curiosity_to_earth_4:0: fetched offset = 1605: consumed offset = 1605
+324 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Starting 
+324 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7], end rebalancing consumer nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7 try #0
+336 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+336 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+336 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+336 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+347 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_4)
+351 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+362 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+375 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Starting 
+379 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_4,0], initOffset 1605 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+5771429 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+6584616 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+14374461 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+15107196 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+17260125 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+18135530 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29825924 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Unable to read additional data from server sessionid 0x15fc78250aa0004, likely server has closed socket, closing socket connection and attempting reconnect
+29826025 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (Disconnected)
+29827750 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+29827752 [main-SendThread(zion-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x15fc78250aa0004 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+29829530 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+29829531 [main-SendThread(zion-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x15fc78250aa0004 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+29831395 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+29831396 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to zion-mainframe/127.0.1.1:2181, initiating session
+29831401 [main-SendThread(zion-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server zion-mainframe/127.0.1.1:2181, sessionid = 0x15fc78250aa0004, negotiated timeout = 6000
+29831401 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+29842409 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29842411 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] WARN kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Error in fetch kafka.consumer.ConsumerFetcherThread$FetchRequest@3bfd904e. Possible cause: java.nio.channels.ClosedChannelException
+29842631 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29842631 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29842632 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29842632 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29842632 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 1 for 1 topic(s) Set(curiosity_to_earth_4)
+29842633 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29842633 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29842634 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 1 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29842635 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29842636 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29842637 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29842638 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Shutting down
+29842639 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Stopped 
+29842639 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Shutdown completed
+29842843 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 2 for 1 topic(s) Set(curiosity_to_earth_4)
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 2 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29842844 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29843055 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29843056 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29843056 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29843056 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29843057 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 3 for 1 topic(s) Set(curiosity_to_earth_4)
+29843057 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29843057 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843058 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 3 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29843058 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843058 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29843059 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29843271 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29843271 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29843272 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29843272 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29843272 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 4 for 1 topic(s) Set(curiosity_to_earth_4)
+29843273 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29843273 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843273 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 4 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29843274 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843276 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29843277 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29843490 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29843490 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29843490 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29843490 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29843491 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 5 for 1 topic(s) Set(curiosity_to_earth_4)
+29843491 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29843491 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843492 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 5 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29843492 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843492 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29843493 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29843703 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29843703 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29843704 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29843704 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29843704 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 6 for 1 topic(s) Set(curiosity_to_earth_4)
+29843705 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29843705 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843705 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 6 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29843706 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843706 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29843706 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29843919 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29843920 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29843920 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29843920 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29843921 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 7 for 1 topic(s) Set(curiosity_to_earth_4)
+29843921 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29843921 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843922 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 7 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29843922 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29843922 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29843923 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29844133 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29844133 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29844133 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29844133 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29844133 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 8 for 1 topic(s) Set(curiosity_to_earth_4)
+29844134 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29844134 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29844134 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 8 for topics [Set(curiosity_to_earth_4)] from broker [BrokerEndPoint(0,zion-mainframe,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29844134 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29844135 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer(BrokerEndPoint(0,zion-mainframe,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 3 more
+29844135 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29844337 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29844338 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29844338 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29844338 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29844338 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29844339 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29844541 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29844542 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29844542 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29844542 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29844542 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29844543 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29844745 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29844745 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29844745 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29844745 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29844745 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29844746 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29844948 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29844949 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29844949 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29844949 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29844949 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29844950 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29845152 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29845152 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29845152 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29845152 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29845153 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29845153 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29845355 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29845356 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29845356 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29845356 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29845356 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29845356 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29845559 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29845559 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29845559 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29845559 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29845560 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29845560 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29845761 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29845962 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29845962 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29845962 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29845962 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29845962 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29845963 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29846163 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29846163 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29846163 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29846163 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29846164 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29846164 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29846365 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29846365 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29846365 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29846365 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29846365 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29846366 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29846567 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29846768 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29846768 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29846768 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to 
+29846768 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29846769 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] WARN kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread], Failed to find leader for Set([curiosity_to_earth_4,0])
+kafka.common.KafkaException: fetching topic metadata for topics [Set(curiosity_to_earth_4)] from broker [ArrayBuffer()] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:94)
+	at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+29846769 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer()
+29846972 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29846972 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29846972 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29846972 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29846972 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 22 for 1 topic(s) Set(curiosity_to_earth_4)
+29846973 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29846978 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29846987 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Starting 
+29846987 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_4,0], initOffset 2187 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+29847027 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0] ERROR kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-0-0], Error for partition [curiosity_to_earth_4,0] to broker 0:kafka.common.NotLeaderForPartitionException
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 23 for 1 topic(s) Set(curiosity_to_earth_4)
+29847191 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+29847193 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+29847193 [nasa.gov.mission.newControl-portable_zion-mainframe-1510899393642-634475a7-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1510899393717] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_4,0], initOffset 2187 to broker BrokerEndPoint(0,zion-mainframe,9092)] )

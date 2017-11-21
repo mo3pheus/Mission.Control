@@ -1,0 +1,59 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+35 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+36 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+36 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to nasa.gov.mission.newControl-portable
+36 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+36 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+36 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to zion-mainframe:2181
+81 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Connecting to zookeeper instance at zion-mainframe:2181
+86 [ZkClient-EventThread-15-zion-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-portable
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_131
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-0.0.1-SNAPSHOT-shaded.jar
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-37-generic
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control/mission.control
+89 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=zion-mainframe:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@517cd4b
+119 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+160 [main-SendThread(2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d/2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181. Will not attempt to authenticate using SASL (unknown error)
+306 [main-SendThread(2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to 2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d/2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181, initiating session
+333 [main-SendThread(2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server 2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d/2600:1700:4880:5fd0:60e9:4e95:a1d0:5a3d:2181, sessionid = 0x15f8e9a6248000b, negotiated timeout = 6000
+336 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+363 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], starting auto committer every 60000 ms
+402 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], begin registering consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 in ZK
+424 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/nasa.gov.mission.newControl-portable/ids/nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 (is it secure? false)
+458 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+459 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], end registering consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 in ZK
+463 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], starting watcher executor thread for consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4
+657 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], begin rebalancing consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 try #0
+1085 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1509933577964] Stopping leader finder thread
+1085 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1509933577964] Stopping all fetchers
+1087 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1509933577964] All connections stopped
+1088 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Cleared all relevant queues for this fetcher
+1090 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Cleared the data chunks in all the consumer message iterators
+1091 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Committing all offsets after clearing the fetcher queues
+1093 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Releasing partition ownership
+1339 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_3 with consumers: List(nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-0)
+1340 [Thread-0] INFO kafka.consumer.RangeAssignor  - nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-0 attempting to claim partition 0
+1860 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-0 successfully owned partition 0 for topic curiosity_to_earth_3
+1887 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], Consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 selected partitions : curiosity_to_earth_3:0: fetched offset = -1: consumed offset = -1
+1888 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread], Starting 
+1889 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4], end rebalancing consumer nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4 try #0
+1917 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+1917 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to nasa.gov.mission.newControl-portable
+1917 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+1917 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+1926 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_3)
+1936 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+2301 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+2325 [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-0-0], Starting 
+2361 [nasa.gov.mission.newControl-portable_zion-portable-1509933577688-591abfc4-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1509933577964] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_3,0], initOffset -1 to broker BrokerEndPoint(0,zion-mainframe,9092)] )

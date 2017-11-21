@@ -15,7 +15,7 @@ public class Producer {
         Transmitter transmitter = new Transmitter(kafkaProperties);
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 5) {
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 15) {
             int choice = ThreadLocalRandom.current().nextInt(0, 6);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
@@ -47,13 +47,17 @@ public class Producer {
                 }
                 break;
                 case 6: {
+                    transmitter.transmitMessage(CommandBuilder.buildSclkInfoCommand());
+                }
+                break;
+                case 7: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;
                 default: {
                 }
             }
-            Thread.sleep(4 * 30000);
+            Thread.sleep(1 * 30000);
             //Thread.sleep(45);
         }
     }

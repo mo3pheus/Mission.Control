@@ -1,0 +1,72 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+33 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+33 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+33 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to nasa.gov.mission.newControl-portable
+33 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+33 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+34 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to 104.1.101.182:2181
+73 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [nasa.gov.mission.newControl-portable_zion-portable-1509933951928-54d2fd13], Connecting to zookeeper instance at 104.1.101.182:2181
+78 [ZkClient-EventThread-15-104.1.101.182:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-portable
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_131
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-0.0.1-SNAPSHOT-shaded.jar
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-37-generic
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+81 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control/mission.control
+82 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=104.1.101.182:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@517cd4b
+90 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+92 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+136 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+1241 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+1247 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2349 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+2355 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+3457 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+3463 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+4565 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+4571 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+5673 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+5679 [main-SendThread(104.1.101.182:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+6091 [ZkClient-EventThread-15-104.1.101.182:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Terminate ZkClient event thread.
+6781 [main-SendThread(104.1.101.182:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server 104.1.101.182/104.1.101.182:2181. Will not attempt to authenticate using SASL (unknown error)
+6892 [main] INFO org.apache.zookeeper.ZooKeeper  - Session: 0x0 closed
+6892 [main-EventThread] INFO org.apache.zookeeper.ClientCnxn  - EventThread shut down
