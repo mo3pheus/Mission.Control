@@ -39,15 +39,17 @@ import java.util.Properties;
  * @author sanketkorgaonkar
  */
 public class Receiver extends Thread {
-    final static   String SEPARATOR       =
+    final static   String SEPARATOR              =
             "============================================================================";
-    final static   String clientId        = "Curiosity";
-    final static   String TOPIC           = "curiosity_to_earth_4";
-    private static String dataArchivePath = null;
-    private        Logger logger          = LoggerFactory.getLogger(Receiver.class);
+    final static   String clientId               = "Curiosity";
+    final static   String TUNED_CHANNEL_PROPERTY = "source.topic";
+    private static String dataArchivePath        = null;
+    private        String tunedChannel           = "";
+    private        Logger logger                 = LoggerFactory.getLogger(Receiver.class);
 
     ConsumerConnector consumerConnector = null;
 
+    @Deprecated
     public Receiver() throws Exception {
         Properties properties = new Properties();
         properties.put("zookeeper.connect", "localhost:2181");
@@ -64,6 +66,7 @@ public class Receiver extends Thread {
 
     public Receiver(Properties comsConfig, String dataArchivePath) {
         ConsumerConfig consumerConfig = new ConsumerConfig(comsConfig);
+        tunedChannel = comsConfig.getProperty(TUNED_CHANNEL_PROPERTY);
         consumerConnector = Consumer.createJavaConsumerConnector(consumerConfig);
         Receiver.dataArchivePath = dataArchivePath;
     }
@@ -81,12 +84,12 @@ public class Receiver extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Listening to Mars on topic : " + TOPIC);
+        System.out.println("Listening to Mars on topic : " + tunedChannel);
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
-        topicCountMap.put(TOPIC, new Integer(1));
+        topicCountMap.put(tunedChannel, new Integer(1));
         Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumerConnector
                 .createMessageStreams(topicCountMap);
-        KafkaStream<byte[], byte[]>      stream       = consumerMap.get(TOPIC).get(0);
+        KafkaStream<byte[], byte[]>      stream       = consumerMap.get(tunedChannel).get(0);
         ConsumerIterator<byte[], byte[]> it           = stream.iterator();
         int                              messageCount = 0;
         long                             scetTime     = 0l;
