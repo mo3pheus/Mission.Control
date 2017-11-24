@@ -1,5 +1,6 @@
 package naasa.gov.mission.control;
 
+import communications.protocol.KafkaConfig;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.PatternLayout;
@@ -31,14 +32,8 @@ public class Driver {
     }
 
     public static void main(String[] args) throws Exception {
-        configureLogging(Boolean.parseBoolean(args[2]));
-        FileInputStream fis = new FileInputStream(new File(args[0]));
-        if (fis != null) {
-            Properties kafkaProperties = new Properties();
-            kafkaProperties.load(fis);
-
-            Receiver receiver = new Receiver(kafkaProperties, args[1]);
-            receiver.start();
-        }
+        configureLogging(Boolean.parseBoolean(args[1]));
+        Receiver receiver = new Receiver(KafkaConfig.getKafkaConfig("Mission.Control"), args[0]);
+        receiver.start();
     }
 }
