@@ -1,0 +1,85 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+31 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+31 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+31 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+31 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1511589924540
+31 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+32 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+32 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+32 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+32 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+69 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Connecting to zookeeper instance at localhost:2181
+73 [ZkClient-EventThread-14-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_151
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-1.1.1-shaded.jar
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=$LD_LIBRARY_PATH:"/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so":/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-40-generic
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+76 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control/mission.control
+77 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@32cf48b7
+85 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+87 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+128 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+132 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15ff1c557500001, negotiated timeout = 6000
+133 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+141 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], starting auto committer every 60000 ms
+158 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], begin registering consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 in ZK
+173 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1511589924540/ids/space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 (is it secure? false)
+181 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+181 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], end registering consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 in ZK
+184 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8
+196 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], begin rebalancing consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 try #0
+265 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] Stopping leader finder thread
+265 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] Stopping all fetchers
+266 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] All connections stopped
+266 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Cleared all relevant queues for this fetcher
+266 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Cleared the data chunks in all the consumer message iterators
+267 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Committing all offsets after clearing the fetcher queues
+267 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Releasing partition ownership
+286 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 rebalancing the following partitions: ArrayBuffer() for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0)
+287 [Thread-0] WARN kafka.consumer.RangeAssignor  - No broker partitions consumed by consumer thread space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0 for topic curiosity_to_earth_5
+295 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 selected partitions : 
+296 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread], Starting 
+296 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], end rebalancing consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 try #0
+212550 [ZkClient-EventThread-14-localhost:2181] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Topic info for path /brokers/topics/curiosity_to_earth_5 changed to {"version":1,"partitions":{"0":[0]}}, triggering rebalance
+212551 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], begin rebalancing consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 try #0
+212579 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] Stopping leader finder thread
+212579 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread], Shutting down
+212580 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread], Stopped 
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread], Shutdown completed
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] Stopping all fetchers
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] All connections stopped
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Cleared all relevant queues for this fetcher
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Cleared the data chunks in all the consumer message iterators
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Committing all offsets after clearing the fetcher queues
+212585 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Releasing partition ownership
+212618 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0)
+212619 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0 attempting to claim partition 0
+212659 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0 successfully owned partition 0 for topic curiosity_to_earth_5
+212670 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], Consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 selected partitions : curiosity_to_earth_5:0: fetched offset = -1: consumed offset = -1
+212682 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread], Starting 
+212682 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8], end rebalancing consumer space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8 try #0
+212746 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+212747 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1511589924540
+212747 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+212747 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+212777 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_5)
+212783 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+212799 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+212854 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-0-0], Starting 
+212879 [space.exploration.mars.rover.curiosity.1511589924540_zion-mainframe-1511589924749-5cd2d0e8-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511589924819] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_5,0], initOffset -1 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+311170 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+373495 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+790464 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+849551 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1274000 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1331671 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 

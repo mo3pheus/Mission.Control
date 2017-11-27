@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Producer {
 
     public static void main(String[] args) throws Exception {
-
+        Driver.configureLogging(false);
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
         long        stTime      = System.currentTimeMillis();
 

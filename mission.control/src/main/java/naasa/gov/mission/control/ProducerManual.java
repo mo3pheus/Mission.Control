@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ProducerManual {
     public static void main(String[] args) throws Exception {
+        Driver.configureLogging(true);
         InputStream fis             = Producer.class.getResourceAsStream("/kafka1.properties");
         Properties  kafkaProperties = new Properties();
         kafkaProperties.load(fis);
