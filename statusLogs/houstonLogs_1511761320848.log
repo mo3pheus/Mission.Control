@@ -1,0 +1,705 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+37 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+37 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+38 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+38 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1511761320873
+38 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+38 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+38 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+38 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+38 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+95 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Connecting to zookeeper instance at localhost:2181
+100 [ZkClient-EventThread-14-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_151
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-1.1.1-shaded.jar
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=$LD_LIBRARY_PATH:"/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so":/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-40-generic
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+104 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+105 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@32cf48b7
+118 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+120 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+173 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+178 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15ffac802570001, negotiated timeout = 6000
+179 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+188 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], starting auto committer every 60000 ms
+215 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], begin registering consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d in ZK
+234 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1511761320873/ids/space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d (is it secure? false)
+245 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+246 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], end registering consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d in ZK
+251 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d
+264 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], begin rebalancing consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d try #0
+358 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Stopping leader finder thread
+358 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Stopping all fetchers
+359 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] All connections stopped
+359 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Cleared all relevant queues for this fetcher
+360 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Cleared the data chunks in all the consumer message iterators
+360 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Committing all offsets after clearing the fetcher queues
+361 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Releasing partition ownership
+386 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d rebalancing the following partitions: ArrayBuffer() for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0)
+387 [Thread-0] WARN kafka.consumer.RangeAssignor  - No broker partitions consumed by consumer thread space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0 for topic curiosity_to_earth_5
+396 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d selected partitions : 
+397 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread], Starting 
+397 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], end rebalancing consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d try #0
+65167 [ZkClient-EventThread-14-localhost:2181] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Topic info for path /brokers/topics/curiosity_to_earth_5 changed to {"version":1,"partitions":{"0":[0]}}, triggering rebalance
+65168 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], begin rebalancing consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d try #0
+65204 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Stopping leader finder thread
+65204 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread], Shutting down
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread], Stopped 
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread], Shutdown completed
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Stopping all fetchers
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] All connections stopped
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Cleared all relevant queues for this fetcher
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Cleared the data chunks in all the consumer message iterators
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Committing all offsets after clearing the fetcher queues
+65205 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Releasing partition ownership
+65270 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0)
+65275 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0 attempting to claim partition 0
+65323 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0 successfully owned partition 0 for topic curiosity_to_earth_5
+65329 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], Consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d selected partitions : curiosity_to_earth_5:0: fetched offset = -1: consumed offset = -1
+65331 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d], end rebalancing consumer space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d try #0
+65331 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread], Starting 
+65355 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+65355 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1511761320873
+65355 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+65355 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+65370 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_5)
+65376 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+65396 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+65455 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Added fetcher for partitions ArrayBuffer()
+65660 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+65660 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1511761320873
+65660 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+65660 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+65660 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 1 for 1 topic(s) Set(curiosity_to_earth_5)
+65661 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+65666 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+65677 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-0-0], Starting 
+65691 [space.exploration.mars.rover.curiosity.1511761320873_zion-mainframe-1511761321164-2a09502d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1511761321255] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_5,0], initOffset -1 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+91117 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+116005 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+181931 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+232248 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+291626 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+311002 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+328107 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+358068 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+408382 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+458825 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+486788 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+536256 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+555031 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+632008 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+662231 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+732339 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+750280 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+828147 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+859129 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+930461 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+943973 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+972323 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+999348 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1022525 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1061382 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1111668 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1126662 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1134668 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1171751 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1222037 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1237030 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1244698 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1264788 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1342774 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1360703 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1390174 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1421881 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1440098 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1490256 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1515577 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1548428 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1564479 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1662368 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1711966 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1752192 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1785713 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1835993 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1871496 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1926717 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2033987 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2063088 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2095640 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2136612 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2195928 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2218076 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2268339 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2283735 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2334003 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2349398 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2352037 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2400238 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2418739 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2522234 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2547241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2597514 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2647776 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2667546 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2763232 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2766216 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3006452 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3056721 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3179693 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3240953 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3254342 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3257331 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3307601 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3322997 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3325987 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3341385 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3391675 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3407071 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3409818 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3409818 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3419953 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3464811 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3522002 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3626280 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3676553 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3726825 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3894376 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3907403 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3920432 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3923423 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3965112 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3989489 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4049511 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4064900 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4124925 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4140312 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4186039 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4201426 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4215197 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4238509 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4283608 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4296967 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4324771 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4346237 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4422120 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4438015 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4479697 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4504107 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4611724 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4655622 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4722609 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4758518 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4811676 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4909987 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4939726 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4985835 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5089025 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5133606 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5161213 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5183188 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5221243 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5261627 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5297193 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5341234 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5387417 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5402809 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5417867 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5469622 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5515807 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5533585 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5546737 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5562416 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5612474 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5658657 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5676608 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5706507 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5744266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5766360 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5889199 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5924394 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5964424 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6025857 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6072039 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6122337 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6149833 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6182934 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6263059 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6302209 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6357904 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6508507 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6554551 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6568325 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6608519 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6718510 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6764652 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6780037 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6830319 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6845706 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6895983 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6911368 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6926751 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6939946 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6955326 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6973761 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7067073 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7139559 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7172596 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7256232 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7312356 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7420206 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7420206 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7480615 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7601253 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7622991 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7673260 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7686830 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7702107 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7746622 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7761898 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7806412 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7821689 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7836965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7839955 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7900202 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7915144 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7946688 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7996960 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8012236 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8062499 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8077776 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8137807 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8153081 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8184654 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8221605 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8254840 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8302722 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8420307 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8470573 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8482588 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8543068 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8687970 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8808018 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8906435 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8906435 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8951791 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8997148 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9012528 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9025840 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9041221 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9091486 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9106867 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9122249 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9172513 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9187898 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9233257 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9248637 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9251625 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9267006 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9267006 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9282387 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9332649 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9371619 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9407790 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9441721 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9498283 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9543644 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9663691 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9677007 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9731840 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9804798 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9843012 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9911668 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10088440 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10091414 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10151461 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10164578 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10179838 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10195102 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10210360 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10262967 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10358338 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10358339 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10401250 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10448585 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10493342 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10551188 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10611213 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10661482 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10674858 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10715829 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10749046 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10780841 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10817326 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10867592 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10867593 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10917863 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10961917 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11080530 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11110025 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11184794 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11419037 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11469309 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11482244 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11485234 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11530995 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11576748 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11627017 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11627017 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11642126 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11658697 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11687902 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11807947 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11823300 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11823300 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11838654 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11854008 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11899762 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11915113 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11918102 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11933454 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11983728 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11999082 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12071307 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12101470 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12161491 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12164481 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12191354 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12251376 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12301663 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12351955 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12351956 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12472000 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12522274 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12525263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12525264 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12825388 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12942503 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12957861 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13008158 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13023513 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13073794 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13089150 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13092140 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13107494 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13110241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13169381 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13247292 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13259942 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13262932 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13313223 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13438559 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13488853 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13502010 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13575182 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13625461 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13640814 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13713602 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13728953 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13754958 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13770310 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13773058 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13776047 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13954034 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13967544 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14017806 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14175963 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14222109 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14256916 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14270091 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14273081 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14286259 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14289248 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14292237 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14292237 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14338545 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14388807 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14404157 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14419507 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14422496 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14447053 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14490182 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14536495 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14582676 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14628985 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14679249 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14688245 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14808296 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14868326 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14871315 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14874319 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14920650 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14970920 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15017247 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15107520 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15173388 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15280939 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15320932 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15388368 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15540371 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15540371 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15540372 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15590644 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15595840 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15618690 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15650872 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15890959 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15936730 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15952097 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15965636 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15981005 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16186603 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16201742 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16216882 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16230498 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16245639 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16289404 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16304546 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16319684 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16319684 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16334824 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16349965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16400230 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16415374 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16418952 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16434093 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16447708 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16462851 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16506611 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16521752 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16572019 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16587162 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16658494 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16696622 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16736123 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16840876 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16850518 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16877589 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16916732 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16969100 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17015687 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17156189 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17202022 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17265583 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17288561 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17408728 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17460048 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17504535 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17532324 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17599099 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17785005 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17944593 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17947597 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18103385 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18116884 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18119890 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18277643 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18277644 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18323561 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18369479 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18415397 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18430770 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18446144 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18496429 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18511804 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18514567 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18693782 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18711740 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18714746 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18804260 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18817492 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18830724 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18830724 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18919007 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18921998 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18966920 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19032562 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19078446 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19187758 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19205174 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19220580 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19280605 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19296009 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19342207 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19357611 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19370749 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19386153 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19432350 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19447753 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19450760 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19466165 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19531092 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19609635 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19650251 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19675714 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19726009 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19759501 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19821663 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19867846 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19898691 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19976403 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20001330 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20028726 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20079020 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20115916 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20142695 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20218688 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20291298 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20316414 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20341189 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20370697 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20472628 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20515929 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20562098 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20612361 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20658521 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20674150 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20711996 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20768071 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20814226 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20856188 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20867796 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20890145 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20930531 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20949419 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21032114 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21051478 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21125718 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21138747 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21160815 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21235837 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21257090 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21309897 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21355286 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21382435 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21427826 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21443256 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21743376 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21758804 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21761809 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21777236 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21792663 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21795427 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21798432 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21843817 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21859059 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21916212 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21961600 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22011870 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22057261 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22107522 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22130769 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22219554 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22238743 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22306790 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22333285 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22376241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22393356 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22411642 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22463065 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22509149 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22525014 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22617547 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22656636 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22689166 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22756712 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22794321 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22901988 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22983551 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23022498 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23047994 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23098947 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23132638 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23184442 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23199873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23252777 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23285543 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23334925 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23448873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23499150 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23499150 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23500031 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23555826 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23664059 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23670383 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23693284 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23729518 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23789536 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23804969 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23817685 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23861747 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23907899 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23945702 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23991849 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24007285 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24023736 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24038722 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24054159 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24089542 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24117157 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24227753 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24262081 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24318460 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24415127 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24465427 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24465427 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24465428 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24482919 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24566999 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24606702 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24681444 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24717589 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24789091 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24826311 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24872012 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24893024 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24929662 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+24989687 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25005122 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25075883 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25119532 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25204521 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+25216080 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25231487 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25262031 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25619501 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+25688492 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+26103801 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+26172672 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+26586671 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+26652314 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+27070501 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+27119680 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+27542364 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+27611008 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+28023538 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+28084024 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+28506136 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+28563237 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+28982234 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+29052181 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+29466668 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+29519872 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+29950604 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30003154 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30423685 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30480978 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30904368 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30967527 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31379159 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31443088 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31872843 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31923432 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+32348931 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+32406737 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+32832640 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 

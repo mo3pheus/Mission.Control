@@ -13,7 +13,7 @@ public class Producer {
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 15) {
-            int choice = ThreadLocalRandom.current().nextInt(0, 6);
+            int choice = ThreadLocalRandom.current().nextInt(0, 7);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
             switch (choice) {
