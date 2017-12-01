@@ -143,8 +143,10 @@ public class Receiver extends Thread {
                     printMessage(received.toString());
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
                                                                                                               .getModuleMessage().toByteArray());
-                    scetTime = heartBeat.getSCET();
+                    scetTime = received.getSCET();
                     printMessage(heartBeat.toString());
+                    printMessage("OneWayLightTime = " + Double.toString(received.getMslPositionsPacket()
+                                                                                .getOwltMSLEarth()));
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.RADAR.getValue()) {
                     printMessage(received.toString());
                     RadarContactListOuterClass.RadarContactList list = RadarContactListOuterClass.RadarContactList
@@ -169,9 +171,6 @@ public class Receiver extends Thread {
                 } else {
                     printMessage(received.toString());
                 }
-
-                System.out.println("ERT = " + System.currentTimeMillis());
-                System.out.println("OWLT = " + (System.currentTimeMillis() - scetTime));
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
             } catch (IOException io) {
