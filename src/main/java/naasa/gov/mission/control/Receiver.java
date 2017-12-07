@@ -20,6 +20,7 @@ import space.exploration.communications.protocol.propulsion.TelemetryPacketOuter
 import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
 import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.SeasonalWeather;
+import space.exploration.communications.protocol.service.WeatherData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
 
@@ -158,11 +159,12 @@ public class Receiver extends Thread {
                             .TelemetryPacket.parseFrom(received.getModuleMessage());
                     printMessage(telemetryPacket.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.WEATHER_SENSOR.getValue()) {
-                    SeasonalWeather.SeasonalWeatherPayload seasonalWeatherPayload = SeasonalWeather
-                            .SeasonalWeatherPayload.parseFrom(received.getModuleMessage());
-                    printMessage(seasonalWeatherPayload.toString());
+//                    SeasonalWeather.SeasonalWeatherPayload seasonalWeatherPayload = SeasonalWeather
+//                            .SeasonalWeatherPayload.parseFrom(received.getModuleMessage());
+                    WeatherData.WeatherPayload weatherPayload = WeatherData.WeatherPayload.parseFrom(received.getModuleMessage());
+                    printMessage(weatherPayload.toString());
                     //printMessage(received.toString());
-                    WeatherDataArchive weatherDataArchive = new WeatherDataArchive(seasonalWeatherPayload.toString());
+                    WeatherDataArchive weatherDataArchive = new WeatherDataArchive(weatherPayload.toString());
                     weatherDataArchive.archiveWeatherData();
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue()) {
                     SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());

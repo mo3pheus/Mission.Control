@@ -1,0 +1,1144 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+32 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+33 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+33 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+33 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1512108438567
+33 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+33 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+33 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+34 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+34 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+78 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Connecting to zookeeper instance at localhost:2181
+83 [ZkClient-EventThread-14-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_151
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-1.1.1-shaded.jar
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=$LD_LIBRARY_PATH:"/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so":/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+86 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-40-generic
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+87 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@32cf48b7
+100 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+102 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+148 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+152 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x1600d19db310005, negotiated timeout = 6000
+153 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+163 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], starting auto committer every 60000 ms
+185 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], begin registering consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 in ZK
+203 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1512108438567/ids/space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 (is it secure? false)
+213 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+213 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], end registering consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 in ZK
+217 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5
+229 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], begin rebalancing consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 try #0
+314 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1512108438884] Stopping leader finder thread
+314 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1512108438884] Stopping all fetchers
+315 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1512108438884] All connections stopped
+315 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Cleared all relevant queues for this fetcher
+316 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Cleared the data chunks in all the consumer message iterators
+317 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Committing all offsets after clearing the fetcher queues
+317 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Releasing partition ownership
+344 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0)
+345 [Thread-0] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0 attempting to claim partition 0
+372 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0 successfully owned partition 0 for topic curiosity_to_earth_5
+389 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], Consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 selected partitions : curiosity_to_earth_5:0: fetched offset = -1: consumed offset = -1
+393 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5], end rebalancing consumer space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5 try #0
+395 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread], Starting 
+407 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+407 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1512108438567
+407 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+407 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+431 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_5)
+442 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+452 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+486 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0], Starting 
+488 [space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1512108438884] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_5,0], initOffset -1 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+37238 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+92924 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+145667 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+190496 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+217554 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+369825 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+396947 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+399744 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+445411 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+516227 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+543327 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+546107 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+573197 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+743448 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+770617 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+820947 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+866801 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+893884 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+939733 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+942528 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+969634 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1015510 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1042683 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+1054709 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1081854 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1084650 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1098015 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1111376 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1138495 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1188817 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1215943 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1229299 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1256362 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1283502 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1286058 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1299425 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1312789 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1326146 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1328943 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1342300 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1384747 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1403451 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1443531 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1505984 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1530273 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1770580 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1783698 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1796814 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1824249 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1864201 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1891632 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+1903684 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1916518 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1943918 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+1955924 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2063869 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2077250 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2104447 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2117829 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2145040 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2148015 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2175119 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2355236 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2382365 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2385340 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2412522 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2412522 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2439684 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2453065 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2480256 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2482988 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2496371 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2544274 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2589404 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2616563 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2629939 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2680226 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2707391 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2833957 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2861224 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3018523 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3045917 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3045917 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3073343 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3264509 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3276515 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3303798 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3315777 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3343030 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3343030 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3343030 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3355040 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3405311 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3432600 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3444553 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3447541 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3460873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3488182 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3501514 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3528807 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3573813 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3587143 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3614393 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3626397 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3653711 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3656701 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3683974 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3734247 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3761540 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3788858 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3791608 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3794597 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3844880 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3847870 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3907911 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3907912 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3958204 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3961192 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3973103 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+3986437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+3998350 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4001341 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+4013301 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4058311 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4103330 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4153612 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4180862 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4194194 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4207529 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4234861 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4237851 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4265107 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4310116 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4337413 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4364716 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+4376680 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4379428 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4429699 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4432691 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4648035 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4652896 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4657754 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4670949 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+4682905 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4733192 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4783474 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+4796678 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5036790 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5049991 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5095915 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5146189 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+5158119 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5171321 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5231347 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5281642 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5294834 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5322219 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5324965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5472036 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5509577 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5559864 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5562854 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5590270 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+5602256 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5647817 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5675206 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5822015 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5849280 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5849281 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6059370 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+6071296 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6083745 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6111019 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6161287 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6188591 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6201028 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6228296 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6233095 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6235830 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6452677 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6498647 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6559595 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6609873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6669897 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6669897 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6720185 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6747524 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6797810 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6825152 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6837702 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6865013 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6915291 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6942637 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6955185 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6982519 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6995058 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6997792 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7048073 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7264230 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+7276443 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7326715 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+7338929 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7338929 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+7351143 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7401428 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7443112 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7503141 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7516263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7603854 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+7616116 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7616116 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7619108 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7619108 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7646374 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7649123 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+7814755 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8031782 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8031782 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8082046 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8082046 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8127718 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8177989 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8177989 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8228281 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+8240500 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8240501 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+8246538 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8252580 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+8264820 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8270857 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8283815 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8334093 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8361385 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8361385 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8364142 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8370184 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8503852 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8506842 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8557113 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8607383 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8657649 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8671222 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8725513 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8775790 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8821041 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8873952 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8919246 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8969512 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+8972247 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9006111 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9019141 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9046437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9096885 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9142176 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9169493 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9182531 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9185505 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9212803 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9215776 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9242999 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9403303 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9449236 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9476639 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+9488899 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9516323 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9562276 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9589686 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9592677 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9620105 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+9632367 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9682650 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+9694908 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9722275 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+9722276 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9725024 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+9873398 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10003696 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10079007 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10286811 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+10299016 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10343752 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10447906 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10447906 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10621175 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10648592 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10651584 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10694094 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10697086 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10724501 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10738056 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10738056 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+10741047 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10768404 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10828431 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10855861 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+11996315 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12023736 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12026487 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12168936 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12168936 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12219210 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12228666 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12278937 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12320851 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12334496 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12337486 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12340476 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12385673 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12388660 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12433855 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12493892 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12553916 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12553917 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12599122 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12612770 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12640082 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12642842 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12675380 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12678371 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12705653 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12705653 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12705654 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+12755924 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12783222 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12806097 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12852090 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12852090 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12879516 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12882504 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+12894673 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12922050 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12972322 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12999694 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13111805 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13157901 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13185315 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13235604 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13262993 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13276793 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13304192 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13317989 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13345392 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+13357560 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13384959 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13398757 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13426139 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13439939 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13467353 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13481155 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13508561 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13511314 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13571341 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13698847 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13749117 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13749117 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13799383 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13842301 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13845288 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13895577 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13895577 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+14018657 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14075589 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14121787 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14135119 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14148451 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14198725 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14226084 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14272278 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14299633 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14302621 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14330022 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14343355 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14370742 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14373490 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14449677 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14480197 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14493594 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14520964 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14520965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14571240 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14598652 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14648929 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14694860 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14722243 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+14734379 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14784674 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14895425 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14922760 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+14968616 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15123013 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15150252 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15162690 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15189967 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15310038 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15337322 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15340056 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15544241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15547231 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+15559353 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15572278 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15585211 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15631003 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+15643172 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15643173 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15670609 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+15682779 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15728580 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15756021 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15759012 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15762004 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15812316 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15839767 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15890073 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15917500 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+15963304 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16009113 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16069153 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16096541 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16099531 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16126963 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16129953 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16157375 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16160127 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16205929 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16251772 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+16251772 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16302149 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+16314267 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16360054 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16410353 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+16422483 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+16434656 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16484956 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16487946 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16538234 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16588521 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16638813 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16638813 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16689111 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16692100 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16719519 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16722266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16725255 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16760076 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16760076 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16760076 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16773773 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+16785942 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16836226 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16896262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16896263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16941857 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+16944846 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+16956988 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17071473 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17098775 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17112255 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17139566 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17189843 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17217152 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17230633 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17257897 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+17260873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18641507 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18668791 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18713602 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18740880 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+18740882 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18860987 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18905784 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18933066 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+18960358 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19005158 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19007890 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19007890 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19039272 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19052750 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19080034 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19083017 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19110285 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19110285 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19137585 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19182375 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19209665 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19569902 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19620189 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19647482 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19647483 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19674787 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19725064 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19725064 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19752334 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19797130 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19824384 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19874812 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+19874812 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19934844 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+19962117 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20006910 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20009644 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20128969 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20174965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20220956 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20313266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20326587 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+20338786 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+20350972 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20364305 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20367310 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20394714 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20422143 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20472430 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20485765 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20513163 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20516166 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20544396 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20547399 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20550407 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20578675 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20606910 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+20619079 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20647348 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20707372 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20753713 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20781894 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20841923 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+20854075 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20857079 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20884477 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20884477 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20911896 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20914660 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+20917663 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+20917664 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21037746 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21051086 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21051086 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21051086 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21097436 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+21109626 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21169655 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21349787 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21363126 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21409471 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21422805 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21436185 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21439194 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21485545 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21498878 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21545235 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21605268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21651679 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21679102 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21739120 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21766543 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+21778729 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21806146 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21809151 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21836492 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21849827 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21877213 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+21889394 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21916727 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21930061 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21930061 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21957458 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21957458 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+21984868 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+21996996 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22043343 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22043343 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22070782 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22098216 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22100979 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22131720 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22171846 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22195154 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+22207289 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22234736 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22285010 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+22297144 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22324606 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22327615 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22355057 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22368448 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22395883 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22441336 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22444341 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22471727 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22517181 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22544537 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+22556723 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22584079 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22629559 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22656941 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22670336 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22697736 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22743206 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22770596 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22770596 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22773603 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22833620 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22861038 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22911304 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22914067 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+22964355 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23014638 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23017646 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+23020654 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+26960942 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Unable to read additional data from server sessionid 0x1600d19db310005, likely server has closed socket, closing socket connection and attempting reconnect
+26961042 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (Disconnected)
+26962315 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+26962315 [main-SendThread(localhost:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x1600d19db310005 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+26963508 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+26963508 [main-SendThread(localhost:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x1600d19db310005 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+26965341 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+26965341 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+26965343 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x1600d19db310005, negotiated timeout = 6000
+26965343 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+30882849 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+30978093 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31037995 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31080764 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+31098011 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31708157 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31802415 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+31862329 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+34999965 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+35131105 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+35211353 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+35931582 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+35959136 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+35986688 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36014265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36041797 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36175259 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36235272 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36655261 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+36715264 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37135289 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37195285 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37228531 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+37255286 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37315272 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37375264 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37518998 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37555241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+37634216 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+38569569 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+38649758 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+38658895 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+38686461 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+38734366 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+39616880 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+39708393 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+39717533 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+39772268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+39832269 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+40192265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+40252270 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+40672268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+40732264 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+41152269 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+41212268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+41632266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+41692263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+42112267 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+42172263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+42592265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+42652265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+43072265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+43132261 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+43552270 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+43612265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+44032262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+44092262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+44512262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+44572266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+44992263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+45052372 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+45472260 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+45532262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+45952262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+46012263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+46432262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+46492260 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+46912262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+46972262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+47392262 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+47452266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+47872263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+47932259 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+48352268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+48412265 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+48832279 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+48892264 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+48952258 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62200494 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62266013 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62307971 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62335489 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62363024 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62390595 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+62416647 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62485972 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62540036 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62567699 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62570732 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+62598415 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64160753 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64232152 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64294992 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64632050 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64650384 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+64711027 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+64888515 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67233313 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67283688 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67315187 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67375211 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67402715 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67402716 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67447321 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67474826 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67519437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67546988 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67590364 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67590365 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+67602816 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67630386 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67633420 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67678414 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67705918 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+67718297 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67721331 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67748867 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67748867 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67793830 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67821318 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+67821319 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+68541656 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+68541658 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+68569148 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+68572188 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+68585469 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+68612996 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69333370 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69360786 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69363338 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69513973 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69513973 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+69526364 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69571179 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+69583569 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+69596008 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69596008 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69713538 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69741168 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69787255 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69814847 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69817882 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69845464 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69848501 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69848502 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69876129 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69879162 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69879162 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69906699 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69934270 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+69934270 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+69936820 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70047984 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70093406 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70133053 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70278944 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70281977 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+70294437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70294437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70294437 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70307884 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70310436 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70567610 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70570614 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70584713 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70731311 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70777460 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+70789833 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+70802261 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70848415 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70908460 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70908460 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70954638 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70957675 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+70960709 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+70973086 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71000665 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71720982 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71748561 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71751596 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71797750 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+71810130 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71837732 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71850831 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71878417 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71881451 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71909040 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+71921414 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71949002 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71962102 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+71989715 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72035885 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72063496 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72063497 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1512108438567_zion-mainframe-1512108438802-36e7b6a5-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+72066049 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+72078339 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72125710 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72125711 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72128751 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72157184 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72203442 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72203442 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72231935 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72278240 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72306794 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+72319173 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72319173 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72319173 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72346778 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72359902 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72387510 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72433765 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+72461384 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock

@@ -2,9 +2,12 @@ package naasa.gov.mission.control;
 
 
 import communications.protocol.ModuleDirectory;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import space.exploration.communications.protocol.InstructionPayloadOuterClass;
 import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
+import space.exploration.spice.utilities.TimeUtils;
 
 import java.util.Scanner;
 
@@ -31,16 +34,12 @@ public class CommandBuilder {
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        String terrestrialStartDate = "2017-09-01";
-        String terrestrialEndDate   = "2017-09-22";
-
-        WeatherQueryOuterClass.WeatherQuery.Builder wQueryBuilder = WeatherQueryOuterClass.WeatherQuery.newBuilder();
-        wQueryBuilder.setTerrestrialEndDate(terrestrialEndDate).setTerrestrialStartDate(terrestrialStartDate);
+        WeatherQueryOuterClass.WeatherQuery.Builder wQueryBuilder  = WeatherQueryOuterClass.WeatherQuery.newBuilder();
 
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
-        tBuilder.setAction("GetSeasonalWeather");
-        tBuilder.setAuxiliaryData(wQueryBuilder.build().toByteString());
+        tBuilder.setAction("GetWeather");
+        //tBuilder.setAuxiliaryData(null);
         tBuilder.setRoverModule(ModuleDirectory.Module.WEATHER_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
