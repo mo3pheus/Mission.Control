@@ -1,0 +1,42 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+26 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+27 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+27 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1512881966959
+27 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+27 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+65 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], Connecting to zookeeper instance at localhost:2181
+69 [ZkClient-EventThread-14-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_151
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-1.1.1-shaded.jar
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=$LD_LIBRARY_PATH:"/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so":/home/sanket/Documents/workspace/SpiceUtilities/src/main/resources/JNISpice/lib/libJNISpice.so:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.10.0-42-generic
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+73 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@2d127a61
+81 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+83 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+124 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+142 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x1603ebdaa180000, negotiated timeout = 6000
+142 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+149 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], starting auto committer every 60000 ms
+166 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], begin registering consumer space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910 in ZK
+181 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1512881966959/ids/space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910 (is it secure? false)
+195 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+195 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], end registering consumer space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910 in ZK
+198 [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910
+213 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], begin rebalancing consumer space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910 try #0
+264 [Thread-0] WARN kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], no brokers found when trying to rebalance.
+266 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910], end rebalancing consumer space.exploration.mars.rover.curiosity.1512881966959_zion-mainframe-1512881967165-a5642910 try #0
