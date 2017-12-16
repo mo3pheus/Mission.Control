@@ -2,6 +2,7 @@ package naasa.gov.mission.control;
 
 import communications.protocol.KafkaConfig;
 
+import java.sql.Connection;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
@@ -47,7 +48,11 @@ public class Producer {
                     transmitter.transmitMessage(CommandBuilder.buildSclkInfoCommand());
                 }
                 break;
-                case 7: {
+                case 7:{
+                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand());
+                }
+                break;
+                case 8: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;

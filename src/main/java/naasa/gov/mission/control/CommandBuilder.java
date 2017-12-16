@@ -11,6 +11,9 @@ import space.exploration.spice.utilities.TimeUtils;
 
 import java.util.Scanner;
 
+import static communications.protocol.ModuleDirectory.SCLK_COMMAND;
+import static communications.protocol.ModuleDirectory.SCLK_SYNC;
+
 public class CommandBuilder {
 
     public static byte[] buildLidarCommand() {
@@ -69,7 +72,24 @@ public class CommandBuilder {
 
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
-        tBuilder.setAction("GetSclkInformation");
+        tBuilder.setAction(SCLK_COMMAND);
+        tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
+        /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
+        tBuilder.setEstimatedPowerUsage(0);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
+    public static byte[] buildSclkSyncCommand() {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+        tBuilder.setAction(SCLK_SYNC);
+        tBuilder.setUtcTime("2016-05-01~12:00:00");
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
         /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
         tBuilder.setEstimatedPowerUsage(0);
