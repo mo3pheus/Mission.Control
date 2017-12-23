@@ -15,7 +15,7 @@ public class ProducerManual {
         Transmitter transmitter = new Transmitter(kafkaProperties);
 
         int choice = 0;
-        while (choice != 9) {
+        while (choice != 10) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
             System.out.println("2. Send Scientific Message");
@@ -25,7 +25,8 @@ public class ProducerManual {
             System.out.println("6. Send Seasonal Weather Request");
             System.out.println("7. Send SclkInformationCommand");
             System.out.println("8: Send SclkSyncCommand");
-            System.out.println("9. Exit");
+            System.out.println("9. Graceful Shutdown.");
+            System.out.println("10. Exit");
             System.out.println("Please enter your choice");
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -77,6 +78,10 @@ public class ProducerManual {
                 }
                 break;
                 case 9: {
+                    transmitter.transmitMessage(CommandBuilder.buildGracefulShutdownCommand());
+                }
+                break;
+                case 10: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;

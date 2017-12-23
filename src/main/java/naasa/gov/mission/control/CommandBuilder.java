@@ -2,12 +2,9 @@ package naasa.gov.mission.control;
 
 
 import communications.protocol.ModuleDirectory;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import space.exploration.communications.protocol.InstructionPayloadOuterClass;
 import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
-import space.exploration.spice.utilities.TimeUtils;
 
 import java.util.Scanner;
 
@@ -37,7 +34,7 @@ public class CommandBuilder {
         iBuilder.setTimeStamp(System.currentTimeMillis());
         iBuilder.setSOS(false);
 
-        WeatherQueryOuterClass.WeatherQuery.Builder wQueryBuilder  = WeatherQueryOuterClass.WeatherQuery.newBuilder();
+        WeatherQueryOuterClass.WeatherQuery.Builder wQueryBuilder = WeatherQueryOuterClass.WeatherQuery.newBuilder();
 
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
@@ -74,6 +71,7 @@ public class CommandBuilder {
                 .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction(SCLK_COMMAND);
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
+
         /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
@@ -89,9 +87,23 @@ public class CommandBuilder {
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction(SCLK_SYNC);
-        tBuilder.setUtcTime("2016-05-01~12:00:00");
+        tBuilder.setUtcTime("2016-01-01~00:00:00");
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
-        /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
+        tBuilder.setEstimatedPowerUsage(0);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
+    public static byte[] buildGracefulShutdownCommand() {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+        tBuilder.setAction("Graceful Shutdown.");
+        tBuilder.setRoverModule(ModuleDirectory.Module.KERNEL.getValue());
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
         return iBuilder.build().toByteArray();
