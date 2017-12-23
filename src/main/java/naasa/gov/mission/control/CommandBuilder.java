@@ -87,7 +87,7 @@ public class CommandBuilder {
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction(SCLK_SYNC);
-        tBuilder.setUtcTime("2016-01-01~00:00:00");
+        tBuilder.setUtcTime("2016-08-27~22:58:00");
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
