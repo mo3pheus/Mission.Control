@@ -49,7 +49,8 @@ public class Producer {
                 }
                 break;
                 case 7:{
-                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand());
+                    transmitter.transmitMessage(CommandBuilder.buildSclkInfoCommand());
+                    //transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand());
                 }
                 break;
                 case 8: {

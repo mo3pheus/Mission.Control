@@ -78,7 +78,7 @@ public class CommandBuilder {
         return iBuilder.build().toByteArray();
     }
 
-    public static byte[] buildSclkSyncCommand() {
+    public static byte[] buildSclkSyncCommand(String utcDate) {
         InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.newBuilder();
         iBuilder.setTimeStamp(System.currentTimeMillis());
@@ -87,7 +87,7 @@ public class CommandBuilder {
         InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.TargetPackage.newBuilder();
         tBuilder.setAction(SCLK_SYNC);
-        tBuilder.setUtcTime("2016-08-27~22:58:00");
+        tBuilder.setUtcTime(utcDate);
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());

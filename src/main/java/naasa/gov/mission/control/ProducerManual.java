@@ -1,5 +1,7 @@
 package naasa.gov.mission.control;
 
+import communications.protocol.KafkaConfig;
+
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
@@ -12,13 +14,13 @@ public class ProducerManual {
         Properties  kafkaProperties = new Properties();
         kafkaProperties.load(fis);
 
-        Transmitter transmitter = new Transmitter(kafkaProperties);
+        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
 
         int choice = 0;
         while (choice != 10) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
-            System.out.println("2. Send Scientific Message");
+            System.out.println("2. Send Spectrometer Message");
             System.out.println("3. Send Camera Command");
             System.out.println("4. Send Radar command");
             System.out.println("5. Send Weather Request");
@@ -74,7 +76,10 @@ public class ProducerManual {
                 }
                 break;
                 case 8: {
-                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand());
+                    System.out.println("Please enter the utcDate in the following format yyyy-mm-dd~hh:mm:ss ::");
+                    Scanner  utcDateScanner = new Scanner(System.in);
+                    String   utcDate        = utcDateScanner.nextLine();
+                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand(utcDate));
                 }
                 break;
                 case 9: {

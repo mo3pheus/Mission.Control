@@ -4,7 +4,7 @@
 
     <groupId>naasa.gov</groupId>
     <artifactId>mission.control</artifactId>
-    <version>1.1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>mission.control</name>
@@ -38,6 +38,7 @@
                                         implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <!--<mainClass>naasa.gov.mission.control.ProducerManual</mainClass>-->
                                     <mainClass>naasa.gov.mission.control.Driver</mainClass>
                                 </transformer>
                             </transformers>
@@ -87,7 +88,7 @@
         <dependency>
             <groupId>space.exploration</groupId>
             <artifactId>communications.protocol</artifactId>
-            <version>1.1.5</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>org.tensorflow</groupId>
