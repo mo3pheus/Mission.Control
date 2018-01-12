@@ -49,8 +49,7 @@ public class Producer {
                 }
                 break;
                 case 7:{
-                    transmitter.transmitMessage(CommandBuilder.buildSclkInfoCommand());
-                    //transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand());
+                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand("2016-01-01~00:00:00"));
                 }
                 break;
                 case 8: {
