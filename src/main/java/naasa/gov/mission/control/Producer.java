@@ -13,8 +13,8 @@ public class Producer {
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 1) {
-            int choice = ThreadLocalRandom.current().nextInt(0, 7);
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 10) {
+            int choice = ThreadLocalRandom.current().nextInt(0, 9);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
             switch (choice) {
@@ -49,10 +49,14 @@ public class Producer {
                 }
                 break;
                 case 7:{
-                    transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand("2016-01-01~00:00:00"));
+                    transmitter.transmitMessage(CommandBuilder.buildSclkInfoCommand());
                 }
                 break;
                 case 8: {
+                    transmitter.transmitMessage(CommandBuilder.buildDANSensorCommand());
+                }
+                break;
+                case 9: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;

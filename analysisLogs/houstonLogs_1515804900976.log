@@ -1,0 +1,82 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+58 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+59 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+59 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+59 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+59 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+60 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+60 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+60 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+60 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+7348 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+7371 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_5)
+7420 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7420 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7447 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7449 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7465 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7469 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+7469 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(earth_to_curiosity_5)
+7470 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7470 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7480 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7480 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7481 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7482 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_5
+7482 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 3
+7583 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 2 for 1 topic(s) Set(earth_to_curiosity_5)
+7585 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7585 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7597 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7598 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7598 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7603 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+7604 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 3 for 1 topic(s) Set(earth_to_curiosity_5)
+7604 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7604 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7619 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7619 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7619 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7619 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_5
+7619 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 2
+7720 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 4 for 1 topic(s) Set(earth_to_curiosity_5)
+7721 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7721 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7728 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7729 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7729 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7729 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+7730 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 5 for 1 topic(s) Set(earth_to_curiosity_5)
+7731 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7731 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7735 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7735 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7736 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+7736 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_5
+7736 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 1
+7837 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 6 for 1 topic(s) Set(earth_to_curiosity_5)
+7837 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7837 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7840 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7840 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7840 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+7841 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+7842 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+7845 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+7850 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 8 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+7856 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7856 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+7858 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 8 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+17497 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+17498 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+17498 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+17498 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+17498 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+17498 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 10 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+17499 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 10 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092

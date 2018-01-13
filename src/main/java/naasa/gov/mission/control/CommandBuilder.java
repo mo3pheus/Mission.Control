@@ -78,6 +78,23 @@ public class CommandBuilder {
         return iBuilder.build().toByteArray();
     }
 
+    public static byte[] buildDANSensorCommand() {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+        tBuilder.setAction("Shoot Neutrons");
+        tBuilder.setRoverModule(ModuleDirectory.Module.DAN_SPECTROMETER.getValue());
+
+        /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
+        tBuilder.setEstimatedPowerUsage(70);
+        iBuilder.addTargets(tBuilder.build());
+        return iBuilder.build().toByteArray();
+    }
+
     public static byte[] buildSclkSyncCommand(String utcDate) {
         InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
                 .InstructionPayload.newBuilder();

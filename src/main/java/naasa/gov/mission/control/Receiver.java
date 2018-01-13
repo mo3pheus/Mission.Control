@@ -19,6 +19,7 @@ import space.exploration.communications.protocol.diagnostics.HeartBeatOuterClass
 import space.exploration.communications.protocol.propulsion.TelemetryPacketOuterClass;
 import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
 import space.exploration.communications.protocol.service.CameraPayload;
+import space.exploration.communications.protocol.service.DanRDRData;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
@@ -168,6 +169,9 @@ public class Receiver extends Thread {
                     SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());
                     printMessage(sclkPacket.toString());
                     printMessage(received.toString());
+                } else if( received.getModuleReporting() == ModuleDirectory.Module.DAN_SPECTROMETER.getValue()){
+                    DanRDRData.DANDerivedData danDerivedData = DanRDRData.DANDerivedData.parseFrom(received.getModuleMessage());
+                    printMessage(danDerivedData.toString());
                 } else {
                     printMessage(received.toString());
                 }
