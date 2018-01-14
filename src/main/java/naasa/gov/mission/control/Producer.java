@@ -13,7 +13,7 @@ public class Producer {
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 10) {
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 1) {
             int choice = ThreadLocalRandom.current().nextInt(0, 9);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);

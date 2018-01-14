@@ -19,7 +19,7 @@ import space.exploration.communications.protocol.diagnostics.HeartBeatOuterClass
 import space.exploration.communications.protocol.propulsion.TelemetryPacketOuterClass;
 import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
 import space.exploration.communications.protocol.service.CameraPayload;
-import space.exploration.communications.protocol.service.DanRDRData;
+import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
@@ -169,9 +169,11 @@ public class Receiver extends Thread {
                     SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());
                     printMessage(sclkPacket.toString());
                     printMessage(received.toString());
-                } else if( received.getModuleReporting() == ModuleDirectory.Module.DAN_SPECTROMETER.getValue()){
-                    DanRDRData.DANDerivedData danDerivedData = DanRDRData.DANDerivedData.parseFrom(received.getModuleMessage());
-                    printMessage(danDerivedData.toString());
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.DAN_SPECTROMETER.getValue()) {
+                    DanRDRDataSeriesOuterClass.DanRDRDataSeries danRDRDataSeries = DanRDRDataSeriesOuterClass
+                            .DanRDRDataSeries.parseFrom(received.getModuleMessage());
+                    printMessage(danRDRDataSeries.toString(), 0);
+                    System.out.println("Data Series length = " + danRDRDataSeries.getDanDataCount());
                 } else {
                     printMessage(received.toString());
                 }
@@ -189,6 +191,17 @@ public class Receiver extends Thread {
             for (char c : message.toCharArray()) {
                 System.out.print(c);
                 Thread.sleep(15);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void printMessage(String message, int delay) {
+        try {
+            for (char c : message.toCharArray()) {
+                System.out.print(c);
+                Thread.sleep(delay);
             }
         } catch (Exception e) {
             e.printStackTrace();
