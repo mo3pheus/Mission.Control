@@ -22,7 +22,7 @@ import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
-import space.exploration.communications.protocol.spectrometer.SpectrometerScanOuterClass;
+import space.exploration.mars.rover.sensors.apxs.ApxsData;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -107,10 +107,9 @@ public class Receiver extends Thread {
                 logger.info("Message received from " + received.getModuleName());
 
                 if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
-                    SpectrometerScanOuterClass.SpectrometerScan scan = SpectrometerScanOuterClass.SpectrometerScan
-                            .parseFrom(received.getModuleMessage());
+                    ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket.parseFrom(received.getModuleMessage());
                     printMessage(received.toString());
-                    printMessage(scan.toString());
+                    printMessage(apxsDataPacket.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.CAMERA_SENSOR.getValue()) {
 
                     CameraPayload.CamPayload camPayload = CameraPayload.CamPayload.parseFrom(received.getModuleMessage());
