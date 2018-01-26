@@ -1,0 +1,131 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+50 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+50 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+50 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+50 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+50 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+51 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+51 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+51 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+51 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+6929 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+6955 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_5)
+7050 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7051 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7080 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7082 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+7100 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+7102 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+7103 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+7108 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+7118 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 2 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+7128 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+7128 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+7129 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 2 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+90249 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+90250 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+90250 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+90251 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+90257 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+90258 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 4 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+90262 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 4 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+152433 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+152437 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+152439 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+152439 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+152441 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+152443 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 6 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+152446 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 6 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3385200 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3385201 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 7 for 1 topic(s) Set(earth_to_curiosity_5)
+3385202 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+3385202 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+3385203 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+3385203 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+3385203 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+3385204 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3385204 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3385204 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3385204 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3385205 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 9 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3385206 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+3385206 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+3385206 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 9 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3465686 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3465687 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3465687 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3465688 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3465690 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3465691 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 11 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3465702 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 11 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3594371 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3594371 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3594371 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3594372 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3594372 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3594373 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 13 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3594375 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 13 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3656017 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3656018 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3656018 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3656019 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3656019 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3656020 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 15 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3656031 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 15 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3739842 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3739843 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3739843 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3739843 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3739843 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3739843 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 17 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3739844 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 17 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3806636 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3806637 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3806637 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3806638 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3806639 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3806640 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 19 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3806644 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 19 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3865833 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3865833 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3865834 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3865834 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3865834 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3865834 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 21 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3865835 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 21 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3921581 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+3921582 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+3921582 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+3921583 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+3921583 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+3921584 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 23 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+3921586 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 23 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4001229 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+4001231 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 24 for 1 topic(s) Set(earth_to_curiosity_5)
+4001239 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4001242 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4001248 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4001250 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_5)
+4001250 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+4001253 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+4001257 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+4001258 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+4001262 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+4001277 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 26 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4001281 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4001281 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+4001290 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 26 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4236027 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+4236028 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+4236032 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+4236032 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+4236032 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+4236033 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 28 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4236040 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 28 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4326095 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+4326095 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+4326096 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_5,0] has leader 0
+4326096 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_5 are 0
+4326096 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_5,0]
+4326097 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 30 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
+4326098 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 30 for topics [earth_to_curiosity_5,0] to broker 0 on zion-mainframe:9092
