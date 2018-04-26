@@ -13,7 +13,7 @@ public class Producer {
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
         long        stTime      = System.currentTimeMillis();
 
-        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 6) {
+        while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 3) {
             int choice = ThreadLocalRandom.current().nextInt(0, 9);
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
@@ -63,7 +63,7 @@ public class Producer {
                 default: {
                 }
             }
-            Thread.sleep(1 * 10000);
+            Thread.sleep(1 * 60000);
             //Thread.sleep(45);
         }
         transmitter.transmitMessage(CommandBuilder.buildGracefulShutdownCommand());
