@@ -5,6 +5,7 @@ import communications.protocol.ModuleDirectory;
 import space.exploration.communications.protocol.InstructionPayloadOuterClass;
 import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
+import space.exploration.communications.protocol.softwareUpdate.SwUpdatePackageOuterClass;
 
 import java.util.Scanner;
 
@@ -12,6 +13,36 @@ import static communications.protocol.ModuleDirectory.SCLK_COMMAND;
 import static communications.protocol.ModuleDirectory.SCLK_SYNC;
 
 public class CommandBuilder {
+
+    public static byte[] buildSoftwareUpdateCommand() {
+        String jarFile = "https://storage.googleapis.com/rover_artifacts/softwareUpdates/mars" +
+                ".rover-1.8-SOLSHOT-shaded.jar";
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+
+        SwUpdatePackageOuterClass.SwUpdatePackage.Builder sBuilder = SwUpdatePackageOuterClass.SwUpdatePackage
+                .newBuilder();
+        sBuilder.setJarFileLocation(jarFile);
+        sBuilder.setLaunchScriptLocation("https://storage.googleapis" +
+                                                 ".com/rover_artifacts/softwareUpdates/softwareLaunch.sh");
+        sBuilder.setJarFileName("mars.rover-1.8-SOLSHOT-shaded.jar");
+        sBuilder.setVersion(1.8d);
+        sBuilder.setScriptFileName("softwareLaunch.sh");
+        tBuilder.setAuxiliaryData(sBuilder.build().toByteString());
+
+        tBuilder.setAction("Update Software");
+        tBuilder.setRoverModule(ModuleDirectory.Module.KERNEL.getValue());
+        iBuilder.addTargets(tBuilder.build());
+
+        InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
+        //System.out.println(instructionPayload.toString());
+        return instructionPayload.toByteArray();
+    }
 
     public static byte[] buildLidarCommand() {
         InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass

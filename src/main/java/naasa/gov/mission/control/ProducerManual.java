@@ -1,6 +1,7 @@
 package naasa.gov.mission.control;
 
 import communications.protocol.KafkaConfig;
+import de.erichseifert.vectorgraphics2d.intermediate.commands.Command;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -17,7 +18,7 @@ public class ProducerManual {
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
 
         int choice = 0;
-        while (choice != 11) {
+        while (choice != 12) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
             System.out.println("2. Send Spectrometer Message");
@@ -29,7 +30,8 @@ public class ProducerManual {
             System.out.println("8: Send SclkSyncCommand");
             System.out.println("9. Send DanSpectrometerCommand");
             System.out.println("10. Graceful Shutdown.");
-            System.out.println("11. Exit");
+            System.out.println("11. Software Update.");
+            System.out.println("12. Exit");
             System.out.println("Please enter your choice");
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -78,8 +80,8 @@ public class ProducerManual {
                 break;
                 case 8: {
                     System.out.println("Please enter the utcDate in the following format yyyy-mm-dd~hh:mm:ss ::");
-                    Scanner  utcDateScanner = new Scanner(System.in);
-                    String   utcDate        = utcDateScanner.nextLine();
+                    Scanner utcDateScanner = new Scanner(System.in);
+                    String  utcDate        = utcDateScanner.nextLine();
                     transmitter.transmitMessage(CommandBuilder.buildSclkSyncCommand(utcDate));
                 }
                 break;
@@ -92,6 +94,11 @@ public class ProducerManual {
                 }
                 break;
                 case 11: {
+                    byte[] msg = CommandBuilder.buildSoftwareUpdateCommand();
+                    transmitter.transmitMessage(msg);
+                }
+                break;
+                case 12: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;

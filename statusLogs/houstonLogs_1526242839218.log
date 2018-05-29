@@ -1,0 +1,123 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+105 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+116 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+116 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+116 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+116 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+117 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+117 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+117 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+117 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+365 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_5)
+539 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+685 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+714 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+735 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(earth_to_curiosity_5)
+737 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+761 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+792 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+793 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_5
+809 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 3
+910 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 2 for 1 topic(s) Set(earth_to_curiosity_5)
+911 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+935 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+935 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+941 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 3 for 1 topic(s) Set(earth_to_curiosity_5)
+941 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+968 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+969 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_5 -> 
+No partition metadata for topic earth_to_curiosity_5 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_5]: class kafka.common.LeaderNotAvailableException 
+969 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_5
+969 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 2
+1070 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 4 for 1 topic(s) Set(earth_to_curiosity_5)
+1071 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+1076 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+1122 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+616208 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 25 for 1 topic(s) Set(earth_to_curiosity_5)
+616210 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+616213 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+616214 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+616221 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+1231278 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 46 for 1 topic(s) Set(earth_to_curiosity_5)
+1231279 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+1231282 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+1231283 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+1231288 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+1846337 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 67 for 1 topic(s) Set(earth_to_curiosity_5)
+1846338 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+1846341 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+1846342 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+1846347 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+2461392 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 88 for 1 topic(s) Set(earth_to_curiosity_5)
+2461393 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+2461396 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+2461396 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+2461400 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+3076438 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 109 for 1 topic(s) Set(earth_to_curiosity_5)
+3076440 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+3076443 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+3076443 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+3076448 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+3691497 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 130 for 1 topic(s) Set(earth_to_curiosity_5)
+3691498 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+3691500 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+3691501 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+3691504 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+4306535 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 151 for 1 topic(s) Set(earth_to_curiosity_5)
+4306535 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4306536 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4306536 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+4306537 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+4921565 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 172 for 1 topic(s) Set(earth_to_curiosity_5)
+4921567 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4921569 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4921570 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+4921572 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+5536600 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 193 for 1 topic(s) Set(earth_to_curiosity_5)
+5536601 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+5536603 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+5536604 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+5536606 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+6151635 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 214 for 1 topic(s) Set(earth_to_curiosity_5)
+6151637 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+6151639 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+6151640 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+6151642 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+6766671 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 235 for 1 topic(s) Set(earth_to_curiosity_5)
+6766672 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+6766674 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+6766675 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+6766678 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+7381712 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 256 for 1 topic(s) Set(earth_to_curiosity_5)
+7381713 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7381716 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7381716 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+7381719 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+7996749 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 277 for 1 topic(s) Set(earth_to_curiosity_5)
+7996749 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+7996750 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+7996751 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+7996751 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+8611776 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 298 for 1 topic(s) Set(earth_to_curiosity_5)
+8611777 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+8611780 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+8611781 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+8611784 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+9226808 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 319 for 1 topic(s) Set(earth_to_curiosity_5)
+9226810 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+9226811 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+9226812 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+9226815 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+9841840 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 340 for 1 topic(s) Set(earth_to_curiosity_5)
+9841840 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+9841841 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+9841841 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+9841842 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+10456869 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 361 for 1 topic(s) Set(earth_to_curiosity_5)
+10456870 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+10456872 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+10456874 [main] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+10456877 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
