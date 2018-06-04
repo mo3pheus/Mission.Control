@@ -1,18 +1,43 @@
 package naasa.gov.mission.control;
 
 
+import certificates.RsaSecureComsCertificate;
+import com.google.protobuf.ByteString;
 import communications.protocol.ModuleDirectory;
+import encryption.EncryptionUtil;
+import org.omg.IOP.ENCODING_CDR_ENCAPS;
 import space.exploration.communications.protocol.InstructionPayloadOuterClass;
 import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
+import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
 import space.exploration.communications.protocol.softwareUpdate.SwUpdatePackageOuterClass;
 
+import java.io.File;
 import java.util.Scanner;
 
 import static communications.protocol.ModuleDirectory.SCLK_COMMAND;
 import static communications.protocol.ModuleDirectory.SCLK_SYNC;
 
 public class CommandBuilder {
+
+    public static final String CERT_FILE = "src/main/resources/certificates/client.ser";
+
+    private static byte[] signAndEncryptMessage(InstructionPayloadOuterClass.InstructionPayload instructionPayload) {
+        byte[] encryptedContent = null;
+        byte[] signature        = null;
+        try {
+            encryptedContent = EncryptionUtil.encryptMessage(new File(CERT_FILE), instructionPayload.toByteArray());
+            signature = EncryptionUtil.signMessage(new File(CERT_FILE), encryptedContent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        SecureMessage.SecureMessagePacket.Builder secMsgBuilder = SecureMessage.SecureMessagePacket.newBuilder();
+        secMsgBuilder.setSignature(ByteString.copyFrom(signature));
+        secMsgBuilder.setContent(ByteString.copyFrom(encryptedContent));
+
+        return secMsgBuilder.build().toByteArray();
+    }
 
     public static byte[] buildSoftwareUpdateCommand() {
         String jarFile = "https://storage.googleapis.com/rover_artifacts/softwareUpdates/mars" +
@@ -31,7 +56,7 @@ public class CommandBuilder {
         sBuilder.setLaunchScriptLocation("https://storage.googleapis" +
                                                  ".com/rover_artifacts/softwareUpdates/softwareLaunch.sh");
         sBuilder.setJarFileName("mars.rover-1.8-SOLSHOT-shaded.jar");
-        sBuilder.setVersion(1.8d);
+        sBuilder.setVersion(1.9d);
         sBuilder.setScriptFileName("softwareLaunch.sh");
         tBuilder.setAuxiliaryData(sBuilder.build().toByteString());
 
@@ -41,7 +66,8 @@ public class CommandBuilder {
 
         InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
         //System.out.println(instructionPayload.toString());
-        return instructionPayload.toByteArray();
+
+        return signAndEncryptMessage(instructionPayload);
     }
 
     public static byte[] buildLidarCommand() {
@@ -56,7 +82,8 @@ public class CommandBuilder {
         tBuilder.setRoverModule(ModuleDirectory.Module.SENSOR_LIDAR.getValue());
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildWeatherCommand() {
@@ -74,7 +101,7 @@ public class CommandBuilder {
         tBuilder.setRoverModule(ModuleDirectory.Module.WEATHER_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildSeasonalWeatherCommand() {
@@ -89,7 +116,7 @@ public class CommandBuilder {
         tBuilder.setRoverModule(ModuleDirectory.Module.WEATHER_SENSOR.getValue());
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildSclkInfoCommand() {
@@ -106,7 +133,7 @@ public class CommandBuilder {
         /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildDANSensorCommand() {
@@ -123,7 +150,7 @@ public class CommandBuilder {
         /* clock has a separate internal battery. Check clock lifeSpan for its duration. */
         tBuilder.setEstimatedPowerUsage(70);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildSclkSyncCommand(String utcDate) {
@@ -139,7 +166,7 @@ public class CommandBuilder {
         tBuilder.setRoverModule(ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue());
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildGracefulShutdownCommand() {
@@ -154,7 +181,7 @@ public class CommandBuilder {
         tBuilder.setRoverModule(ModuleDirectory.Module.KERNEL.getValue());
         tBuilder.setEstimatedPowerUsage(0);
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     @Deprecated
@@ -178,7 +205,7 @@ public class CommandBuilder {
         tBuilder.setAuxiliaryData(null);
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildMoveCommand(int x, int y) {
@@ -201,7 +228,7 @@ public class CommandBuilder {
                                           .toByteString());
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildScienceMission() {
@@ -217,7 +244,7 @@ public class CommandBuilder {
         tBuilder.setEstimatedPowerUsage(30);
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildCameraCommand() {
@@ -234,7 +261,7 @@ public class CommandBuilder {
         tBuilder.setEstimatedPowerUsage(20);
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildCameraCommand(String camId) {
@@ -251,7 +278,7 @@ public class CommandBuilder {
         tBuilder.setEstimatedPowerUsage(20);
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static byte[] buildRadarCommand() {
@@ -267,7 +294,7 @@ public class CommandBuilder {
         tBuilder.setEstimatedPowerUsage(20);
 
         iBuilder.addTargets(tBuilder.build());
-        return iBuilder.build().toByteArray();
+        return signAndEncryptMessage(iBuilder.build());
     }
 
     public static String getCamId() {
