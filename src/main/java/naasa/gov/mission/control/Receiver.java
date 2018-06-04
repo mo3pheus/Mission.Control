@@ -5,6 +5,7 @@ package naasa.gov.mission.control;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import communications.protocol.ModuleDirectory;
+import encryption.EncryptionUtil;
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
@@ -18,6 +19,7 @@ import space.exploration.communications.protocol.communication.RoverStatusOuterC
 import space.exploration.communications.protocol.diagnostics.HeartBeatOuterClass;
 import space.exploration.communications.protocol.propulsion.TelemetryPacketOuterClass;
 import space.exploration.communications.protocol.radar.RadarContactListOuterClass;
+import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
@@ -31,6 +33,10 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.SignatureException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,8 +46,9 @@ import java.util.Properties;
  * @author sanketkorgaonkar
  */
 public class Receiver extends Thread {
-    final static   String SEPARATOR              =
+    final static String SEPARATOR =
             "============================================================================";
+
     final static   String clientId               = "Curiosity";
     final static   String TUNED_CHANNEL_PROPERTY = "source.topic";
     private static String dataArchivePath        = null;
@@ -100,8 +107,14 @@ public class Receiver extends Thread {
             System.out.println("RECEIVED MESSAGE:: " + messageCount);
             System.out.println(SEPARATOR);
             try {
-                RoverStatusOuterClass.RoverStatus received = (RoverStatusOuterClass.RoverStatus
-                        .parseFrom(it.next().message()));
+                SecureMessage.SecureMessagePacket secureMessagePacket = SecureMessage.SecureMessagePacket.parseFrom
+                        (it.next().message());
+
+                RoverStatusOuterClass.RoverStatus received = null;
+                if (encryption.EncryptionUtil.verifyMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket)) {
+                    printMessage("Message is authentic. Sender id = " + secureMessagePacket.getSenderId());
+                    received = RoverStatusOuterClass.RoverStatus.parseFrom(EncryptionUtil.decryptMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket));
+                }
                 scetTime = received.getSCET();
 
                 logger.info("Message received from " + received.getModuleName());
@@ -180,6 +193,18 @@ public class Receiver extends Thread {
                 e.printStackTrace();
             } catch (IOException io) {
                 io.printStackTrace();
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            } catch (InvalidKeyException e) {
+                e.printStackTrace();
+            } catch (SignatureException e) {
+                e.printStackTrace();
+            } catch (NoSuchProviderException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             messageCount++;
         }

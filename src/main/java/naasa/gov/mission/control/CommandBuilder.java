@@ -35,6 +35,7 @@ public class CommandBuilder {
         SecureMessage.SecureMessagePacket.Builder secMsgBuilder = SecureMessage.SecureMessagePacket.newBuilder();
         secMsgBuilder.setSignature(ByteString.copyFrom(signature));
         secMsgBuilder.setContent(ByteString.copyFrom(encryptedContent));
+        secMsgBuilder.setSenderId("mission.control@Houston");
 
         return secMsgBuilder.build().toByteArray();
     }

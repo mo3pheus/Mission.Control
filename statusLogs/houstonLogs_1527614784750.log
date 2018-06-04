@@ -1,0 +1,140 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+21 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+22 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1527614784771
+22 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+55 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Connecting to zookeeper instance at localhost:2181
+60 [ZkClient-EventThread-15-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+62 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+62 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-portable
+62 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_171
+62 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+62 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-1.2-shaded.jar
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.13.0-43-generic
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+63 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@2d127a61
+72 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+74 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+113 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+117 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x163ac8543a50009, negotiated timeout = 6000
+118 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+126 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], starting auto committer every 60000 ms
+145 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], begin registering consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 in ZK
+164 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1527614784771/ids/space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 (is it secure? false)
+172 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+172 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], end registering consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 in ZK
+175 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3
+188 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], begin rebalancing consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 try #0
+266 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1527614785039] Stopping leader finder thread
+266 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1527614785039] Stopping all fetchers
+267 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1527614785039] All connections stopped
+267 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Cleared all relevant queues for this fetcher
+268 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Cleared the data chunks in all the consumer message iterators
+268 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Committing all offsets after clearing the fetcher queues
+269 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Releasing partition ownership
+288 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-0)
+289 [Thread-0] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-0 attempting to claim partition 0
+315 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-0 successfully owned partition 0 for topic curiosity_to_earth_5
+326 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], Consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 selected partitions : curiosity_to_earth_5:0: fetched offset = -1: consumed offset = -1
+327 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread], Starting 
+328 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3], end rebalancing consumer space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3 try #0
+337 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+338 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1527614784771
+338 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-portable:9092
+338 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+348 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-portable,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_5)
+351 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-portable:9092 for producing
+359 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-portable:9092
+376 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-0-0], Starting 
+383 [space.exploration.mars.rover.curiosity.1527614784771_zion-portable-1527614784970-de7249d3-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1527614785039] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_5,0], initOffset -1 to broker BrokerEndPoint(0,zion-portable,9092)] )
+36548 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+144987 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+204936 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+624935 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+684927 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1105542 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1165520 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1371323 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1381584 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1415332 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1465538 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1825504 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+1885512 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2050640 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+2063014 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2114901 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2223266 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2283278 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2703187 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2759096 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2768263 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+2780601 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2816168 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+2898546 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+2910918 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5563879 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5672241 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5741190 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5750479 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5784268 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5792178 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5842176 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+5854485 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+5866873 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5902452 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+5939963 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6026366 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6035529 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+6047903 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6083596 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6159216 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+6228370 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+6240730 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10367471 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10421375 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+10433723 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10475889 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10578620 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10587761 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+10600164 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10637915 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+10721371 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12021126 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12129577 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12189519 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12342872 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+12421899 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12431046 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+12443452 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12481226 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12494710 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+12507121 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12564625 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12624628 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+12675111 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+12687502 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13292714 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13349020 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+13361456 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13401049 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13470116 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13479254 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+13491652 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13529407 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13612880 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13648758 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
+13672837 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from 
+13723449 [Thread-0] INFO naasa.gov.mission.control.Receiver  - Message received from Spacecraft Clock
