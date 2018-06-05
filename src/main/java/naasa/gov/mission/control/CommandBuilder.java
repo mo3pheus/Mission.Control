@@ -1,11 +1,8 @@
 package naasa.gov.mission.control;
 
-
-import certificates.RsaSecureComsCertificate;
 import com.google.protobuf.ByteString;
 import communications.protocol.ModuleDirectory;
 import encryption.EncryptionUtil;
-import org.omg.IOP.ENCODING_CDR_ENCAPS;
 import space.exploration.communications.protocol.InstructionPayloadOuterClass;
 import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.security.SecureMessage;
@@ -34,6 +31,7 @@ public class CommandBuilder {
 
         SecureMessage.SecureMessagePacket.Builder secMsgBuilder = SecureMessage.SecureMessagePacket.newBuilder();
         secMsgBuilder.setSignature(ByteString.copyFrom(signature));
+
         secMsgBuilder.setContent(ByteString.copyFrom(encryptedContent));
         secMsgBuilder.setSenderId("mission.control@Houston");
 

@@ -112,8 +112,8 @@ public class Receiver extends Thread {
 
                 RoverStatusOuterClass.RoverStatus received = null;
                 if (encryption.EncryptionUtil.verifyMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket)) {
-                    printMessage("Message is authentic. Sender id = " + secureMessagePacket.getSenderId());
-                    received = RoverStatusOuterClass.RoverStatus.parseFrom(EncryptionUtil.decryptMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket));
+                    printMessage("Message is authentic. Sender id = " + secureMessagePacket.getSenderId() + "\n");
+                    received = RoverStatusOuterClass.RoverStatus.parseFrom(EncryptionUtil.decryptMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket.getContent().toByteArray()));
                 }
                 scetTime = received.getSCET();
 
