@@ -20,22 +20,15 @@ public class CommandBuilder {
     public static final String CERT_FILE = "src/main/resources/certificates/client.ser";
 
     private static byte[] signAndEncryptMessage(InstructionPayloadOuterClass.InstructionPayload instructionPayload) {
-        byte[] encryptedContent = null;
-        byte[] signature        = null;
+        byte[] message = null;
+
         try {
-            encryptedContent = EncryptionUtil.encryptMessage(new File(CERT_FILE), instructionPayload.toByteArray());
-            signature = EncryptionUtil.signMessage(new File(CERT_FILE), encryptedContent);
+            message = EncryptionUtil.encryptData("mission.control@Houston", new File(CERT_FILE), instructionPayload
+                    .toByteArray()).toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        SecureMessage.SecureMessagePacket.Builder secMsgBuilder = SecureMessage.SecureMessagePacket.newBuilder();
-        secMsgBuilder.setSignature(ByteString.copyFrom(signature));
-
-        secMsgBuilder.setContent(ByteString.copyFrom(encryptedContent));
-        secMsgBuilder.setSenderId("mission.control@Houston");
-
-        return secMsgBuilder.build().toByteArray();
+        return message;
     }
 
     public static byte[] buildSoftwareUpdateCommand() {

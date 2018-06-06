@@ -109,13 +109,19 @@ public class Receiver extends Thread {
             try {
                 SecureMessage.SecureMessagePacket secureMessagePacket = SecureMessage.SecureMessagePacket.parseFrom
                         (it.next().message());
+                System.out.println(secureMessagePacket);
 
-                RoverStatusOuterClass.RoverStatus received = null;
-                if (encryption.EncryptionUtil.verifyMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket)) {
-                    printMessage("Message is authentic. Sender id = " + secureMessagePacket.getSenderId() + "\n");
-                    received = RoverStatusOuterClass.RoverStatus.parseFrom(EncryptionUtil.decryptMessage(new File(CommandBuilder.CERT_FILE), secureMessagePacket.getContent().toByteArray()));
+                RoverStatusOuterClass.RoverStatus received    = null;
+                File                              certificate = new File(CommandBuilder.CERT_FILE);
+
+                try {
+                    byte[] rawContent = EncryptionUtil.decryptContent(certificate, secureMessagePacket);
+                    received = RoverStatusOuterClass.RoverStatus.parseFrom(rawContent);
+                } catch (Exception e) {
+                    System.out.println("Could not verify the message/ message was corrupted.");
+                    e.printStackTrace();
+                    continue;
                 }
-                scetTime = received.getSCET();
 
                 logger.info("Message received from " + received.getModuleName());
 
@@ -189,20 +195,6 @@ public class Receiver extends Thread {
                 } else {
                     printMessage(received.toString());
                 }
-            } catch (InvalidProtocolBufferException e) {
-                e.printStackTrace();
-            } catch (IOException io) {
-                io.printStackTrace();
-            } catch (NoSuchAlgorithmException e) {
-                e.printStackTrace();
-            } catch (InvalidKeyException e) {
-                e.printStackTrace();
-            } catch (SignatureException e) {
-                e.printStackTrace();
-            } catch (NoSuchProviderException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
             } catch (Exception e) {
                 e.printStackTrace();
             }
