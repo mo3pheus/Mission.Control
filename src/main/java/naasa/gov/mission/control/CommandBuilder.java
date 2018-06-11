@@ -25,7 +25,7 @@ public class CommandBuilder {
 
         try {
             message = EncryptionUtil.encryptData("mission.control@Houston", new File(CERT_FILE), instructionPayload
-                    .toByteArray()).toByteArray();
+                    .toByteArray(),3l).toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
         }

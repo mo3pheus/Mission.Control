@@ -116,11 +116,8 @@ public class Receiver extends Thread {
 
                 try {
                     long   startTime  = System.currentTimeMillis();
-                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket);
-                    System.out.println(" Time taken for new decryption = " + (System.currentTimeMillis() - startTime));
-                    startTime = System.currentTimeMillis();
-                    rawContent = EncryptionUtil.decryptContent(certificate, secureMessagePacket);
-                    System.out.println(" Time taken for old decryption = " + (System.currentTimeMillis() - startTime));
+                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket,3l);
+                    System.out.println(" Time taken for decryption = " + (System.currentTimeMillis() - startTime));
                     received = RoverStatusOuterClass.RoverStatus.parseFrom(rawContent);
                 } catch (Exception e) {
                     System.out.println("Could not verify the message/ message was corrupted.");
@@ -152,7 +149,7 @@ public class Receiver extends Thread {
                                 frame.getContentPane().add(new ImageUtil(imag));
                                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                                 frame.setVisible(true);
-                                Thread.sleep(30000);
+                                Thread.sleep(3000);
                                 frame.dispose();
                             } catch (IOException e) {
                                 e.printStackTrace();
