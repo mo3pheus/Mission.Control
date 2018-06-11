@@ -115,7 +115,12 @@ public class Receiver extends Thread {
                 File                              certificate = new File(CommandBuilder.CERT_FILE);
 
                 try {
-                    byte[] rawContent = EncryptionUtil.decryptContent(certificate, secureMessagePacket);
+                    long   startTime  = System.currentTimeMillis();
+                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket);
+                    System.out.println(" Time taken for new decryption = " + (System.currentTimeMillis() - startTime));
+                    startTime = System.currentTimeMillis();
+                    rawContent = EncryptionUtil.decryptContent(certificate, secureMessagePacket);
+                    System.out.println(" Time taken for old decryption = " + (System.currentTimeMillis() - startTime));
                     received = RoverStatusOuterClass.RoverStatus.parseFrom(rawContent);
                 } catch (Exception e) {
                     System.out.println("Could not verify the message/ message was corrupted.");
@@ -123,7 +128,7 @@ public class Receiver extends Thread {
                     continue;
                 }
 
-                logger.info("Message received from " + received.getModuleName());
+                printMessage("Message received from " + received.getModuleName());
 
                 if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
                     ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket.parseFrom(received.getModuleMessage());

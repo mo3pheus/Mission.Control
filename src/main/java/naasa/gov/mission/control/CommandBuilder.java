@@ -17,8 +17,9 @@ import static communications.protocol.ModuleDirectory.SCLK_SYNC;
 
 public class CommandBuilder {
 
-    public static final String CERT_FILE = "src/main/resources/certificates/client.ser";
+    //public static final String CERT_FILE = "src/main/resources/certificates/client.ser";
 
+    public static final String CERT_FILE = "src/main/resources/certificates/clientOriginal.ser";
     private static byte[] signAndEncryptMessage(InstructionPayloadOuterClass.InstructionPayload instructionPayload) {
         byte[] message = null;
 
