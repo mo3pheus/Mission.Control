@@ -8,6 +8,7 @@ import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
 import space.exploration.communications.protocol.softwareUpdate.SwUpdatePackageOuterClass;
+import space.exploration.kernel.diagnostics.LogRequest;
 
 import java.io.File;
 import java.util.Scanner;
@@ -54,6 +55,32 @@ public class CommandBuilder {
         tBuilder.setAuxiliaryData(sBuilder.build().toByteString());
 
         tBuilder.setAction("Update Software");
+        tBuilder.setRoverModule(ModuleDirectory.Module.KERNEL.getValue());
+        iBuilder.addTargets(tBuilder.build());
+
+        InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
+        //System.out.println(instructionPayload.toString());
+
+        return signAndEncryptMessage(instructionPayload);
+    }
+
+    public static byte[] buildLogRequestCommand(String startDate, String endDate) {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+        iBuilder.setSOS(false);
+
+
+        LogRequest.LogRequestPacket.Builder lBuilder = LogRequest.LogRequestPacket.newBuilder();
+        lBuilder.setDateFormat("yyyy-MM-dd~HH:mm:ss");
+        lBuilder.setStartDate(startDate);
+        lBuilder.setEndDate(endDate);
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+        tBuilder.setAuxiliaryData(lBuilder.build().toByteString());
+
+        tBuilder.setAction("Request Rover Logs");
         tBuilder.setRoverModule(ModuleDirectory.Module.KERNEL.getValue());
         iBuilder.addTargets(tBuilder.build());
 

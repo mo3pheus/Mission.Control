@@ -24,6 +24,7 @@ import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
+import space.exploration.kernel.diagnostics.LogResponse;
 import space.exploration.mars.rover.sensors.apxs.ApxsData;
 
 import javax.imageio.ImageIO;
@@ -116,7 +117,7 @@ public class Receiver extends Thread {
 
                 try {
                     long   startTime  = System.currentTimeMillis();
-                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket,3l);
+                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket, 3l);
                     System.out.println(" Time taken for decryption = " + (System.currentTimeMillis() - startTime));
                     received = RoverStatusOuterClass.RoverStatus.parseFrom(rawContent);
                 } catch (Exception e) {
@@ -194,6 +195,11 @@ public class Receiver extends Thread {
                             .DanRDRDataSeries.parseFrom(received.getModuleMessage());
                     printMessage(danRDRDataSeries.toString(), 0);
                     System.out.println("Data Series length = " + danRDRDataSeries.getDanDataCount());
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.KERNEL.getValue()) {
+                    LogResponse.LogResponsePacket logResponsePacket = LogResponse.LogResponsePacket.parseFrom
+                            (received.getModuleMessage());
+                    printMessage(logResponsePacket.toString(), 0);
+                    System.out.println("Number of log files = " + logResponsePacket.getLogFilesCount());
                 } else {
                     printMessage(received.toString());
                 }
