@@ -11,6 +11,7 @@ import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
+import naasa.gov.mission.control.analytics.FileUtil;
 import naasa.gov.mission.control.naasa.gov.mission.control.util.ImageUtil;
 import nasa.gov.mission.control.weatherAnalysis.WeatherDataArchive;
 import org.slf4j.Logger;
@@ -198,7 +199,8 @@ public class Receiver extends Thread {
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.KERNEL.getValue()) {
                     LogResponse.LogResponsePacket logResponsePacket = LogResponse.LogResponsePacket.parseFrom
                             (received.getModuleMessage());
-                    printMessage(logResponsePacket.toString(), 0);
+                    /*printMessage(logResponsePacket.toString(), 0);*/
+                    FileUtil.saveLogFiles("curiosityLogs", logResponsePacket);
                     System.out.println("Number of log files = " + logResponsePacket.getLogFilesCount());
                 } else {
                     printMessage(received.toString());
