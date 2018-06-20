@@ -1,0 +1,125 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+20 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+20 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+21 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1528948471961
+21 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+21 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to localhost:2181
+56 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Connecting to zookeeper instance at localhost:2181
+62 [ZkClient-EventThread-15-localhost:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=zion-mainframe
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.8.0_171
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-2.0-shaded.jar
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.13.0-43-generic
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+66 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@17776a8
+74 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+76 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+106 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to localhost/127.0.0.1:2181, initiating session
+109 [main-SendThread(localhost:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x163f17fc6190012, negotiated timeout = 6000
+110 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+119 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], starting auto committer every 60000 ms
+137 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], begin registering consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d in ZK
+155 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1528948471961/ids/space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d (is it secure? false)
+162 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+162 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], end registering consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d in ZK
+165 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d
+175 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], begin rebalancing consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d try #0
+236 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1528948472232] Stopping leader finder thread
+236 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1528948472232] Stopping all fetchers
+236 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1528948472232] All connections stopped
+236 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Cleared all relevant queues for this fetcher
+237 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Cleared the data chunks in all the consumer message iterators
+237 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Committing all offsets after clearing the fetcher queues
+238 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Releasing partition ownership
+253 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_5 with consumers: List(space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0)
+254 [Thread-0] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0 attempting to claim partition 0
+274 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0 successfully owned partition 0 for topic curiosity_to_earth_5
+283 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], Consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d selected partitions : curiosity_to_earth_5:0: fetched offset = -1: consumed offset = -1
+284 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread], Starting 
+284 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d], end rebalancing consumer space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d try #0
+295 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+295 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1528948471961
+295 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to zion-mainframe:9092
+295 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+305 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,zion-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_5)
+309 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+316 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from zion-mainframe:9092
+329 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0-0], Starting 
+335 [space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1528948472232] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_5,0], initOffset -1 to broker BrokerEndPoint(0,zion-mainframe,9092)] )
+9172285 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+10090363 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)
+14035977 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1528948471961_zion-mainframe-1528948472171-9901b53d-0-0] INFO kafka.consumer.SimpleConsumer  - Reconnect due to error:
+java.io.EOFException
+	at org.apache.kafka.common.network.NetworkReceive.readFromReadableChannel(NetworkReceive.java:83)
+	at kafka.network.BlockingChannel.readCompletely(BlockingChannel.scala:129)
+	at kafka.network.BlockingChannel.receive(BlockingChannel.scala:120)
+	at kafka.consumer.SimpleConsumer.liftedTree1$1(SimpleConsumer.scala:86)
+	at kafka.consumer.SimpleConsumer.kafka$consumer$SimpleConsumer$$sendRequest(SimpleConsumer.scala:83)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1$$anonfun$apply$mcV$sp$1.apply(SimpleConsumer.scala:132)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply$mcV$sp(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.consumer.SimpleConsumer$$anonfun$fetch$1.apply(SimpleConsumer.scala:131)
+	at kafka.metrics.KafkaTimer.time(KafkaTimer.scala:33)
+	at kafka.consumer.SimpleConsumer.fetch(SimpleConsumer.scala:130)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:108)
+	at kafka.consumer.ConsumerFetcherThread.fetch(ConsumerFetcherThread.scala:29)
+	at kafka.server.AbstractFetcherThread.processFetchRequest(AbstractFetcherThread.scala:102)
+	at kafka.server.AbstractFetcherThread.doWork(AbstractFetcherThread.scala:93)
+	at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:63)

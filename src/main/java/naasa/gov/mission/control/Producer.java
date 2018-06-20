@@ -14,7 +14,10 @@ public class Producer {
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 5) {
-            int choice = ThreadLocalRandom.current().nextInt(0, 9);
+            int choice = ThreadLocalRandom.current().nextInt(0, 12);
+            while(choice == 10){
+                choice = ThreadLocalRandom.current().nextInt(0, 12);
+            }
             //int choice = 3;
             System.out.println("Selected choice = " + choice);
             switch (choice) {
