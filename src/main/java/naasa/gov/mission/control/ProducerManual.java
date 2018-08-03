@@ -18,7 +18,7 @@ public class ProducerManual {
         Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
 
         int choice = 0;
-        while (choice != 13) {
+        while (choice != 14) {
             System.out.println("0. Send Move Message");
             System.out.println("1. Send Lidar Message");
             System.out.println("2. Send Spectrometer Message");
@@ -32,7 +32,8 @@ public class ProducerManual {
             System.out.println("10. Graceful Shutdown.");
             System.out.println("11. Software Update.");
             System.out.println("12. Request Rover Logs");
-            System.out.println("13. Exit");
+            System.out.println("13. Sample Analysis on Mars");
+            System.out.println("14. Exit");
             System.out.println("Please enter your choice");
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
@@ -111,6 +112,14 @@ public class ProducerManual {
                 }
                 break;
                 case 13: {
+                    Scanner dateScanner = new Scanner(System.in);
+                    System.out.println("Please enter sol number::");
+                    int    sol = Integer.parseInt(dateScanner.nextLine());
+                    byte[] msg = CommandBuilder.buildSampleAnayslisCommand(sol);
+                    transmitter.transmitMessage(msg);
+                }
+                break;
+                case 14: {
                     System.out.println("This is NASA Mission Control coms signing off.");
                 }
                 break;

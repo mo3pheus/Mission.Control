@@ -89,7 +89,7 @@ public class Producer {
                 default: {
                 }
             }
-            Thread.sleep(1 * 25000);
+            Thread.sleep(1 * 45000);
             //Thread.sleep(45);
         }
         transmitter.transmitMessage(CommandBuilder.buildGracefulShutdownCommand());
