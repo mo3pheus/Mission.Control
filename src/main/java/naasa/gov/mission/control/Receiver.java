@@ -23,6 +23,7 @@ import space.exploration.communications.protocol.radar.RadarContactListOuterClas
 import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
+import space.exploration.communications.protocol.service.SampleAnalysisDataOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.kernel.diagnostics.LogResponse;
@@ -130,12 +131,14 @@ public class Receiver extends Thread {
                 printMessage("Message received from " + received.getModuleName());
 
                 if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
-                    ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket.parseFrom(received.getModuleMessage());
+                    ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket
+                            .parseFrom(received.getModuleMessage());
                     printMessage(received.toString());
                     printMessage(apxsDataPacket.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.CAMERA_SENSOR.getValue()) {
 
-                    CameraPayload.CamPayload camPayload = CameraPayload.CamPayload.parseFrom(received.getModuleMessage());
+                    CameraPayload.CamPayload camPayload = CameraPayload.CamPayload
+                            .parseFrom(received.getModuleMessage());
                     //System.out.println(received.toString());
 
                     for (String metaData : camPayload.getImageDataMap().keySet()) {
@@ -165,7 +168,8 @@ public class Receiver extends Thread {
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.DIAGNOSTICS.getValue()) {
                     printMessage(received.toString());
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
-                                                                                                              .getModuleMessage().toByteArray());
+                                                                                                              .getModuleMessage()
+                                                                                                              .toByteArray());
                     scetTime = received.getSCET();
                     printMessage(heartBeat.toString());
                     printMessage("OneWayLightTime = " + Double.toString(received.getMslPositionsPacket()
@@ -188,7 +192,8 @@ public class Receiver extends Thread {
                     WeatherDataArchive weatherDataArchive = new WeatherDataArchive(weatherPayload.toString());
                     weatherDataArchive.archiveWeatherData();
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue()) {
-                    SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());
+                    SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket
+                            .parseFrom(received.getModuleMessage());
                     printMessage(sclkPacket.toString());
                     printMessage(received.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.DAN_SPECTROMETER.getValue()) {
@@ -202,6 +207,11 @@ public class Receiver extends Thread {
                     /*printMessage(logResponsePacket.toString(), 0);*/
                     FileUtil.saveLogFiles("curiosityLogs", logResponsePacket);
                     System.out.println("Number of log files = " + logResponsePacket.getLogFilesCount());
+                } else if (received.getModuleReporting() == ModuleDirectory.Module.SAM_SPECTROMETER.getValue()) {
+                    SampleAnalysisDataOuterClass.SampleAnalysisData sampleAnalysisData =
+                            SampleAnalysisDataOuterClass.SampleAnalysisData
+                                    .parseFrom(received.getModuleMessage());
+                    printMessage(sampleAnalysisData.toString());
                 } else {
                     printMessage(received.toString());
                 }

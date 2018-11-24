@@ -15,7 +15,7 @@ public class ProducerManual {
         Properties  kafkaProperties = new Properties();
         kafkaProperties.load(fis);
 
-        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
+        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control", args[0]));
 
         int choice = 0;
         while (choice != 14) {

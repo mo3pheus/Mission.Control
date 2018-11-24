@@ -10,12 +10,12 @@ public class Producer {
 
     public static void main(String[] args) throws Exception {
         Driver.configureLogging(false);
-        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
+        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control", args[0]));
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 5) {
             int choice = ThreadLocalRandom.current().nextInt(0, 12);
-            while(choice == 10){
+            while (choice == 10) {
                 choice = ThreadLocalRandom.current().nextInt(0, 12);
             }
             //int choice = 3;
