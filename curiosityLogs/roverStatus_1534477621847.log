@@ -1,0 +1,74 @@
+2018-08-16 23:47:06,237 [radio] INFO  space.exploration.mars.rover.communication.Receiver - Time Elapsed since last message = 29870
+2018-08-16 23:47:06,287 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15334668185476E8
+stateCuriosity: -3.3245145554E7
+stateCuriosity: -7.3698745075E7
+stateCuriosity: -3.2104218513E7
+stateCuriosity: 0.756
+stateCuriosity: 8.725
+stateCuriosity: 2.869
+owltMSLEarth: 290.171
+stateEarth: 3.3247207693E7
+stateEarth: 7.3703314515E7
+stateEarth: 3.2106208773E7
+stateEarth: -0.759
+stateEarth: -8.732
+stateEarth: -2.872
+owltEarthMSL: 290.189
+positionEarthWRTCuriosity: 3.3247207693E7
+positionEarthWRTCuriosity: 7.3703314515E7
+positionEarthWRTCuriosity: 3.2106208773E7
+owltEarthMSL2: 290.189
+angSepHGAEarth: 137.439
+utcTime: "2016-05-01~00:30:00"
+sol: 1327
+sclkValue: " 1/01327:22:30:25:71625"
+
+2018-08-16 23:47:06,323 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15334668185476E8
+stateCuriosity: -3.3245145554E7
+stateCuriosity: -7.3698745075E7
+stateCuriosity: -3.2104218513E7
+stateCuriosity: 0.756
+stateCuriosity: 8.725
+stateCuriosity: 2.869
+owltMSLEarth: 290.171
+stateEarth: 3.3247207693E7
+stateEarth: 7.3703314515E7
+stateEarth: 3.2106208773E7
+stateEarth: -0.759
+stateEarth: -8.732
+stateEarth: -2.872
+owltEarthMSL: 290.189
+positionEarthWRTCuriosity: 3.3247207693E7
+positionEarthWRTCuriosity: 7.3703314515E7
+positionEarthWRTCuriosity: 3.2106208773E7
+owltEarthMSL2: 290.189
+angSepHGAEarth: 137.439
+utcTime: "2016-05-01~00:30:00"
+sol: 1327
+sclkValue: " 1/01327:22:30:25:71625"
+
+2018-08-16 23:47:06,324 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 290.171
+2018-08-16 23:47:06,733 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-08-16 23:47:06,733 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1534477626204
+targets {
+  roverModule: 6
+  action: "Update Software"
+  auxiliaryData: "\tffffff\376?\022`https://storage.googleapis.com/rover_artifacts/softwareUpdates/mars.rover-1.8-SOLSHOT-shaded.jar\032Phttps://storage.googleapis.com/rover_artifacts/softwareUpdates/softwareLaunch.sh\"!mars.rover-1.8-SOLSHOT-shaded.jar*\021softwareLaunch.sh"
+}
+
+2018-08-16 23:47:12,747 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - 1534477632747,6,Update Software Current instructionQueue length = 1
+2018-08-16 23:47:12,747 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Maintenance State Software Version - 2.0
+2018-08-16 23:47:12,747 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover commencing software update.
+2018-08-16 23:47:12,748 [radio] ERROR space.exploration.mars.rover.kernel.ListeningState - Software already up to date.
+2018-08-16 23:47:12,748 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 1
+2018-08-16 23:47:12,749 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-08-16 23:47:12,750 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1534477621847
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-08-16~23:47:01\032\0232018-08-17~00:00:00"
+}
+
+2018-08-16 23:47:18,763 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1534477638763,6,Request Rover Logs Current instructionQueue length = 0
+2018-08-16 23:47:18,764 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-08-16 23:47:18,764 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-08-16~23:47:01 End date = 2018-08-17~00:00:00

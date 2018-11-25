@@ -3,6 +3,7 @@
  */
 package naasa.gov.mission.control;
 
+import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import communications.protocol.ModuleDirectory;
 import encryption.EncryptionUtil;
@@ -36,6 +37,9 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -52,6 +56,7 @@ public class Receiver extends Thread {
     final static String SEPARATOR =
             "============================================================================";
 
+    final static   String samDataArchive         = "dataArchives/SamData/";
     final static   String clientId               = "Curiosity";
     final static   String TUNED_CHANNEL_PROPERTY = "source.topic";
     private static String dataArchivePath        = null;
@@ -211,6 +216,33 @@ public class Receiver extends Thread {
                     SampleAnalysisDataOuterClass.SampleAnalysisData sampleAnalysisData =
                             SampleAnalysisDataOuterClass.SampleAnalysisData
                                     .parseFrom(received.getModuleMessage());
+
+                    util.FileUtil.processDirectories(samDataArchive + sampleAnalysisData.getSol());
+
+                    for (int i = 0; i < sampleAnalysisData.getDataFilesCount(); i++) {
+                        SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile sampleDataFile =
+                                sampleAnalysisData
+                                        .getDataFiles(i);
+                        System.out.println("SampleData file extracted:: " + sampleDataFile.toString());
+                        System.out.println(
+                                "Proposed file destination path = " + samDataArchive + sampleDataFile.getFileName());
+                        Path path = Paths
+                                .get(samDataArchive + sampleAnalysisData.getSol() + "/" + sampleDataFile.getFileName());
+                        Files.write(path, sampleDataFile.getContent().toByteArray());
+                    }
+
+//                    List<SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile> sampleDataFiles =
+//                            sampleAnalysisData
+//                                    .getDataFilesList();
+//                    for (SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile sampleDataFile :
+//                            sampleDataFiles) {
+//                        printMessage("FileName = " + sampleDataFile.getFileName());
+//                        Path path = Paths.get(dataArchivePath + sampleDataFile.getFileName());
+//                        printMessage(path.toString());
+////                        Files.write(Paths.get(samDataArchive + sampleDataFile.getFileName()),
+////                                    sampleDataFile.getContent().toByteArray());
+//                    }
+
                     printMessage(sampleAnalysisData.toString());
                 } else {
                     printMessage(received.toString());

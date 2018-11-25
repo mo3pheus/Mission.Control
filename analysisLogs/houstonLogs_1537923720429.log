@@ -1,0 +1,329 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+25 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+26 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+26 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+26 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+26 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+26 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+26 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+27 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+16764 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+16782 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_5)
+16789 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+16789 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16789 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 0 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$1.apply$mcV$sp(DefaultEventHandler.scala:68)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:68)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+16790 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16791 [main] ERROR kafka.utils.CoreUtils$  - fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$1.apply$mcV$sp(DefaultEventHandler.scala:68)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:68)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 10 more
+16791 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+16792 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(earth_to_curiosity_5)
+16792 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+16792 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16792 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 1 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:188)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:152)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:151)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:151)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:96)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:73)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+16792 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16793 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+16793 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 3
+16896 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 2 for 1 topic(s) Set(earth_to_curiosity_5)
+16898 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+16898 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16898 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 2 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+16899 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16900 [main] ERROR kafka.utils.CoreUtils$  - fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 10 more
+16901 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+16902 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 3 for 1 topic(s) Set(earth_to_curiosity_5)
+16903 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+16903 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16904 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 3 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:188)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:152)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:151)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:151)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:96)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:73)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+16905 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+16905 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+16906 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 2
+17007 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 4 for 1 topic(s) Set(earth_to_curiosity_5)
+17007 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+17007 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17008 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 4 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+17008 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17008 [main] ERROR kafka.utils.CoreUtils$  - fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 10 more
+17009 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+17009 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 5 for 1 topic(s) Set(earth_to_curiosity_5)
+17010 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+17010 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17010 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 5 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:188)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:152)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:151)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:151)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:96)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:73)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+17010 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17011 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+17011 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 1
+17112 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 6 for 1 topic(s) Set(earth_to_curiosity_5)
+17113 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+17113 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17114 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 6 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+17114 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17115 [main] ERROR kafka.utils.CoreUtils$  - fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 10 more
+17116 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_5
+17117 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 7 for 1 topic(s) Set(earth_to_curiosity_5)
+17118 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+17118 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17118 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 7 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.BrokerPartitionInfo.getBrokerPartitionInfo(BrokerPartitionInfo.scala:49)
+	at kafka.producer.async.DefaultEventHandler.kafka$producer$async$DefaultEventHandler$$getPartitionListForTopic(DefaultEventHandler.scala:188)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:152)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$partitionAndCollate$1.apply(DefaultEventHandler.scala:151)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at kafka.producer.async.DefaultEventHandler.partitionAndCollate(DefaultEventHandler.scala:151)
+	at kafka.producer.async.DefaultEventHandler.dispatchSerializedData(DefaultEventHandler.scala:96)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:73)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+17119 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17119 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+17120 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 0
+17221 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 8 for 1 topic(s) Set(earth_to_curiosity_5)
+17222 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+17222 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17223 [main] WARN kafka.client.ClientUtils$  - Fetching topic metadata with correlation id 8 for topics [Set(earth_to_curiosity_5)] from broker [BrokerEndPoint(0,localhost,9092)] failed
+java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+17223 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+17224 [main] ERROR kafka.utils.CoreUtils$  - fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+kafka.common.KafkaException: fetching topic metadata for topics [Set(earth_to_curiosity_5)] from broker [ArrayBuffer(BrokerEndPoint(0,localhost,9092))] failed
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:73)
+	at kafka.producer.BrokerPartitionInfo.updateInfo(BrokerPartitionInfo.scala:82)
+	at kafka.producer.async.DefaultEventHandler$$anonfun$handle$2.apply$mcV$sp(DefaultEventHandler.scala:79)
+	at kafka.utils.CoreUtils$.swallow(CoreUtils.scala:79)
+	at kafka.utils.Logging$class.swallowError(Logging.scala:106)
+	at kafka.utils.CoreUtils$.swallowError(CoreUtils.scala:51)
+	at kafka.producer.async.DefaultEventHandler.handle(DefaultEventHandler.scala:79)
+	at kafka.producer.Producer.send(Producer.scala:77)
+	at kafka.javaapi.producer.Producer.send(Producer.scala:33)
+	at naasa.gov.mission.control.Transmitter.transmitMessage(Transmitter.java:52)
+	at naasa.gov.mission.control.ProducerManual.main(ProducerManual.java:49)
+Caused by: java.nio.channels.ClosedChannelException
+	at kafka.network.BlockingChannel.send(BlockingChannel.scala:110)
+	at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:75)
+	at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:74)
+	at kafka.producer.SyncProducer.send(SyncProducer.scala:119)
+	at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:59)
+	... 10 more
+17226 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to send requests for topics earth_to_curiosity_5 with correlation ids in [0,8]

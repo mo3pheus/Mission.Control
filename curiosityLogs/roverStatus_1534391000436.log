@@ -1,0 +1,32 @@
+2018-08-15 23:43:20,907 [remsCalibrationKickOff] ERROR space.exploration.mars.rover.service.calibration.weather.RemsDataService - Can not find relevant link here for target = http://pds-atmospheres.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_01294_01417/null
+org.jsoup.HttpStatusException: HTTP error fetching URL. Status=404, URL=http://pds-atmospheres.nmsu.edu/PDS/data/mslrem_1001/DATA/SOL_01294_01417/null
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:537)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:493)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:205)
+	at org.jsoup.helper.HttpConnection.get(HttpConnection.java:194)
+	at space.exploration.mars.rover.service.calibration.weather.RemsDataService.getFileLink(RemsDataService.java:61)
+	at space.exploration.mars.rover.service.calibration.weather.RemsDataService.getFileURL(RemsDataService.java:79)
+	at space.exploration.mars.rover.service.calibration.weather.WeatherDataService.downloadCalibrationData(WeatherDataService.java:19)
+	at space.exploration.mars.rover.sensor.WeatherSensor$CalibrationKickOff.run(WeatherSensor.java:162)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-15 23:43:21,041 [remsCalibrationKickOff] INFO  space.exploration.mars.rover.sensor.WeatherSensor - No weather data for sol = 1390
+2018-08-15 23:43:21,747 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor - BatteryMonitor performing due diligence. SCET = 1534391001747 Rover state = Listening State
+2018-08-15 23:43:21,749 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor -  Battery primaryUnits = 661 auxiliaryPowerUnits = 100
+2018-08-15 23:43:27,324 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 1
+2018-08-15 23:43:27,326 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-08-15 23:43:27,327 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1534391000436
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-08-15~23:43:20\032\0232018-08-16~00:00:00"
+}
+
+2018-08-15 23:43:33,341 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1534391013341,6,Request Rover Logs Current instructionQueue length = 0
+2018-08-15 23:43:33,342 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-08-15 23:43:33,343 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-08-15~23:43:20 End date = 2018-08-16~00:00:00

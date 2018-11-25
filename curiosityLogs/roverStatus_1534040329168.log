@@ -1,0 +1,90 @@
+2018-08-11 22:18:49,168 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1534040306175
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-08-11~22:18:26\032\0232018-08-12~00:00:00"
+}
+
+2018-08-11 22:18:55,183 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1534040335183,6,Request Rover Logs Current instructionQueue length = 0
+2018-08-11 22:18:55,183 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-08-11 22:18:55,184 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-08-11~22:18:26 End date = 2018-08-12~00:00:00
+2018-08-11 22:18:55,194 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-08-11 22:19:01,284 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15335508185476E8
+stateCuriosity: -3.3244506987E7
+stateCuriosity: -7.3691412306E7
+stateCuriosity: -3.2101808894E7
+stateCuriosity: 0.764
+stateCuriosity: 8.734
+stateCuriosity: 2.868
+owltMSLEarth: 290.146
+stateEarth: 3.3246566831E7
+stateEarth: 7.3695976369E7
+stateEarth: 3.2103796875E7
+stateEarth: -0.767
+stateEarth: -8.74
+stateEarth: -2.871
+owltEarthMSL: 290.164
+positionEarthWRTCuriosity: 3.3246566831E7
+positionEarthWRTCuriosity: 7.3695976369E7
+positionEarthWRTCuriosity: 3.2103796875E7
+owltEarthMSL2: 290.164
+angSepHGAEarth: 138.459
+utcTime: "2016-05-01~00:44:00"
+sol: 1327
+sclkValue: " 1/01327:22:44:03:24146"
+
+2018-08-11 22:19:01,316 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15335508185476E8
+stateCuriosity: -3.3244506987E7
+stateCuriosity: -7.3691412306E7
+stateCuriosity: -3.2101808894E7
+stateCuriosity: 0.764
+stateCuriosity: 8.734
+stateCuriosity: 2.868
+owltMSLEarth: 290.146
+stateEarth: 3.3246566831E7
+stateEarth: 7.3695976369E7
+stateEarth: 3.2103796875E7
+stateEarth: -0.767
+stateEarth: -8.74
+stateEarth: -2.871
+owltEarthMSL: 290.164
+positionEarthWRTCuriosity: 3.3246566831E7
+positionEarthWRTCuriosity: 7.3695976369E7
+positionEarthWRTCuriosity: 3.2103796875E7
+owltEarthMSL2: 290.164
+angSepHGAEarth: 138.459
+utcTime: "2016-05-01~00:44:00"
+sol: 1327
+sclkValue: " 1/01327:22:44:03:24146"
+
+2018-08-11 22:19:01,316 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 290.146
+2018-08-11 22:19:01,336 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-08-11 22:19:01,338 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-08-11 22:19:04,338 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-08-11 22:19:04,339 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor - BatteryMonitor performing due diligence. SCET = 1534040333180 Rover state = Listening State
+2018-08-11 22:19:04,340 [roverGarbageCollector] ERROR space.exploration.mars.rover.diagnostics.RoverGarbageCollector - Encountered exception while processing instructionQueue
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.remove(ArrayList.java:496)
+	at space.exploration.mars.rover.kernel.Rover.processPendingMessageQueue(Rover.java:142)
+	at space.exploration.mars.rover.diagnostics.RoverGarbageCollector$QueueMonitor.run(RoverGarbageCollector.java:63)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-11 22:19:04,341 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor -  Battery primaryUnits = 737 auxiliaryPowerUnits = 100
+2018-08-11 22:19:09,685 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 1
+2018-08-11 22:19:09,686 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-08-11 22:19:09,686 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1534040329168
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-08-11~22:18:49\032\0232018-08-12~00:00:00"
+}
+
+2018-08-11 22:19:15,705 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1534040355705,6,Request Rover Logs Current instructionQueue length = 0
+2018-08-11 22:19:15,706 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-08-11 22:19:15,706 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-08-11~22:18:49 End date = 2018-08-12~00:00:00

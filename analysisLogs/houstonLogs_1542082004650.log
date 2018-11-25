@@ -1,0 +1,832 @@
+0 [main] INFO org.apache.kafka.clients.producer.ProducerConfig  - ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [zion-mainframe:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = 1
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 0
+
+9 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bufferpool-wait-time
+69 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name buffer-exhausted-records
+79 [main] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 1 to Cluster(nodes = [Node(-1, zion-mainframe, 9092)], partitions = [])
+91 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name connections-closed:client-id-producer-1
+91 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name connections-created:client-id-producer-1
+91 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-sent-received:client-id-producer-1
+91 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-sent:client-id-producer-1
+92 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-received:client-id-producer-1
+92 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name select-time:client-id-producer-1
+93 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name io-time:client-id-producer-1
+96 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name batch-size
+96 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name compression-rate
+96 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name queue-time
+96 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name request-time
+97 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name produce-throttle-time
+97 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name records-per-request
+97 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name record-retries
+97 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name errors
+97 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name record-size-max
+99 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.producer.internals.Sender  - Starting Kafka producer I/O thread.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration zookeeper.connect = zion-mainframe:2181 was supplied but isn't a known config.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration group.id = space.exploration.mars.rover.curiosity.1542082004672 was supplied but isn't a known config.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration source.topic = curiosity_to_earth_6 was supplied but isn't a known config.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration auto.offset.reset = largest was supplied but isn't a known config.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration metadata.broker.list = zion-mainframe:9092 was supplied but isn't a known config.
+99 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration destination.topic = earth_to_curiosity_6 was supplied but isn't a known config.
+101 [main] INFO org.apache.kafka.common.utils.AppInfoParser  - Kafka version : 0.9.0.1
+101 [main] INFO org.apache.kafka.common.utils.AppInfoParser  - Kafka commitId : 23c69d62a0cabf06
+102 [main] DEBUG org.apache.kafka.clients.producer.KafkaProducer  - Kafka producer started
+7717 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+7718 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+8842 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.bytes-sent
+8843 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.bytes-received
+8856 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.latency
+8858 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+8860 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+8928 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+8928 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+8932 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+8932 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+9028 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+9028 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+9031 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+9032 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+9129 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+9129 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+9132 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+9133 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+9229 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+9229 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+9232 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+9232 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+9330 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+9330 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+9333 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+9333 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+9430 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+9430 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+10686 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+10687 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+10734 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+10834 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+10834 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+10917 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+10917 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+10935 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+11035 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+11035 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+12220 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+12220 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+12238 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+12339 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+12339 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+13446 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+13447 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+13542 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+13542 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+14682 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+14682 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+14746 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+14746 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+15936 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+15936 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+15948 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+16049 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+16049 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+16057 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+16058 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+16149 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+16149 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+17237 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+17237 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+17252 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+17353 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+17353 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+18673 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+18674 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+18756 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+18756 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+19899 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+19900 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+19958 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+19958 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+19961 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+19961 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+20059 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+20059 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+21128 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+21128 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+21162 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+21262 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+21262 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+22355 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+22355 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+22364 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+22464 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+22464 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+23586 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+23586 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+23668 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+23668 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+24917 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+24917 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+24970 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+24970 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+24972 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+24973 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+25070 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+25070 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+26146 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+26146 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+26172 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+26272 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+26272 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+27288 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+27288 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+27375 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+27376 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+28606 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+28607 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+28678 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+28678 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+29687 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+29687 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+29780 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+29780 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+30808 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+30808 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+30882 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+30882 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+30900 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+30900 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+30998 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+30998 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+32290 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+32290 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+32300 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+32401 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+32401 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+33432 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+33432 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+33503 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+33503 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+34648 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+34648 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+34705 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+34705 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+35874 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+35874 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+35908 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+36008 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+36009 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+36079 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+36079 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+36109 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+36209 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+36209 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+37410 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+37410 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+37412 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+37513 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+37513 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+38642 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+38642 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+38717 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+38717 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+39867 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+39868 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+39919 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+39919 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+39922 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+39923 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+40019 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+40019 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+41096 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+41096 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+41121 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+41221 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+41222 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+42325 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+42326 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+42424 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+42424 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+43557 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+43558 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+43626 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+43626 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+44783 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+44783 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+44828 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+44928 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+44928 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+44987 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+44988 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+45029 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+45129 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+45129 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+46319 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+46319 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+46330 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+46431 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+46431 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+47477 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+47477 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+47533 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+47533 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+48776 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+48777 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+48836 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+48836 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+48839 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+48839 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+48936 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+48936 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+50006 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+50006 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+50038 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+50138 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+50138 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+51234 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+51234 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+51241 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+51341 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+51341 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+52466 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+52466 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+52542 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+52542 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+53695 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+53695 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+53744 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+53844 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+53844 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+53896 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+53897 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+53945 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+54045 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+54045 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.
+55228 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.network.Selector  - Connection with zion-mainframe/192.168.1.87 disconnected
+java.net.NoRouteToHostException: No route to host
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.kafka.common.network.PlaintextTransportLayer.finishConnect(PlaintextTransportLayer.java:54)
+	at org.apache.kafka.common.network.KafkaChannel.finishConnect(KafkaChannel.java:72)
+	at org.apache.kafka.common.network.Selector.poll(Selector.java:274)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:256)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:216)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+55228 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+55247 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Give up sending metadata request since no node is available
+55347 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+55347 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-mainframe:9092.

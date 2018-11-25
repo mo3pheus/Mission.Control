@@ -1,0 +1,556 @@
+2018-06-30 22:09:30,622 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor - BatteryMonitor performing due diligence. SCET = 1530414570622 Rover state = Listening State
+2018-06-30 22:09:30,622 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor -  Battery primaryUnits = 458 auxiliaryPowerUnits = 100
+2018-06-30 22:09:30,622 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:09:30,626 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414090532
+targets {
+  roverModule: 10
+  estimatedPowerUsage: 70
+  action: "GetWeather"
+}
+
+2018-06-30 22:09:36,634 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414576634,10,GetWeather Current instructionQueue length = 3
+2018-06-30 22:09:36,634 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover will try to get weather measurements - actual Curiosity Data
+2018-06-30 22:09:36,634 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Weather Sensing State Software Version - 2.0
+2018-06-30 22:09:36,634 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.WeatherSensingState - Will get mars weather measurements
+2018-06-30 22:09:39,648 [roverGarbageCollector] ERROR space.exploration.mars.rover.sensor.WeatherSensor - REMS sensor is calibrating. Please wait for a while.
+2018-06-30 22:09:39,648 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:09:45,731 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.1544182818546E8
+stateCuriosity: -3.3190703948E7
+stateCuriosity: -7.2758843839E7
+stateCuriosity: -3.1787768172E7
+stateCuriosity: 0.522
+stateCuriosity: 8.802
+stateCuriosity: 2.884
+owltMSLEarth: 287.058
+stateEarth: 3.3192618849E7
+stateEarth: 7.276304133E7
+stateEarth: 3.1789602189E7
+stateEarth: -0.524
+stateEarth: -8.808
+stateEarth: -2.886
+owltEarthMSL: 287.074
+positionEarthWRTCuriosity: 3.3192618849E7
+positionEarthWRTCuriosity: 7.276304133E7
+positionEarthWRTCuriosity: 3.1789602189E7
+owltEarthMSL2: 287.074
+angSepHGAEarth: 117.67
+utcTime: "2016-05-02~06:16:00"
+sol: 1329
+sclkValue: " 1/01329:03:28:38:57518"
+
+2018-06-30 22:09:45,763 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.1544182818546E8
+stateCuriosity: -3.3190703948E7
+stateCuriosity: -7.2758843839E7
+stateCuriosity: -3.1787768172E7
+stateCuriosity: 0.522
+stateCuriosity: 8.802
+stateCuriosity: 2.884
+owltMSLEarth: 287.058
+stateEarth: 3.3192618849E7
+stateEarth: 7.276304133E7
+stateEarth: 3.1789602189E7
+stateEarth: -0.524
+stateEarth: -8.808
+stateEarth: -2.886
+owltEarthMSL: 287.074
+positionEarthWRTCuriosity: 3.3192618849E7
+positionEarthWRTCuriosity: 7.276304133E7
+positionEarthWRTCuriosity: 3.1789602189E7
+owltEarthMSL2: 287.074
+angSepHGAEarth: 117.67
+utcTime: "2016-05-02~06:16:00"
+sol: 1329
+sclkValue: " 1/01329:03:28:38:57518"
+
+2018-06-30 22:09:45,764 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 287.058
+2018-06-30 22:09:45,772 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:09:45,773 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:09:48,773 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:09:48,774 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 3
+2018-06-30 22:09:48,774 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:09:48,775 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414383687
+targets {
+  roverModule: 11
+  action: "GetSclkInformation"
+}
+
+2018-06-30 22:09:54,790 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414594790,11,GetSclkInformation Current instructionQueue length = 3
+2018-06-30 22:09:54,791 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover will get detailed spacecraftClock information. Houston, this is CuriosityActual.
+2018-06-30 22:09:54,791 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.SclkTiming State Software Version - 2.0
+2018-06-30 22:09:54,791 [radio] INFO  space.exploration.mars.rover.kernel.SpacecraftClock - Internal time::2016-05-02T06:34:00.000-05:00 sclk of::1/01329:03:46:09:67902
+2018-06-30 22:09:54,792 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:10:00,877 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.1544362818546E8
+stateCuriosity: -3.3189779737E7
+stateCuriosity: -7.2742982708E7
+stateCuriosity: -3.1782562873E7
+stateCuriosity: 0.505
+stateCuriosity: 8.821
+stateCuriosity: 2.9
+owltMSLEarth: 287.005
+stateEarth: 3.3191690417E7
+stateEarth: 7.2747170253E7
+stateEarth: 3.1784392681E7
+stateEarth: -0.507
+stateEarth: -8.826
+stateEarth: -2.902
+owltEarthMSL: 287.022
+positionEarthWRTCuriosity: 3.3191690417E7
+positionEarthWRTCuriosity: 7.2747170253E7
+positionEarthWRTCuriosity: 3.1784392681E7
+owltEarthMSL2: 287.022
+angSepHGAEarth: 112.838
+utcTime: "2016-05-02~06:46:00"
+sol: 1329
+sclkValue: " 1/01329:03:57:50:41492"
+
+2018-06-30 22:10:00,910 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.1544362818546E8
+stateCuriosity: -3.3189779737E7
+stateCuriosity: -7.2742982708E7
+stateCuriosity: -3.1782562873E7
+stateCuriosity: 0.505
+stateCuriosity: 8.821
+stateCuriosity: 2.9
+owltMSLEarth: 287.005
+stateEarth: 3.3191690417E7
+stateEarth: 7.2747170253E7
+stateEarth: 3.1784392681E7
+stateEarth: -0.507
+stateEarth: -8.826
+stateEarth: -2.902
+owltEarthMSL: 287.022
+positionEarthWRTCuriosity: 3.3191690417E7
+positionEarthWRTCuriosity: 7.2747170253E7
+positionEarthWRTCuriosity: 3.1784392681E7
+owltEarthMSL2: 287.022
+angSepHGAEarth: 112.838
+utcTime: "2016-05-02~06:46:00"
+sol: 1329
+sclkValue: " 1/01329:03:57:50:41492"
+
+2018-06-30 22:10:00,910 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 287.005
+2018-06-30 22:10:00,925 [radio] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:10:00,925 [radio] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:10:03,925 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:03,926 [radio] INFO  space.exploration.mars.rover.communication.Receiver - Time Elapsed since last message = 33568
+2018-06-30 22:10:03,926 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:03,926 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor - BatteryMonitor performing due diligence. SCET = 1530414603926 Rover state = Listening State
+2018-06-30 22:10:03,927 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414117038
+targets {
+  roverModule: 12
+  estimatedPowerUsage: 70
+  action: "Shoot Neutrons"
+}
+
+2018-06-30 22:10:03,968 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.1544398818546E8
+stateCuriosity: -3.3189598706E7
+stateCuriosity: -7.2739806579E7
+stateCuriosity: -3.178151825E7
+stateCuriosity: 0.501
+stateCuriosity: 8.824
+stateCuriosity: 2.903
+owltMSLEarth: 286.995
+stateEarth: 3.3191508582E7
+stateEarth: 7.2743992221E7
+stateEarth: 3.1783347252E7
+stateEarth: -0.503
+stateEarth: -8.83
+stateEarth: -2.906
+owltEarthMSL: 287.011
+positionEarthWRTCuriosity: 3.3191508582E7
+positionEarthWRTCuriosity: 7.2743992221E7
+positionEarthWRTCuriosity: 3.1783347252E7
+owltEarthMSL2: 287.011
+angSepHGAEarth: 111.855
+utcTime: "2016-05-02~06:52:00"
+sol: 1329
+sclkValue: " 1/01329:04:03:40:78286"
+
+2018-06-30 22:10:04,003 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.1544398818546E8
+stateCuriosity: -3.3189598706E7
+stateCuriosity: -7.2739806579E7
+stateCuriosity: -3.178151825E7
+stateCuriosity: 0.501
+stateCuriosity: 8.824
+stateCuriosity: 2.903
+owltMSLEarth: 286.995
+stateEarth: 3.3191508582E7
+stateEarth: 7.2743992221E7
+stateEarth: 3.1783347252E7
+stateEarth: -0.503
+stateEarth: -8.83
+stateEarth: -2.906
+owltEarthMSL: 287.011
+positionEarthWRTCuriosity: 3.3191508582E7
+positionEarthWRTCuriosity: 7.2743992221E7
+positionEarthWRTCuriosity: 3.1783347252E7
+owltEarthMSL2: 287.011
+angSepHGAEarth: 111.855
+utcTime: "2016-05-02~06:52:00"
+sol: 1329
+sclkValue: " 1/01329:04:03:40:78286"
+
+2018-06-30 22:10:04,003 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.995
+2018-06-30 22:10:09,945 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414609945,12,Shoot Neutrons Current instructionQueue length = 2
+2018-06-30 22:10:09,945 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState -  Rover Curiosity will do a Dynamic Albedo of Neutrons Scan
+2018-06-30 22:10:09,945 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.DANSensing State Software Version - 2.0
+2018-06-30 22:10:21,951 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:10:28,036 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15446868185459E8
+stateCuriosity: -3.3188203413E7
+stateCuriosity: -7.2714356716E7
+stateCuriosity: -3.1773117511E7
+stateCuriosity: 0.467
+stateCuriosity: 8.848
+stateCuriosity: 2.931
+owltMSLEarth: 286.911
+stateEarth: 3.3190107382E7
+stateEarth: 7.2718528246E7
+stateEarth: 3.1774940553E7
+stateEarth: -0.469
+stateEarth: -8.853
+stateEarth: -2.932
+owltEarthMSL: 286.927
+positionEarthWRTCuriosity: 3.3190107382E7
+positionEarthWRTCuriosity: 7.2718528246E7
+positionEarthWRTCuriosity: 3.1774940553E7
+owltEarthMSL2: 286.927
+angSepHGAEarth: 103.857
+utcTime: "2016-05-02~07:40:00"
+sol: 1329
+sclkValue: " 1/01329:04:50:23:72644"
+
+2018-06-30 22:10:28,070 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15446868185459E8
+stateCuriosity: -3.3188203413E7
+stateCuriosity: -7.2714356716E7
+stateCuriosity: -3.1773117511E7
+stateCuriosity: 0.467
+stateCuriosity: 8.848
+stateCuriosity: 2.931
+owltMSLEarth: 286.911
+stateEarth: 3.3190107382E7
+stateEarth: 7.2718528246E7
+stateEarth: 3.1774940553E7
+stateEarth: -0.469
+stateEarth: -8.853
+stateEarth: -2.932
+owltEarthMSL: 286.927
+positionEarthWRTCuriosity: 3.3190107382E7
+positionEarthWRTCuriosity: 7.2718528246E7
+positionEarthWRTCuriosity: 3.1774940553E7
+owltEarthMSL2: 286.927
+angSepHGAEarth: 103.857
+utcTime: "2016-05-02~07:40:00"
+sol: 1329
+sclkValue: " 1/01329:04:50:23:72644"
+
+2018-06-30 22:10:28,070 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.911
+2018-06-30 22:10:28,086 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:10:28,086 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:10:31,086 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:31,087 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 2
+2018-06-30 22:10:31,087 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:31,088 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414410211
+targets {
+  roverModule: 11
+  action: "GetSclkInformation"
+}
+
+2018-06-30 22:10:37,105 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414637105,11,GetSclkInformation Current instructionQueue length = 2
+2018-06-30 22:10:37,105 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover will get detailed spacecraftClock information. Houston, this is CuriosityActual.
+2018-06-30 22:10:37,105 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.SclkTiming State Software Version - 2.0
+2018-06-30 22:10:37,105 [radio] INFO  space.exploration.mars.rover.kernel.SpacecraftClock - Internal time::2016-05-02T07:58:00.000-05:00 sclk of::1/01329:05:07:54:83028
+2018-06-30 22:10:37,105 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:10:43,143 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15448668185459E8
+stateCuriosity: -3.3187385139E7
+stateCuriosity: -7.2698419716E7
+stateCuriosity: -3.1767827278E7
+stateCuriosity: 0.442
+stateCuriosity: 8.859
+stateCuriosity: 2.947
+owltMSLEarth: 286.858
+stateEarth: 3.3189285923E7
+stateEarth: 7.2702583506E7
+stateEarth: 3.176964706E7
+stateEarth: -0.444
+stateEarth: -8.863
+stateEarth: -2.949
+owltEarthMSL: 286.875
+positionEarthWRTCuriosity: 3.3189285923E7
+positionEarthWRTCuriosity: 7.2702583506E7
+positionEarthWRTCuriosity: 3.176964706E7
+owltEarthMSL2: 286.875
+angSepHGAEarth: 98.8
+utcTime: "2016-05-02~08:10:00"
+sol: 1329
+sclkValue: " 1/01329:05:19:35:56618"
+
+2018-06-30 22:10:43,176 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15448668185459E8
+stateCuriosity: -3.3187385139E7
+stateCuriosity: -7.2698419716E7
+stateCuriosity: -3.1767827278E7
+stateCuriosity: 0.442
+stateCuriosity: 8.859
+stateCuriosity: 2.947
+owltMSLEarth: 286.858
+stateEarth: 3.3189285923E7
+stateEarth: 7.2702583506E7
+stateEarth: 3.176964706E7
+stateEarth: -0.444
+stateEarth: -8.863
+stateEarth: -2.949
+owltEarthMSL: 286.875
+positionEarthWRTCuriosity: 3.3189285923E7
+positionEarthWRTCuriosity: 7.2702583506E7
+positionEarthWRTCuriosity: 3.176964706E7
+owltEarthMSL2: 286.875
+angSepHGAEarth: 98.8
+utcTime: "2016-05-02~08:10:00"
+sol: 1329
+sclkValue: " 1/01329:05:19:35:56618"
+
+2018-06-30 22:10:43,176 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.858
+2018-06-30 22:10:43,184 [radio] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:10:43,184 [radio] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:10:46,185 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:46,185 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor -  Battery primaryUnits = 318 auxiliaryPowerUnits = 100
+2018-06-30 22:10:46,185 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:10:46,185 [radio] INFO  space.exploration.mars.rover.communication.Receiver - Time Elapsed since last message = 42259
+2018-06-30 22:10:46,185 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414143545
+targets {
+  roverModule: 10
+  estimatedPowerUsage: 70
+  action: "GetWeather"
+}
+
+2018-06-30 22:10:46,222 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15449028185459E8
+stateCuriosity: -3.3187226957E7
+stateCuriosity: -7.2695230067E7
+stateCuriosity: -3.1766765581E7
+stateCuriosity: 0.437
+stateCuriosity: 8.861
+stateCuriosity: 2.951
+owltMSLEarth: 286.848
+stateEarth: 3.3189127153E7
+stateEarth: 7.2699392415E7
+stateEarth: 3.1768584755E7
+stateEarth: -0.438
+stateEarth: -8.865
+stateEarth: -2.953
+owltEarthMSL: 286.864
+positionEarthWRTCuriosity: 3.3189127153E7
+positionEarthWRTCuriosity: 7.2699392415E7
+positionEarthWRTCuriosity: 3.1768584755E7
+owltEarthMSL2: 286.864
+angSepHGAEarth: 97.788
+utcTime: "2016-05-02~08:16:00"
+sol: 1329
+sclkValue: " 1/01329:05:25:25:93412"
+
+2018-06-30 22:10:46,256 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15449028185459E8
+stateCuriosity: -3.3187226957E7
+stateCuriosity: -7.2695230067E7
+stateCuriosity: -3.1766765581E7
+stateCuriosity: 0.437
+stateCuriosity: 8.861
+stateCuriosity: 2.951
+owltMSLEarth: 286.848
+stateEarth: 3.3189127153E7
+stateEarth: 7.2699392415E7
+stateEarth: 3.1768584755E7
+stateEarth: -0.438
+stateEarth: -8.865
+stateEarth: -2.953
+owltEarthMSL: 286.864
+positionEarthWRTCuriosity: 3.3189127153E7
+positionEarthWRTCuriosity: 7.2699392415E7
+positionEarthWRTCuriosity: 3.1768584755E7
+owltEarthMSL2: 286.864
+angSepHGAEarth: 97.788
+utcTime: "2016-05-02~08:16:00"
+sol: 1329
+sclkValue: " 1/01329:05:25:25:93412"
+
+2018-06-30 22:10:46,257 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.848
+2018-06-30 22:10:52,193 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414652193,10,GetWeather Current instructionQueue length = 1
+2018-06-30 22:10:52,193 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover will try to get weather measurements - actual Curiosity Data
+2018-06-30 22:10:52,193 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Weather Sensing State Software Version - 2.0
+2018-06-30 22:10:52,193 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.WeatherSensingState - Will get mars weather measurements
+2018-06-30 22:10:55,206 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:11:01,245 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15450828185458E8
+stateCuriosity: -3.3186465165E7
+stateCuriosity: -7.2679273104E7
+stateCuriosity: -3.176143914E7
+stateCuriosity: 0.409
+stateCuriosity: 8.868
+stateCuriosity: 2.967
+owltMSLEarth: 286.795
+stateEarth: 3.3188362677E7
+stateEarth: 7.2683428777E7
+stateEarth: 3.1763255512E7
+stateEarth: -0.411
+stateEarth: -8.872
+stateEarth: -2.969
+owltEarthMSL: 286.812
+positionEarthWRTCuriosity: 3.3188362677E7
+positionEarthWRTCuriosity: 7.2683428777E7
+positionEarthWRTCuriosity: 3.1763255512E7
+owltEarthMSL2: 286.812
+angSepHGAEarth: 92.747
+utcTime: "2016-05-02~08:46:00"
+sol: 1329
+sclkValue: " 1/01329:05:54:37:77386"
+
+2018-06-30 22:11:01,279 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15450828185458E8
+stateCuriosity: -3.3186465165E7
+stateCuriosity: -7.2679273104E7
+stateCuriosity: -3.176143914E7
+stateCuriosity: 0.409
+stateCuriosity: 8.868
+stateCuriosity: 2.967
+owltMSLEarth: 286.795
+stateEarth: 3.3188362677E7
+stateEarth: 7.2683428777E7
+stateEarth: 3.1763255512E7
+stateEarth: -0.411
+stateEarth: -8.872
+stateEarth: -2.969
+owltEarthMSL: 286.812
+positionEarthWRTCuriosity: 3.3188362677E7
+positionEarthWRTCuriosity: 7.2683428777E7
+positionEarthWRTCuriosity: 3.1763255512E7
+owltEarthMSL2: 286.812
+angSepHGAEarth: 92.747
+utcTime: "2016-05-02~08:46:00"
+sol: 1329
+sclkValue: " 1/01329:05:54:37:77386"
+
+2018-06-30 22:11:01,280 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.795
+2018-06-30 22:11:01,287 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:11:01,287 [roverGarbageCollector] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:11:04,288 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:11:04,288 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 1
+2018-06-30 22:11:04,288 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:11:04,288 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414436718
+targets {
+  roverModule: 12
+  estimatedPowerUsage: 70
+  action: "Shoot Neutrons"
+}
+
+2018-06-30 22:11:10,297 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414670297,12,Shoot Neutrons Current instructionQueue length = 1
+2018-06-30 22:11:10,297 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState -  Rover Curiosity will do a Dynamic Albedo of Neutrons Scan
+2018-06-30 22:11:10,297 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.DANSensing State Software Version - 2.0
+2018-06-30 22:11:22,299 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-06-30 22:11:28,336 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15454068185458E8
+stateCuriosity: -3.3185224634E7
+stateCuriosity: -7.2650529168E7
+stateCuriosity: -3.1751779205E7
+stateCuriosity: 0.356
+stateCuriosity: 8.873
+stateCuriosity: 2.995
+owltMSLEarth: 286.701
+stateEarth: 3.3187118404E7
+stateEarth: 7.2654675149E7
+stateEarth: 3.1753591529E7
+stateEarth: -0.357
+stateEarth: -8.875
+stateEarth: -2.996
+owltEarthMSL: 286.717
+positionEarthWRTCuriosity: 3.3187118404E7
+positionEarthWRTCuriosity: 7.2654675149E7
+positionEarthWRTCuriosity: 3.1753591529E7
+owltEarthMSL2: 286.717
+angSepHGAEarth: 83.851
+utcTime: "2016-05-02~09:40:00"
+sol: 1329
+sclkValue: " 1/01329:06:47:11:08538"
+
+2018-06-30 22:11:28,371 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15454068185458E8
+stateCuriosity: -3.3185224634E7
+stateCuriosity: -7.2650529168E7
+stateCuriosity: -3.1751779205E7
+stateCuriosity: 0.356
+stateCuriosity: 8.873
+stateCuriosity: 2.995
+owltMSLEarth: 286.701
+stateEarth: 3.3187118404E7
+stateEarth: 7.2654675149E7
+stateEarth: 3.1753591529E7
+stateEarth: -0.357
+stateEarth: -8.875
+stateEarth: -2.996
+owltEarthMSL: 286.717
+positionEarthWRTCuriosity: 3.3187118404E7
+positionEarthWRTCuriosity: 7.2654675149E7
+positionEarthWRTCuriosity: 3.1753591529E7
+owltEarthMSL2: 286.717
+angSepHGAEarth: 83.851
+utcTime: "2016-05-02~09:42:00"
+sol: 1329
+sclkValue: " 1/01329:06:47:11:08538"
+
+2018-06-30 22:11:28,372 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.701
+2018-06-30 22:11:28,388 [radio] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-06-30 22:11:28,388 [radio] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-06-30 22:11:31,389 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:11:31,389 [batteryMonitor] INFO  space.exploration.mars.rover.power.BatteryMonitor - BatteryMonitor performing due diligence. SCET = 1530414691389 Rover state = Listening State
+2018-06-30 22:11:31,389 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-06-30 22:11:31,389 [radio] INFO  space.exploration.mars.rover.communication.Receiver - Time Elapsed since last message = 45204
+2018-06-30 22:11:31,389 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530414570621
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-06-30~22:09:30\032\0232018-07-01~00:00:00"
+}
+
+2018-06-30 22:11:31,425 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15454548185458E8
+stateCuriosity: -3.318505592E7
+stateCuriosity: -7.2646270222E7
+stateCuriosity: -3.1750340651E7
+stateCuriosity: 0.347
+stateCuriosity: 8.873
+stateCuriosity: 2.999
+owltMSLEarth: 286.687
+stateEarth: 3.3186949256E7
+stateEarth: 7.2650415023E7
+stateEarth: 3.1752152485E7
+stateEarth: -0.348
+stateEarth: -8.875
+stateEarth: -3.0
+owltEarthMSL: 286.703
+positionEarthWRTCuriosity: 3.3186949256E7
+positionEarthWRTCuriosity: 7.2650415023E7
+positionEarthWRTCuriosity: 3.1752152485E7
+owltEarthMSL2: 286.703
+angSepHGAEarth: 82.565
+utcTime: "2016-05-02~09:48:00"
+sol: 1329
+sclkValue: " 1/01329:06:54:58:24264"
+
+2018-06-30 22:11:31,460 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15454548185458E8
+stateCuriosity: -3.318505592E7
+stateCuriosity: -7.2646270222E7
+stateCuriosity: -3.1750340651E7
+stateCuriosity: 0.347
+stateCuriosity: 8.873
+stateCuriosity: 2.999
+owltMSLEarth: 286.687
+stateEarth: 3.3186949256E7
+stateEarth: 7.2650415023E7
+stateEarth: 3.1752152485E7
+stateEarth: -0.348
+stateEarth: -8.875
+stateEarth: -3.0
+owltEarthMSL: 286.703
+positionEarthWRTCuriosity: 3.3186949256E7
+positionEarthWRTCuriosity: 7.2650415023E7
+positionEarthWRTCuriosity: 3.1752152485E7
+owltEarthMSL2: 286.703
+angSepHGAEarth: 82.565
+utcTime: "2016-05-02~09:48:00"
+sol: 1329
+sclkValue: " 1/01329:06:54:58:24264"
+
+2018-06-30 22:11:31,460 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 286.687
+2018-06-30 22:11:37,397 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530414697397,6,Request Rover Logs Current instructionQueue length = 0
+2018-06-30 22:11:37,397 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-06-30 22:11:37,397 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-06-30~22:09:30 End date = 2018-07-01~00:00:00

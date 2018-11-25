@@ -1,0 +1,48 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+19 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+19 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+19 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+19 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+19 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+19 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+19 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+19 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+20 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+4017 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+4033 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_6)
+4038 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4039 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4066 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4067 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_6)
+4073 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_6 -> 
+No partition metadata for topic earth_to_curiosity_6 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_6]: class kafka.common.LeaderNotAvailableException 
+4075 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_6
+4075 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(earth_to_curiosity_6)
+4075 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4075 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4079 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4080 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_6)
+4080 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_6 -> 
+No partition metadata for topic earth_to_curiosity_6 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_6]: class kafka.common.LeaderNotAvailableException 
+4080 [main] ERROR kafka.producer.async.DefaultEventHandler  - Failed to collate messages by topic, partition due to: Failed to fetch topic metadata for topic: earth_to_curiosity_6
+4081 [main] INFO kafka.producer.async.DefaultEventHandler  - Back off for 100 ms before retrying send. Remaining retries = 3
+4184 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 2 for 1 topic(s) Set(earth_to_curiosity_6)
+4186 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4186 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+4200 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+4200 [main] DEBUG kafka.client.ClientUtils$  - Successfully fetched metadata for 1 topic(s) Set(earth_to_curiosity_6)
+4202 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_6
+4205 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_6,0] has leader 0
+4208 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_6 are 0
+4219 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_6,0]
+4231 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 4 for topics [earth_to_curiosity_6,0] to broker 0 on zion-mainframe:9092
+4239 [main] DEBUG kafka.network.BlockingChannel  - Created socket with SO_TIMEOUT = 10000 (requested 10000), SO_RCVBUF = 530904 (requested -1), SO_SNDBUF = 102400 (requested 102400), connectTimeoutMs = 10000.
+4239 [main] INFO kafka.producer.SyncProducer  - Connected to zion-mainframe:9092 for producing
+4240 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 4 for topics [earth_to_curiosity_6,0] to broker 0 on zion-mainframe:9092
+20794 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Handling 1 events
+20795 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Getting broker partition info for topic earth_to_curiosity_6
+20795 [main] DEBUG kafka.producer.BrokerPartitionInfo  - Partition [earth_to_curiosity_6,0] has leader 0
+20795 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Broker partitions registered for topic: earth_to_curiosity_6 are 0
+20795 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Sending 1 messages with no compression to [earth_to_curiosity_6,0]
+20796 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sending messages with correlation id 6 for topics [earth_to_curiosity_6,0] to broker 0 on zion-mainframe:9092
+20796 [main] DEBUG kafka.producer.async.DefaultEventHandler  - Producer sent messages with correlation id 6 for topics [earth_to_curiosity_6,0] to broker 0 on zion-mainframe:9092

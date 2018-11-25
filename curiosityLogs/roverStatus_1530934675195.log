@@ -1,0 +1,76 @@
+2018-07-06 22:37:55,323 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-07-06 22:37:55,324 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530934673616
+targets {
+  roverModule: 11
+  action: "GetSclkInformation"
+}
+
+2018-07-06 22:38:01,338 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530934681338,11,GetSclkInformation Current instructionQueue length = 1
+2018-07-06 22:38:01,338 [radio] INFO  space.exploration.mars.rover.kernel.ListeningState - Rover will get detailed spacecraftClock information. Houston, this is CuriosityActual.
+2018-07-06 22:38:01,338 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.SclkTiming State Software Version - 2.0
+2018-07-06 22:38:01,339 [radio] INFO  space.exploration.mars.rover.kernel.SpacecraftClock - Internal time::2016-05-01T03:54:00.000-05:00 sclk of::1/01328:01:48:58:22646
+2018-07-06 22:38:01,339 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Transmitting State Software Version - 2.0
+2018-07-06 22:38:07,391 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - Houston - this is curiosityActual.ephemerisTime: 5.15347628185474E8
+stateCuriosity: -3.3234856824E7
+stateCuriosity: -7.3584640199E7
+stateCuriosity: -3.2066906794E7
+stateCuriosity: 0.805
+stateCuriosity: 8.891
+stateCuriosity: 2.907
+owltMSLEarth: 289.789
+stateEarth: 3.3236881332E7
+stateEarth: 7.3589121903E7
+stateEarth: 3.2068859884E7
+stateEarth: -0.808
+stateEarth: -8.898
+stateEarth: -2.91
+owltEarthMSL: 289.807
+positionEarthWRTCuriosity: 3.3236881332E7
+positionEarthWRTCuriosity: 7.3589121903E7
+positionEarthWRTCuriosity: 3.2068859884E7
+owltEarthMSL2: 289.807
+angSepHGAEarth: 130.976
+utcTime: "2016-05-01~04:06:00"
+sol: 1328
+sclkValue: " 1/01328:02:00:38:96235"
+
+2018-07-06 22:38:07,428 [radio] INFO  space.exploration.mars.rover.kernel.PositionSensor - ephemerisTime: 5.15347628185474E8
+stateCuriosity: -3.3234856824E7
+stateCuriosity: -7.3584640199E7
+stateCuriosity: -3.2066906794E7
+stateCuriosity: 0.805
+stateCuriosity: 8.891
+stateCuriosity: 2.907
+owltMSLEarth: 289.789
+stateEarth: 3.3236881332E7
+stateEarth: 7.3589121903E7
+stateEarth: 3.2068859884E7
+stateEarth: -0.808
+stateEarth: -8.898
+stateEarth: -2.91
+owltEarthMSL: 289.807
+positionEarthWRTCuriosity: 3.3236881332E7
+positionEarthWRTCuriosity: 7.3589121903E7
+positionEarthWRTCuriosity: 3.2068859884E7
+owltEarthMSL2: 289.807
+angSepHGAEarth: 130.976
+utcTime: "2016-05-01~04:06:00"
+sol: 1328
+sclkValue: " 1/01328:02:00:38:96235"
+
+2018-07-06 22:38:07,428 [radio] INFO  space.exploration.mars.rover.communication.Radio - One Way Light Time computed by SPICE :: 289.789
+2018-07-06 22:38:07,437 [radio] INFO  space.exploration.mars.rover.communication.Radio - Message encryption successful.
+2018-07-06 22:38:07,437 [radio] INFO  space.exploration.mars.rover.communication.Transmitter - Sending information packet to curiosity_to_earth_5
+2018-07-06 22:38:10,438 [radio] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-07-06 22:38:10,438 [roverGarbageCollector] INFO  space.exploration.mars.rover.diagnostics.RoverGarbageCollector - RoverGC trimming instructionQueue. Current length = 1
+2018-07-06 22:38:10,439 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.Rover - Trying to reflect rover state.Listening State Software Version - 2.0
+2018-07-06 22:38:10,439 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - timeStamp: 1530934675195
+targets {
+  roverModule: 6
+  action: "Request Rover Logs"
+  auxiliaryData: "\n\023yyyy-MM-dd~HH:mm:ss\022\0232018-07-06~22:37:55\032\0232018-07-07~00:00:00"
+}
+
+2018-07-06 22:38:16,454 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - 1530934696454,6,Request Rover Logs Current instructionQueue length = 0
+2018-07-06 22:38:16,455 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Requesting logs in date format = yyyy-MM-dd~HH:mm:ss
+2018-07-06 22:38:16,455 [roverGarbageCollector] INFO  space.exploration.mars.rover.kernel.ListeningState - Start date = 2018-07-06~22:37:55 End date = 2018-07-07~00:00:00

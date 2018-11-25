@@ -1,0 +1,125 @@
+0 [main] INFO org.apache.kafka.clients.producer.ProducerConfig  - ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [zion-portable:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = 1
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 0
+
+8 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bufferpool-wait-time
+75 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name buffer-exhausted-records
+87 [main] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 1 to Cluster(nodes = [Node(-1, zion-portable, 9092)], partitions = [])
+94 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name connections-closed:client-id-producer-1
+94 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name connections-created:client-id-producer-1
+94 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-sent-received:client-id-producer-1
+94 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-sent:client-id-producer-1
+95 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name bytes-received:client-id-producer-1
+95 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name select-time:client-id-producer-1
+95 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name io-time:client-id-producer-1
+98 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name batch-size
+98 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name compression-rate
+99 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name queue-time
+99 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name request-time
+99 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name produce-throttle-time
+99 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name records-per-request
+100 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name record-retries
+100 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name errors
+100 [main] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name record-size-max
+102 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.producer.internals.Sender  - Starting Kafka producer I/O thread.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration zookeeper.connect = zion-portable:2181 was supplied but isn't a known config.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration group.id = space.exploration.mars.rover.curiosity.1541995087706 was supplied but isn't a known config.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration source.topic = curiosity_to_earth_6 was supplied but isn't a known config.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration auto.offset.reset = largest was supplied but isn't a known config.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration metadata.broker.list = zion-portable:9092 was supplied but isn't a known config.
+102 [main] WARN org.apache.kafka.clients.producer.ProducerConfig  - The configuration destination.topic = earth_to_curiosity_6 was supplied but isn't a known config.
+104 [main] INFO org.apache.kafka.common.utils.AppInfoParser  - Kafka version : 0.9.0.1
+104 [main] INFO org.apache.kafka.common.utils.AppInfoParser  - Kafka commitId : 23c69d62a0cabf06
+104 [main] DEBUG org.apache.kafka.clients.producer.KafkaProducer  - Kafka producer started
+2568 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node -1 for sending metadata request
+2568 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node -1 at zion-portable:9092.
+2831 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.bytes-sent
+2832 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.bytes-received
+2832 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node--1.latency
+2832 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Completed connection to node -1
+2887 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=0,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995090604, sendTimeMs=0) to node -1
+2963 [kafka-producer-network-thread | producer-1] WARN org.apache.kafka.clients.NetworkClient  - Error while fetching metadata with correlation id 0 : {earth_to_curiosity_6=LEADER_NOT_AVAILABLE}
+2963 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 2 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [])
+3056 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initialize connection to node 0 for sending metadata request
+3056 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Initiating connection to node 0 at zion-portable:9092.
+3059 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node-0.bytes-sent
+3059 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node-0.bytes-received
+3060 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name node-0.latency
+3060 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Completed connection to node 0
+3157 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=1,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995090887, sendTimeMs=0) to node 0
+3173 [kafka-producer-network-thread | producer-1] WARN org.apache.kafka.clients.NetworkClient  - Error while fetching metadata with correlation id 1 : {earth_to_curiosity_6=LEADER_NOT_AVAILABLE}
+3173 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 3 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [])
+3273 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=2,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995091004, sendTimeMs=0) to node 0
+3350 [kafka-producer-network-thread | producer-1] WARN org.apache.kafka.clients.NetworkClient  - Error while fetching metadata with correlation id 2 : {earth_to_curiosity_6=LEADER_NOT_AVAILABLE}
+3350 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 4 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [])
+3451 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=3,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995091182, sendTimeMs=0) to node 0
+3559 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 5 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+3565 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name topic.earth_to_curiosity_6.records-per-batch
+3565 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name topic.earth_to_curiosity_6.bytes
+3565 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name topic.earth_to_curiosity_6.compression-rate
+3565 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name topic.earth_to_curiosity_6.record-retries
+3565 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.common.metrics.Metrics  - Added sensor with name topic.earth_to_curiosity_6.record-errors
+303573 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=6,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995391304, sendTimeMs=0) to node 0
+303896 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 6 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+543962 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Node -1 disconnected.
+543963 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=7,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995631693, sendTimeMs=0) to node 0
+544005 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 7 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+844033 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=8,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541995931764, sendTimeMs=0) to node 0
+844161 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 8 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+1144184 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=9,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541996231914, sendTimeMs=0) to node 0
+1144190 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 9 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+1444220 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=10,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541996531950, sendTimeMs=0) to node 0
+1444226 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 10 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+1744240 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=11,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541996831971, sendTimeMs=0) to node 0
+1744246 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 11 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+2044273 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=12,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541997132004, sendTimeMs=0) to node 0
+2044280 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 12 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+2344280 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=13,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541997432011, sendTimeMs=0) to node 0
+2344286 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 13 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
+2644294 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.NetworkClient  - Sending metadata request ClientRequest(expectResponse=true, callback=null, request=RequestSend(header={api_key=3,api_version=0,correlation_id=14,client_id=producer-1}, body={topics=[earth_to_curiosity_6]}), isInitiatedByNetworkClient, createdTimeMs=1541997732025, sendTimeMs=0) to node 0
+2644300 [kafka-producer-network-thread | producer-1] DEBUG org.apache.kafka.clients.Metadata  - Updated cluster metadata version 14 to Cluster(nodes = [Node(0, zion-portable, 9092)], partitions = [Partition(topic = earth_to_curiosity_6, partition = 0, leader = 0, replicas = [0,], isr = [0,]])
