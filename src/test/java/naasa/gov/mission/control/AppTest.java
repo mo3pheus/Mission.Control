@@ -10,7 +10,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.Buffer;
 
 /**
  * Unit test for simple App.

@@ -227,7 +227,7 @@ public class Receiver extends Thread {
                         System.out.println(
                                 "Proposed file destination path = " + samDataArchive + sampleDataFile.getFileName());
                         Path path = Paths
-                                .get(samDataArchive + sampleAnalysisData.getSol() + "/" + sampleDataFile.getFileName());
+                                .get(samDataArchive + sampleAnalysisData.getSol() + "/"        + sampleDataFile.getFileName());
                         Files.write(path, sampleDataFile.getContent().toByteArray());
                     }
 
