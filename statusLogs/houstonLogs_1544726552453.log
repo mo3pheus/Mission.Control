@@ -1,0 +1,75 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+21 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+21 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+21 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1544726552508
+21 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to antares-mainframe:2181
+60 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1544726552508_antares-mainframe-1544726552789-8a74b76a], Connecting to zookeeper instance at antares-mainframe:2181
+65 [ZkClient-EventThread-28-antares-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=antares-mainframe
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=10.0.2
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-11-openjdk-amd64
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-2.0-shaded.jar
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.15.0-42-generic
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+69 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+70 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=antares-mainframe:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@4bbf6d0e
+79 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+84 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+91 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+1194 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+1194 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2295 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2295 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+3396 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+3397 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+4498 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+4498 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+5599 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+5599 [main-SendThread(antares-mainframe:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+6079 [ZkClient-EventThread-28-antares-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Terminate ZkClient event thread.
+6700 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+6803 [main] INFO org.apache.zookeeper.ZooKeeper  - Session: 0x0 closed
+6803 [main-EventThread] INFO org.apache.zookeeper.ClientCnxn  - EventThread shut down

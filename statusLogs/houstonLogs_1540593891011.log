@@ -1,0 +1,24 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+20 [main] WARN kafka.utils.VerifiableProperties  - Property auto.offset.reset is not valid
+20 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+20 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+20 [main] WARN kafka.utils.VerifiableProperties  - Property group.id is not valid
+20 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+20 [main] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to localhost:9092
+20 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property zookeeper.connect is not valid
+231 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 0 for 1 topic(s) Set(earth_to_curiosity_6)
+238 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+267 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+286 [main] WARN kafka.producer.BrokerPartitionInfo  - Error while fetching metadata [{TopicMetadata for topic earth_to_curiosity_6 -> 
+No partition metadata for topic earth_to_curiosity_6 due to kafka.common.LeaderNotAvailableException}] for topic [earth_to_curiosity_6]: class kafka.common.LeaderNotAvailableException 
+289 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 1 for 1 topic(s) Set(earth_to_curiosity_6)
+290 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+295 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+319 [main] INFO kafka.producer.SyncProducer  - Connected to antares-mainframe:9092 for producing
+608111 [main] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,localhost,9092) with correlation id 31 for 1 topic(s) Set(earth_to_curiosity_6)
+608125 [main] INFO kafka.producer.SyncProducer  - Connected to localhost:9092 for producing
+608127 [main] INFO kafka.producer.SyncProducer  - Disconnecting from localhost:9092
+608128 [main] INFO kafka.producer.SyncProducer  - Disconnecting from antares-mainframe:9092
+608130 [main] INFO kafka.producer.SyncProducer  - Connected to antares-mainframe:9092 for producing

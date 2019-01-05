@@ -1,0 +1,68 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+21 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+21 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+21 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1542082252177
+21 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to zion-mainframe:2181
+64 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1542082252177_antares-mainframe-1542082252459-3063fe3e], Connecting to zookeeper instance at zion-mainframe:2181
+69 [ZkClient-EventThread-28-zion-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=antares-mainframe
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=10.0.2
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-11-openjdk-amd64
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-2.0-shaded.jar
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.15.0-38-generic
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+72 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+73 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=zion-mainframe:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@791d1f8b
+99 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+116 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+454 [main-SendThread(zion-mainframe.attlocal.net:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+1562 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+1679 [main-SendThread(zion-mainframe.attlocal.net:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2780 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+2913 [main-SendThread(zion-mainframe.attlocal.net:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+4014 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+4137 [main-SendThread(zion-mainframe.attlocal.net:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+5238 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+5365 [main-SendThread(zion-mainframe.attlocal.net:2181)] WARN org.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+6099 [ZkClient-EventThread-28-zion-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Terminate ZkClient event thread.
+6466 [main-SendThread(zion-mainframe.attlocal.net:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server zion-mainframe.attlocal.net/192.168.1.87:2181. Will not attempt to authenticate using SASL (unknown error)
+9665 [main] INFO org.apache.zookeeper.ZooKeeper  - Session: 0x0 closed
+9666 [main-EventThread] INFO org.apache.zookeeper.ClientCnxn  - EventThread shut down

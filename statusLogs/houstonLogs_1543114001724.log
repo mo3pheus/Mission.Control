@@ -1,0 +1,62 @@
+0 [main] INFO kafka.utils.VerifiableProperties  - Verifying properties
+21 [main] INFO kafka.utils.VerifiableProperties  - Property auto.offset.reset is overridden to largest
+21 [main] WARN kafka.utils.VerifiableProperties  - Property bootstrap.servers is not valid
+21 [main] WARN kafka.utils.VerifiableProperties  - Property destination.topic is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property group.id is overridden to space.exploration.mars.rover.curiosity.1543114001774
+22 [main] WARN kafka.utils.VerifiableProperties  - Property key.serializer is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property metadata.broker.list is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property source.topic is not valid
+22 [main] WARN kafka.utils.VerifiableProperties  - Property value.serializer is not valid
+22 [main] INFO kafka.utils.VerifiableProperties  - Property zookeeper.connect is overridden to antares-mainframe:2181
+57 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Connecting to zookeeper instance at antares-mainframe:2181
+61 [ZkClient-EventThread-28-antares-mainframe:2181] INFO org.I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+64 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:host.name=antares-mainframe
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.version=10.0.2
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.home=/usr/lib/jvm/java-11-openjdk-amd64
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=target/mission.control-2.0-shaded.jar
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=/tmp
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Linux
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=amd64
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:os.version=4.15.0-39-generic
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.name=sanket
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.home=/home/sanket
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=/home/sanket/Documents/workspace/Mission.Control
+65 [main] INFO org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=antares-mainframe:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@791d1f8b
+74 [main] INFO org.I0Itec.zkclient.ZkClient  - Waiting for keeper state SyncConnected
+79 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Opening socket connection to server antares-mainframe/127.0.1.1:2181. Will not attempt to authenticate using SASL (unknown error)
+85 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Socket connection established to antares-mainframe/127.0.1.1:2181, initiating session
+93 [main-SendThread(antares-mainframe:2181)] INFO org.apache.zookeeper.ClientCnxn  - Session establishment complete on server antares-mainframe/127.0.1.1:2181, sessionid = 0x16746c2f4950007, negotiated timeout = 6000
+94 [main-EventThread] INFO org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+105 [main] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], starting auto committer every 60000 ms
+130 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], begin registering consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 in ZK
+145 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Creating /consumers/space.exploration.mars.rover.curiosity.1543114001774/ids/space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 (is it secure? false)
+156 [Thread-0] INFO kafka.utils.ZKCheckedEphemeral  - Result of znode creation is: OK
+156 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], end registering consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 in ZK
+160 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4_watcher_executor] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], starting watcher executor thread for consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4
+177 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], begin rebalancing consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 try #0
+246 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1543114002084] Stopping leader finder thread
+246 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1543114002084] Stopping all fetchers
+247 [Thread-0] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1543114002084] All connections stopped
+247 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Cleared all relevant queues for this fetcher
+248 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Cleared the data chunks in all the consumer message iterators
+248 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Committing all offsets after clearing the fetcher queues
+248 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Releasing partition ownership
+265 [Thread-0] INFO kafka.consumer.RangeAssignor  - Consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 rebalancing the following partitions: ArrayBuffer(0) for topic curiosity_to_earth_6 with consumers: List(space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-0)
+266 [Thread-0] INFO kafka.consumer.RangeAssignor  - space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-0 attempting to claim partition 0
+290 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-0 successfully owned partition 0 for topic curiosity_to_earth_6
+303 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], Consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 selected partitions : curiosity_to_earth_6:0: fetched offset = -1: consumed offset = -1
+305 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager$LeaderFinderThread  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread], Starting 
+305 [Thread-0] INFO kafka.consumer.ZookeeperConsumerConnector  - [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4], end rebalancing consumer space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4 try #0
+319 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Verifying properties
+319 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property client.id is overridden to space.exploration.mars.rover.curiosity.1543114001774
+319 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property metadata.broker.list is overridden to antares-mainframe:9092
+319 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.utils.VerifiableProperties  - Property request.timeout.ms is overridden to 30000
+332 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.client.ClientUtils$  - Fetching metadata from broker BrokerEndPoint(0,antares-mainframe,9092) with correlation id 0 for 1 topic(s) Set(curiosity_to_earth_6)
+334 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.producer.SyncProducer  - Connected to antares-mainframe:9092 for producing
+346 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.producer.SyncProducer  - Disconnecting from antares-mainframe:9092
+371 [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-0-0] INFO kafka.consumer.ConsumerFetcherThread  - [ConsumerFetcherThread-space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-0-0], Starting 
+377 [space.exploration.mars.rover.curiosity.1543114001774_antares-mainframe-1543114002038-c6c193e4-leader-finder-thread] INFO kafka.consumer.ConsumerFetcherManager  - [ConsumerFetcherManager-1543114002084] Added fetcher for partitions ArrayBuffer([[curiosity_to_earth_6,0], initOffset -1 to broker BrokerEndPoint(0,antares-mainframe,9092)] )
