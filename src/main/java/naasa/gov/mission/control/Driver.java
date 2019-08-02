@@ -1,6 +1,5 @@
 package naasa.gov.mission.control;
 
-
 import communications.protocol.KafkaConfig;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Level;
@@ -34,7 +33,7 @@ public class Driver {
 
     public static void main(String[] args) throws Exception {
         configureLogging(Boolean.parseBoolean(args[1]));
-        Receiver receiver = new Receiver(KafkaConfig.getKafkaConfig("Mission.Control", args[2]), args[0]);
+        Receiver receiver = new Receiver(KafkaConfig.getKafkaConfig("Mission.Control"), args[0]);
         receiver.start();
     }
 }

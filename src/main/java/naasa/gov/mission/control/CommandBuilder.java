@@ -8,6 +8,8 @@ import space.exploration.communications.protocol.robot.RobotPositionsOuterClass;
 import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.SamQueryOuterClass;
 import space.exploration.communications.protocol.service.WeatherQueryOuterClass;
+
+
 import space.exploration.communications.protocol.softwareUpdate.SwUpdatePackageOuterClass;
 import space.exploration.kernel.diagnostics.LogRequest;
 
@@ -22,18 +24,42 @@ public class CommandBuilder {
     //public static final String CERT_FILE = "src/main/resources/certificates/client.ser";
 
     public static final String CERT_FILE = "src/main/resources/certificates/clientOriginal.ser";
-
     private static byte[] signAndEncryptMessage(InstructionPayloadOuterClass.InstructionPayload instructionPayload) {
         byte[] message = null;
 
         try {
             message = EncryptionUtil.encryptData("mission.control@Houston", new File(CERT_FILE), instructionPayload
-                    .toByteArray(), 3l).toByteArray();
+                    .toByteArray(),3l,true).toByteArray();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return message;
     }
+
+    public static byte[] buildSampleAnalysis(int sol) {
+        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.newBuilder();
+        iBuilder.setTimeStamp(System.currentTimeMillis());
+
+        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
+                .InstructionPayload.TargetPackage.newBuilder();
+
+        SamQueryOuterClass.SamQuery.Builder sBuilder = SamQueryOuterClass.SamQuery.newBuilder();
+        sBuilder.setSol(sol);
+        sBuilder.setGetNearest(true);
+
+        tBuilder.setAuxiliaryData(sBuilder.build().toByteString());
+        tBuilder.setAction("Perform Sample Analysis");
+        tBuilder.setRoverModule(ModuleDirectory.Module.SAM_SPECTROMETER.getValue());
+        iBuilder.addTargets(tBuilder.build());
+        iBuilder.addTargets(tBuilder.build());
+
+        InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
+
+        return signAndEncryptMessage(instructionPayload);
+    }
+
+
 
     public static byte[] buildSoftwareUpdateCommand() {
         String jarFile = "https://storage.googleapis.com/rover_artifacts/softwareUpdates/mars" +
@@ -62,29 +88,6 @@ public class CommandBuilder {
 
         InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
         //System.out.println(instructionPayload.toString());
-
-        return signAndEncryptMessage(instructionPayload);
-    }
-
-    public static byte[] buildSampleAnayslisCommand(int sol) {
-        InstructionPayloadOuterClass.InstructionPayload.Builder iBuilder = InstructionPayloadOuterClass
-                .InstructionPayload.newBuilder();
-        iBuilder.setTimeStamp(System.currentTimeMillis());
-        iBuilder.setSOS(false);
-
-        InstructionPayloadOuterClass.InstructionPayload.TargetPackage.Builder tBuilder = InstructionPayloadOuterClass
-                .InstructionPayload.TargetPackage.newBuilder();
-
-        SamQueryOuterClass.SamQuery.Builder sBuilder = SamQueryOuterClass.SamQuery.newBuilder();
-        sBuilder.setSol(sol);
-        sBuilder.setGetNearest(true);
-
-        tBuilder.setAuxiliaryData(sBuilder.build().toByteString());
-        tBuilder.setAction("Perform Sample Analysis");
-        tBuilder.setRoverModule(ModuleDirectory.Module.SAM_SPECTROMETER.getValue());
-        iBuilder.addTargets(tBuilder.build());
-
-        InstructionPayloadOuterClass.InstructionPayload instructionPayload = iBuilder.build();
 
         return signAndEncryptMessage(instructionPayload);
     }

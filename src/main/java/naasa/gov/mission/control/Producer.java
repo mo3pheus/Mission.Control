@@ -10,12 +10,12 @@ public class Producer {
 
     public static void main(String[] args) throws Exception {
         Driver.configureLogging(false);
-        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control", args[0]));
+        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
         long        stTime      = System.currentTimeMillis();
 
         while (TimeUnit.MILLISECONDS.toHours(System.currentTimeMillis() - stTime) < 5) {
             int choice = ThreadLocalRandom.current().nextInt(0, 12);
-            while (choice == 10) {
+            while(choice == 10){
                 choice = ThreadLocalRandom.current().nextInt(0, 12);
             }
             //int choice = 3;
@@ -90,6 +90,7 @@ public class Producer {
                 }
             }
             Thread.sleep(1 * 45000);
+            //Thread.sleep(1 * 25000);
             //Thread.sleep(45);
         }
         transmitter.transmitMessage(CommandBuilder.buildGracefulShutdownCommand());
