@@ -3,7 +3,6 @@
  */
 package naasa.gov.mission.control;
 
-import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import communications.protocol.ModuleDirectory;
 import encryption.EncryptionUtil;
@@ -24,7 +23,6 @@ import space.exploration.communications.protocol.radar.RadarContactListOuterClas
 import space.exploration.communications.protocol.security.SecureMessage;
 import space.exploration.communications.protocol.service.CameraPayload;
 import space.exploration.communications.protocol.service.DanRDRDataSeriesOuterClass;
-import space.exploration.communications.protocol.service.SampleAnalysisDataOuterClass;
 import space.exploration.communications.protocol.service.WeatherRDRData;
 import space.exploration.communications.protocol.spacecraftClock.SpacecraftClock;
 import space.exploration.kernel.diagnostics.LogResponse;
@@ -37,9 +35,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -56,7 +51,6 @@ public class Receiver extends Thread {
     final static String SEPARATOR =
             "============================================================================";
 
-    final static   String samDataArchive         = "dataArchives/SamData/";
     final static   String clientId               = "Curiosity";
     final static   String TUNED_CHANNEL_PROPERTY = "source.topic";
     private static String dataArchivePath        = null;
@@ -124,7 +118,7 @@ public class Receiver extends Thread {
 
                 try {
                     long   startTime  = System.currentTimeMillis();
-                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket, 3l);
+                    byte[] rawContent = EncryptionUtil.decryptSecureMessage(certificate, secureMessagePacket, 3l, true);
                     System.out.println(" Time taken for decryption = " + (System.currentTimeMillis() - startTime));
                     received = RoverStatusOuterClass.RoverStatus.parseFrom(rawContent);
                 } catch (Exception e) {
@@ -136,14 +130,12 @@ public class Receiver extends Thread {
                 printMessage("Message received from " + received.getModuleName());
 
                 if (received.getModuleReporting() == ModuleDirectory.Module.SCIENCE.getValue()) {
-                    ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket
-                            .parseFrom(received.getModuleMessage());
+                    ApxsData.ApxsDataPacket apxsDataPacket = ApxsData.ApxsDataPacket.parseFrom(received.getModuleMessage());
                     printMessage(received.toString());
                     printMessage(apxsDataPacket.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.CAMERA_SENSOR.getValue()) {
 
-                    CameraPayload.CamPayload camPayload = CameraPayload.CamPayload
-                            .parseFrom(received.getModuleMessage());
+                    CameraPayload.CamPayload camPayload = CameraPayload.CamPayload.parseFrom(received.getModuleMessage());
                     //System.out.println(received.toString());
 
                     for (String metaData : camPayload.getImageDataMap().keySet()) {
@@ -173,8 +165,7 @@ public class Receiver extends Thread {
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.DIAGNOSTICS.getValue()) {
                     printMessage(received.toString());
                     HeartBeatOuterClass.HeartBeat heartBeat = HeartBeatOuterClass.HeartBeat.parseFrom(received
-                                                                                                              .getModuleMessage()
-                                                                                                              .toByteArray());
+                                                                                                              .getModuleMessage().toByteArray());
                     scetTime = received.getSCET();
                     printMessage(heartBeat.toString());
                     printMessage("OneWayLightTime = " + Double.toString(received.getMslPositionsPacket()
@@ -197,8 +188,7 @@ public class Receiver extends Thread {
                     WeatherDataArchive weatherDataArchive = new WeatherDataArchive(weatherPayload.toString());
                     weatherDataArchive.archiveWeatherData();
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.SPACECRAFT_CLOCK.getValue()) {
-                    SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket
-                            .parseFrom(received.getModuleMessage());
+                    SpacecraftClock.SclkPacket sclkPacket = SpacecraftClock.SclkPacket.parseFrom(received.getModuleMessage());
                     printMessage(sclkPacket.toString());
                     printMessage(received.toString());
                 } else if (received.getModuleReporting() == ModuleDirectory.Module.DAN_SPECTROMETER.getValue()) {
@@ -212,38 +202,6 @@ public class Receiver extends Thread {
                     /*printMessage(logResponsePacket.toString(), 0);*/
                     FileUtil.saveLogFiles("curiosityLogs", logResponsePacket);
                     System.out.println("Number of log files = " + logResponsePacket.getLogFilesCount());
-                } else if (received.getModuleReporting() == ModuleDirectory.Module.SAM_SPECTROMETER.getValue()) {
-                    SampleAnalysisDataOuterClass.SampleAnalysisData sampleAnalysisData =
-                            SampleAnalysisDataOuterClass.SampleAnalysisData
-                                    .parseFrom(received.getModuleMessage());
-
-                    util.FileUtil.processDirectories(samDataArchive + sampleAnalysisData.getSol());
-
-                    for (int i = 0; i < sampleAnalysisData.getDataFilesCount(); i++) {
-                        SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile sampleDataFile =
-                                sampleAnalysisData
-                                        .getDataFiles(i);
-                        System.out.println("SampleData file extracted:: " + sampleDataFile.toString());
-                        System.out.println(
-                                "Proposed file destination path = " + samDataArchive + sampleDataFile.getFileName());
-                        Path path = Paths
-                                .get(samDataArchive + sampleAnalysisData.getSol() + "/"        + sampleDataFile.getFileName());
-                        Files.write(path, sampleDataFile.getContent().toByteArray());
-                    }
-
-//                    List<SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile> sampleDataFiles =
-//                            sampleAnalysisData
-//                                    .getDataFilesList();
-//                    for (SampleAnalysisDataOuterClass.SampleAnalysisData.SampleDataFile sampleDataFile :
-//                            sampleDataFiles) {
-//                        printMessage("FileName = " + sampleDataFile.getFileName());
-//                        Path path = Paths.get(dataArchivePath + sampleDataFile.getFileName());
-//                        printMessage(path.toString());
-////                        Files.write(Paths.get(samDataArchive + sampleDataFile.getFileName()),
-////                                    sampleDataFile.getContent().toByteArray());
-//                    }
-
-                    printMessage(sampleAnalysisData.toString());
                 } else {
                     printMessage(received.toString());
                 }

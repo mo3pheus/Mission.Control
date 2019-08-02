@@ -15,7 +15,7 @@ public class ProducerManual {
         Properties  kafkaProperties = new Properties();
         kafkaProperties.load(fis);
 
-        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control", args[0]));
+        Transmitter transmitter = new Transmitter(KafkaConfig.getKafkaConfig("Mission.Control"));
 
         int choice = 0;
         while (choice != 14) {
@@ -113,9 +113,9 @@ public class ProducerManual {
                 break;
                 case 13: {
                     Scanner dateScanner = new Scanner(System.in);
-                    System.out.println("Please enter sol number::");
-                    int    sol = Integer.parseInt(dateScanner.nextLine());
-                    byte[] msg = CommandBuilder.buildSampleAnayslisCommand(sol);
+                    System.out.println("Enter sol number: ");
+                    int sol = Integer.parseInt(dateScanner.nextLine());
+                    byte[] msg = CommandBuilder.buildSampleAnalysis(sol);
                     transmitter.transmitMessage(msg);
                 }
                 break;

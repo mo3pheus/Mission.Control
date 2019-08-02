@@ -11,10 +11,9 @@ import java.util.Properties;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.Producer;
+import kafka.javaapi.producer.Producer;
+import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
 
 /**
  * @author sanketkorgaonkar
@@ -35,7 +34,7 @@ public class Transmitter {
 			kafkaProperties = new Properties();
 			kafkaProperties.load(inputStream);
 			kafkaProperties.put("sourceTopic", kafkaShipmentBuilder.sourceTopic);
-			earthChannel = new KafkaProducer<>(kafkaProperties);
+			earthChannel = new Producer<String, byte[]>(new ProducerConfig(kafkaProperties));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -45,15 +44,12 @@ public class Transmitter {
 
 	public Transmitter(Properties comsConfig) {
 		kafkaProperties = comsConfig;
-		earthChannel = new KafkaProducer<>(kafkaProperties);
-		//earthChannel = new Producer<String, byte[]>(new ProducerConfig(kafkaProperties));
+		earthChannel = new Producer<String, byte[]>(new ProducerConfig(kafkaProperties));
 	}
 
 	public void transmitMessage(byte[] message) throws InterruptedException, InvalidProtocolBufferException {
 		for (int i = 0; i < 1; i++) {
-			//earthChannel.send(new KeyedMessage<String, byte[]>(kafkaProperties.getProperty("destination.topic"), message));
-			earthChannel.send(
-					new ProducerRecord<>(kafkaProperties.getProperty("destination.topic"), message));
+			earthChannel.send(new KeyedMessage<String, byte[]>(kafkaProperties.getProperty("destination.topic"), message));
 			System.out.println(" Sending canned interrupt messages to " + kafkaProperties.getProperty("destination.topic"));
 			Thread.sleep(1500l);
 		}
